@@ -1,5 +1,5 @@
 {
-    "name": "chery/larchitecture",
+    "name": "pitchwho/larchitecture",
     "require": {},
     "autoload": {
         "psr-4": {
