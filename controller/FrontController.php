@@ -2,6 +2,7 @@
 
 namespace Controller;
 use \Helper\Connect;
+use Model\RevuesModel;
 
 class FrontController
 {
@@ -14,8 +15,18 @@ class FrontController
         $a = $_GET['a'] ?? $_POST['a'] ?? '' ;
 
         switch($a){
-
-
+            case 'ajouter' :
+                $controller = new RevuesController();
+                echo $controller->addAction();
+                break;
+            case 'supp' :
+                $controller = new RevuesController();
+                echo $controller->deleteAction($_GET['id']);
+                break;
+            case 'modifier' :
+                $controller = new RevuesController();
+                echo $controller->updateAction($_GET['id']);
+                break;
             default :
                 $controller = new RevuesController();
                 echo $controller->listAction(); // affiche la liste des numéros des revues
