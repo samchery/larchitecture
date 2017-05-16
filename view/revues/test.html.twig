@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    coucou
+    <table>
+        <tr>
+            <th>numero</th>
+        </tr>
+        {% for numero in list %}
+            <tr>
+                <td>{{ revues.numero }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
