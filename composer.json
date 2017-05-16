@@ -1,9 +1,13 @@
 {
-    "name": "pitchwho/larchitecture",
-    "require": {},
+    "name": "samchery/larchitecture",
+    "require": {
+        "twig/twig": "^2.3"
+    },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "Controller\\": "controller/",
+            "Helper\\": "helper/",
+            "Model\\": "model/"
         }
     }
 }
