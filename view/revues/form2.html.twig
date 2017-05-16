@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    ici le formulaire
+    <form method="post" action="#">
+        <p>
+            <label for="numero">Numéro :</label>
+            <input type="text" name="numero" id="numero" value="{{ list.numero }}">
+        </p>
+        <p>
+            <label for="img">Image :</label>
+            <input type="text" name="img" id="img" value="{{ list.img }}">
+        </p>
+
+        <p>
+            <label for="region">Région :</label>
+            <input type="text" name="region" id="region" value="{{ list.region }}">
+        </p>
+
+        <p>
+            <label for="zone">Zone :</label>
+            <input type="text" name="zone" id="zone" value="{{ list.zone }}">
+        </p>
+
+        <p>
+            <label for="datepub">date publication :</label>
+            <input type="text" name="datepub" id="datepub" value="{{ list.datepub }}">
+        </p>
+
+        <input type="submit" value="Modifier">
+    </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>numero</th>
+            <th>moderation</th>
+            <th>tralala</th>
+        </tr>
+        {% for elem in list %}
+            <tr>
+                <td>{{ elem.numero }}</td>
+                <td><a href="index.php?a=supp&id={{ elem.id }}">supprimer ({{ elem.id }})</a></td>
+                <td><a href="index.php?a=modifier&id={{ elem.id }}">modifier ({{ elem.id }})</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

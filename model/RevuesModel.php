@@ -87,7 +87,7 @@ class RevuesModel extends Model
                 throw new \Exception('Arg database');
             }
 
-            return self::$db->lastInsertId();
+            return (int) self::$db->lastInsertId();
         }
     }
 
@@ -140,6 +140,7 @@ class RevuesModel extends Model
             if ($requete->errorCode() !== "00000") {
                 throw new \Exception('Arg database');
             }
+            return 'ok';
         }
     }
 }
