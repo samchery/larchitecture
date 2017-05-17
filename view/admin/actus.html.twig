@@ -1,5 +1,16 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>GESTION DES ACTUS</h1>
+    <h1>GESTION DES ACTUS LALALALALLALALALALA</h1>
+    <table>
+        {% for elem in lastActues %}
+            <tr>
+                <td>{{ elem.datepub }}</td>
+                <td>{{ elem.architecte }}</td>
+                <td>{{ elem.titre }}</td>
+                <td><a href="/admin/modifactus?id={{ elem.id }}">Modifier</a></td>
+                <td><a href="/admin/deleteactus?id={{ elem.id }}">Supprimer</a></td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

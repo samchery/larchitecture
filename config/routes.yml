@@ -1,3 +1,4 @@
+# FRONT OFFICE
 homepage:
   path: /
   defaults: { _controller: 'Controller\PageController::goHome' }
@@ -14,10 +15,13 @@ commander :
   path: /commander
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
 
+
+# BACK OFFICE
 admin :
   path: /admin
   defaults: { _controller: 'Controller\RevuesController::listAction' }
 
+# Gestion des revues
 admin-add-revues :
   path: /admin/addrevues
   defaults: { _controller: 'Controller\RevuesController::addAction' }
@@ -30,11 +34,38 @@ admin-delete-revues :
   path: /admin/deleterevues?id={id}
   defaults: { _controller: 'Controller\RevuesController::deleteAction' }
 
+
+# Gestion des actualités
+admin-actus :
+  path: /admin/actus
+  defaults: { _controller: 'Controller\ActusController::afficheActus' }
+
+admin-add-actus :
+  path: /admin/addactus
+  defaults: { _controller: 'Controller\ActusController::addAction' }
+
+admin-modif-actus :
+  path: /admin/modifactus?id={id}
+  defaults: { _controller: 'Controller\ActusController::updateAction' }
+
+admin-delete-actus :
+  path: /admin/deleteactus?id={id}
+  defaults: { _controller: 'Controller\ActusController::deleteAction' }
+
+
+# Gestion des partenaires
 admin-partenaires :
   path: /admin/partenaires
   defaults: { _controller: 'Controller\PageController::tempPartenaires' }
 
-admin-actus :
-  path: /admin/actus
-  defaults: { _controller: 'Controller\PageController::tempActus' }
+admin-add-actus :
+  path: /admin/addactus
+  defaults: { _controller: 'Controller\ActusController::addAction' }
 
+admin-modif-actus :
+  path: /admin/modifactus?id={id}
+  defaults: { _controller: 'Controller\ActusController::updateAction' }
+
+admin-delete-actus :
+  path: /admin/deleteactus?id={id}
+  defaults: { _controller: 'Controller\ActusController::deleteAction' }
