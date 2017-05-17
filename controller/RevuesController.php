@@ -44,13 +44,11 @@ class RevuesController extends Controller
             // envoie résultat dans BDD et redirection vers page
             $model = new RevuesModel();
             $data = $model->add($_POST); // dans data on a id inséré
-            $detail = $model->select($data);
-            return self::$twig->render('revues/details.html.twig',[
-               'list' => $detail
-            ]);
+            $model->select($data);
+            header("location: /admin");
         } else {
             // afficher le formulaire (si y'a rien dans POST)
-            return self::$twig->render('revues/form.html.twig');
+            return self::$twig->render('admin/form.html.twig');
         }
     }
 
@@ -59,38 +57,40 @@ class RevuesController extends Controller
      * Supprime l'entrée dont l'id est passé en paramètre
      * et redirige vers la liste des revues
      */
-    public function deleteAction($id)
+    public function deleteAction()
     {
+        $id = $_GET['id'];
         // on s'assure que l'id est bien un entier
         $id = (int) $id;
 
         $model = new RevuesModel();
         $model->delete($id);
-        header('location : index.php?a=list');
+        Header("Location: /admin");
     }
 
     /**
-     * @param $id
-     * @return mixed
+     * @return string
+     * @internal param $id
      * La méthode va suivant les cas :
      * - rediriger vers le formulaire de modification prérempli suivant l'id passé en paramètre
      * - updater la bdd et rediriger vers la liste des revues
      */
-    public function updateAction($id)
+    public function updateAction()
     {
+        $id = $_GET['id'];
         // on s'assure que l'id est bien un entier
         $id = (int) $id;
 
         if(count($_POST) == 0){
             $model = new RevuesModel();
             $detail = $model->select($id);
-            return self::$twig->render('revues/form.html.twig',[
+            return self::$twig->render('admin/form.html.twig',[
                 'list' => $detail
             ]);
         } else {
             $model = new RevuesModel();
             $model->update($_POST, $id);
-            header ("location: index.php");
+            return self::$twig->render('admin/list.html.twig');
         }
     }
 }

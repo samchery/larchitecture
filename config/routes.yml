@@ -6,4 +6,26 @@ admin :
   path: /admin
   defaults: { _controller: 'Controller\RevuesController::listAction' }
 
+admin-add-revues :
+  path: /admin/addrevues
+  defaults: { _controller: 'Controller\RevuesController::addAction' }
+
+admin-modif-revues :
+  path: /admin/modifrevues?id={id}
+  defaults: { _controller: 'Controller\RevuesController::updateAction' }
+
+admin-delete-revues :
+  path: /admin/deleterevues?id={id}
+  defaults: { _controller: 'Controller\RevuesController::deleteAction' }
+
+admin-partenaires :
+  path: /admin/partenaires
+  defaults: { _controller: 'Controller\PageController::tempPartenaires' }
+
+admin-actus :
+  path: /admin/actus
+  defaults: { _controller: 'Controller\PageController::tempActus' }
+
+
+
 
