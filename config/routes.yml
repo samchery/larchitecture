@@ -56,16 +56,16 @@ admin-delete-actus :
 # Gestion des partenaires
 admin-partenaires :
   path: /admin/partenaires
-  defaults: { _controller: 'Controller\PageController::tempPartenaires' }
+  defaults: { _controller: 'Controller\PartenairesController::affichePartenaires' }
 
-admin-add-actus :
-  path: /admin/addactus
-  defaults: { _controller: 'Controller\ActusController::addAction' }
+admin-add-partenaires :
+  path: /admin/addpartenaires
+  defaults: { _controller: 'Controller\PartenairesController::addPartenaire' }
 
-admin-modif-actus :
-  path: /admin/modifactus?id={id}
-  defaults: { _controller: 'Controller\ActusController::updateAction' }
+admin-modif-partenaires :
+  path: /admin/modifpartenaire?id={id}
+  defaults: { _controller: 'Controller\PartenairesController::updatePartenaire' }
 
-admin-delete-actus :
-  path: /admin/deleteactus?id={id}
-  defaults: { _controller: 'Controller\ActusController::deleteAction' }
+admin-delete-partenaires :
+  path: /admin/deletepartenaire?id={id}
+  defaults: { _controller: 'Controller\PartenairesController::deletePartenaire' }

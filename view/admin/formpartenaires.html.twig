@@ -1,0 +1,61 @@
+{% block body %}
+    {%  if list %}
+        <form method="post" action="#">
+            <p>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" value="{{ list.nom }}">
+            </p>
+
+            <p>
+                <label for="departement">Département :</label>
+                <input type="text" name="departement" id="departement" value="{{ list.departement }}">
+            </p>
+
+            <p>
+                <label for="url">Url :</label>
+                <input type="text" name="url" id="url" value="{{ list.url }}">
+            </p>
+
+            <p>
+                <label for="region">Région :</label>
+                <input type="text" name="region" id="region" value="{{ list.region }}">
+            </p>
+
+            <p>
+                <label for="secteur">Secteur :</label>
+                <input type="text" name="secteur" id="secteur" value="{{ list.secteur }}">
+            </p>
+
+            <input type="submit" value="Modifier">
+        </form>
+    {% else %}
+        <form method="post" action="#">
+            <p>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom">
+            </p>
+
+            <p>
+                <label for="departement">Département :</label>
+                <input type="text" name="departement" id="departement" >
+            </p>
+
+            <p>
+                <label for="url">Url :</label>
+                <input type="text" name="url" id="url">
+            </p>
+
+            <p>
+                <label for="region">Région :</label>
+                <input type="text" name="region" id="region">
+            </p>
+
+            <p>
+                <label for="secteur">Secteur :</label>
+                <input type="text" name="secteur" id="secteur">
+            </p>
+
+            <input type="submit" value="Ajouter">
+        </form>
+    {% endif %}
+{% endblock %}
