@@ -23,15 +23,4 @@ class PageController extends Controller
             'lastActus' => $dataActu
         ]);
     }
-
-    //a supprimer pour l'inté
-    public function tempPartenaires()
-    {
-        return self::$twig->render('admin/partenaires.html.twig');
-    }
-
-    public function tempActus()
-    {
-        return self::$twig->render('admin/actus.html.twig');
-    }
 }
