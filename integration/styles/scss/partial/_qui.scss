@@ -1,0 +1,35 @@
+.who {
+	padding-top: 2%;
+	width: 100%;
+	float: left;
+	font-family: $lato;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 2%;
+
+	figure {
+		width: 40%;
+		float: left;
+	}
+
+	img {
+		width: 100%;
+		float: left;
+	}
+
+	article {
+		text-align: center;
+		width: 50%;
+	}
+		h2 {
+			font-size: 110%;
+			font-weight: 700;
+			margin-bottom: 6%;
+		}
+
+		p {
+			font-size: 90%;
+			font-weight: 400;
+		}
+}

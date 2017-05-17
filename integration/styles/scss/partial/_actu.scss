@@ -1,0 +1,76 @@
+.actu {
+	width: 90%;
+	display: flex;
+	float: left;
+	justify-content: space-around;
+	font-family: $lato;
+	margin: 0 auto;
+	margin: 5% 0 0 5%;
+	align-items: center;
+		
+	figure {
+		width: 40%;
+	}
+
+	@media screen and (max-width: 480px) {
+		figure {
+			width: 100%
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	article {
+		text-align: center;
+		width: 55%;
+	
+		h2 {
+			font-size: 1.8rem;
+			margin-bottom: 4%;
+			font-weight: 700;
+		}
+
+		h3 {
+			font-size: 1.6rem;
+			margin-bottom: 7%;
+		}
+
+		p {
+			font-family: $merri;
+			line-height: 16px;
+			font-size: 1.4rem;
+			font-weight: 300;
+			letter-spacing: 1px;
+			
+			@media screen and (max-width: 480px) {
+				&:last-of-type {
+					width: 90%;
+					text-align: left;
+				}
+			}
+		}
+
+
+		a{
+			color: #35AEBD;
+			text-transform: underline;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		article {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.actu {
+		width: 90%;
+		display: initial;
+		float: none;
+	}
+}
