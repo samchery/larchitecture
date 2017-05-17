@@ -31,7 +31,7 @@ class FrontController
                 $controller = new RevuesController();
                 echo $controller->updateAction($_GET['id']);
                 break;
-            case 'region' :
+            case 'zone' :
                 $controller = new RevuesController();
                 echo $controller->regionAction($_GET['region']);
                 break;
