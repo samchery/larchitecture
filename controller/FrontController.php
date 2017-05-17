@@ -31,6 +31,10 @@ class FrontController
                 $controller = new RevuesController();
                 echo $controller->updateAction($_GET['id']);
                 break;
+            case 'region' :
+                $controller = new RevuesController();
+                echo $controller->regionAction($_GET['region']);
+                break;
             default :
                 $controller = new RevuesController();
                 echo $controller->listAction();
