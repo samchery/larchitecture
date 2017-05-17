@@ -5,34 +5,6 @@
         <form method="post" action="#">
             <p>
                 <label for="numero">Numéro :</label>
-                <input type="text" name="numero" id="numero">
-            </p>
-            <p>
-                <label for="img">Image :</label>
-                <input type="text" name="img" id="img">
-            </p>
-
-            <p>
-                <label for="region">Région :</label>
-                <input type="text" name="region" id="region">
-            </p>
-
-            <p>
-                <label for="zone">Zone :</label>
-                <input type="text" name="zone" id="zone">
-            </p>
-
-            <p>
-                <label for="datepub">date publication :</label>
-                <input type="text" name="datepub" id="datepub">
-            </p>
-
-            <input type="submit" value="Ajouter">
-        </form>
-    {% else %}
-        <form method="post" action="#">
-            <p>
-                <label for="numero">Numéro :</label>
                 <input type="text" name="numero" id="numero" value="{{ list.numero }}">
             </p>
             <p>
@@ -56,6 +28,34 @@
             </p>
 
             <input type="submit" value="Modifier">
+        </form>
+    {% else %}
+        <form method="post" action="#">
+            <p>
+                <label for="numero">Numéro :</label>
+                <input type="text" name="numero" id="numero">
+            </p>
+            <p>
+                <label for="img">Image :</label>
+                <input type="text" name="img" id="img">
+            </p>
+
+            <p>
+                <label for="region">Région :</label>
+                <input type="text" name="region" id="region">
+            </p>
+
+            <p>
+                <label for="zone">Zone :</label>
+                <input type="text" name="zone" id="zone">
+            </p>
+
+            <p>
+                <label for="datepub">date publication :</label>
+                <input type="text" name="datepub" id="datepub">
+            </p>
+
+            <input type="submit" value="Ajouter">
         </form>
     {% endif %}
 {% endblock %}
