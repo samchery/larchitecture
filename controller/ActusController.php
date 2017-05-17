@@ -12,7 +12,6 @@ class ActusController extends Controller
         $model = new ActusModel();
         $data = $model->select();
         // méthode pour sélect les actus
-<<<<<<< Updated upstream
         return self::$twig->render('admin/actus.html.twig',[
             'lastActues' => $data
         ]);
@@ -28,8 +27,6 @@ class ActusController extends Controller
             return self::$twig->render('front/detailsActu.html.twig',[
                 'lastActues' => $data
             ]);
-        } else{
-            // lancer une exception
         }
     }
 
@@ -91,28 +88,6 @@ class ActusController extends Controller
             $model->update($_POST, $id);
             Header("Location: actus");
         }
-=======
-        return self::$twig->render('front/actus.html.twig',[
-            'lastActues' => $data
-        ]);
->>>>>>> Stashed changes
     }
-
-    public function afficheUneActu()
-    {
-        if($_GET['id']){
-            $id = (int) $_GET['id'];
-            $model = new ActusModel();
-            $data = $model->select($id);
-            // méthode pour sélect les actus
-            return self::$twig->render('front/detailsActu.html.twig',[
-                'lastActues' => $data
-            ]);
-        } else{
-           // lancer une exception
-        }
-    }
-
-
 }
 

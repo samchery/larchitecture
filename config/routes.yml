@@ -20,13 +20,8 @@ commander :
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
 
 
-<<<<<<< Updated upstream
 # BACK OFFICE
-=======
 
-
-# NAVIGATION DANS LE BACK OFFICE :
->>>>>>> Stashed changes
 admin :
   path: /admin
   defaults: { _controller: 'Controller\RevuesController::listAction' }
@@ -61,7 +56,6 @@ admin-modif-actus :
 admin-delete-actus :
   path: /admin/deleteactus?id={id}
   defaults: { _controller: 'Controller\ActusController::deleteAction' }
-
 
 # Gestion des partenaires
 admin-partenaires :
