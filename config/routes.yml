@@ -1,0 +1,9 @@
+homepage:
+  path: /
+  defaults: { _controller: 'Controller\PageController::goHome' }
+
+admin :
+  path: /admin
+  defaults: { _controller: 'Controller\RevuesController::listAction' }
+
+

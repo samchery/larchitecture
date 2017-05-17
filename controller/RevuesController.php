@@ -18,7 +18,7 @@ class RevuesController extends Controller
     {
         $model = new RevuesModel();
         $data = $model->select() ;
-        return self::$twig->render('revues/list.html.twig',[
+        return self::$twig->render('admin/list.html.twig',[
             'list' => $data
         ]);
     }
