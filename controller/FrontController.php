@@ -2,7 +2,6 @@
 
 namespace Controller;
 use \Helper\Connect;
-use Model\RevuesModel;
 
 /**
  * Class FrontController
