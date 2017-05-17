@@ -23,6 +23,15 @@ class RevuesController extends Controller
         ]);
     }
 
+    public function regionAction($region)
+    {
+        $model = new RevuesModel();
+        $data = $model->selectByRegion($region) ;
+        return self::$twig->render('revues/region.html.twig',[
+            'list' => $data
+        ]);
+    }
+
 
     /**
      * La méthode va suivant les cas :

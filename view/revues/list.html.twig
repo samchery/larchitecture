@@ -9,7 +9,7 @@
         </tr>
         {% for elem in list %}
             <tr>
-                <td>{{ elem.numero }}</td>
+                <td><a href="index.php?region={{ elem.region }}">{{ elem.region }}</a></td>
                 <td><a href="index.php?a=supp&id={{ elem.id }}">supprimer ({{ elem.id }})</a></td>
                 <td><a href="index.php?a=modifier&id={{ elem.id }}">modifier ({{ elem.id }})</a></td>
             </tr>
