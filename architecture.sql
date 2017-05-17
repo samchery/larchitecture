@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
-<<<<<<< Updated upstream
 -- Generation Time: May 17, 2017 at 08:01 AM
-=======
--- Generation Time: May 17, 2017 at 09:04 AM
->>>>>>> Stashed changes
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.9
 
