@@ -12,12 +12,12 @@ class FrontController
 {
     public function __construct()
     {
-        // commence par se connection à la DBB
         Connect::getPDO();
 
-        // GESTION DES CAS DE REDIRECTION = LES ACTIONS (récupéré dans url avec GET)
+        // ordre de priorité des valeurs que prendra $a
         $a = $_GET['a'] ?? $_POST['a'] ?? '' ;
 
+        // différents cas de paramètres passés dans l'url
         switch($a){
             case 'ajouter' :
                 $controller = new RevuesController();
@@ -33,7 +33,7 @@ class FrontController
                 break;
             default :
                 $controller = new RevuesController();
-                echo $controller->listAction(); // affiche la liste des numéros des revues
+                echo $controller->listAction();
                 break;
         }
     }

@@ -3,10 +3,15 @@
 namespace Helper;
 use \PDO;
 
+/**
+ * Class Connect
+ * Va nous permettre de se connecter à la bdd
+ * @package Helper
+ */
 class Connect
 {
     /**
-     * CONST de connexion
+     * CONST des identifiants de connexion
      */
     const DB_USER = 'root';
     const DB_PASS = 'root';
@@ -14,7 +19,7 @@ class Connect
     const DB_NAME = 'architecture';
 
     /**
-     * @var null permet de faire 1 seule et unique connexion
+     * @var on attribue null à $pdo afin de ne faire qu'une seule connexion par la suite
      */
     private static $pdo = null;
 
@@ -23,6 +28,7 @@ class Connect
      */
     public static function getPDO()
     {
+        // si $pdo est null alors on instancie une connexion
         if(is_null(self::$pdo)) {
             try{
                 self::$pdo = new PDO('mysql:dbname=' . self::DB_NAME . ';host=' . self::DB_HOST , self::DB_USER , self::DB_PASS);

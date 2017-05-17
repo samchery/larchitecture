@@ -3,6 +3,12 @@
 namespace Helper;
 
 
+/**
+ * Class Controller
+ * Permet de loader nos templates Twig pour tous nos controllers
+ * (les classes contenues dans controller en héritant)
+ * @package Helper
+ */
 class Controller
 {
     protected static $twig;

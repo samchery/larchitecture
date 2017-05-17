@@ -5,16 +5,19 @@ use \Helper\Model;
 use \PDO;
 
 /**
- * Class revues
+ * Class RevuesModel
+ * Va gérer toutes les modifications de la table revues de la bdd
  * @package Controller
  */
 class RevuesModel extends Model
 {
     /**
-     * methode qui sélectionne toutes entrées de la table revues ou avec un id
      * @param null $id
      * @return array | bool
      * @throws \Exception
+     * Suivant les cas, la méthode va :
+     * - sélectionner toutes les entrées de la table revues
+     * - sélectionner une entrée correspondant à l'id passée en paramètre
      */
     public function select($id = Null){
         if($id === Null){
@@ -43,9 +46,8 @@ class RevuesModel extends Model
             $requete->bindValue(':id', $id, PDO::PARAM_INT);
             $requete->execute();
 
-            // VERIF BIND OK :
             if ($requete->errorCode() !== "00000") {
-               throw new \Exception('Arg database');
+               throw new \Exception('Argh database');
             }
 
             return $requete->fetch(PDO::FETCH_OBJ);
@@ -53,10 +55,11 @@ class RevuesModel extends Model
     }
 
     /**
-     * methode qui ajoute une entrée à la table revues
      * @param $statement
-     * @return string
+     * @return string : id de l'entrée que l'on vient d'ajouter
      * @throws \Exception
+     * La méthode récupère les valeurs contenues dans $statement
+     * et les injecte dans la bdd
      */
     public function add($statement){
         if(is_array($statement)){
@@ -82,9 +85,8 @@ class RevuesModel extends Model
             $requete->bindValue(':datepub', $statement['datepub'], PDO::PARAM_STR);
             $requete->execute();
 
-            // VERIF BIND OK :
             if ($requete->errorCode() !== "00000") {
-                throw new \Exception('Arg database');
+                throw new \Exception('Argh database');
             }
 
             return (int) self::$db->lastInsertId();
@@ -92,10 +94,10 @@ class RevuesModel extends Model
     }
 
     /**
-     * methode supprime une entrée (celle de l'id) à la table revues
      * @param $id
      * @return null
      * @throws \Exception
+     * La méthode supprime de la bdd l'entrée qui correspond à l'id contenu dans $id
      */
     public function delete($id){
         if(is_int($id)){
@@ -111,11 +113,11 @@ class RevuesModel extends Model
     }
 
     /**
-     * methode qui met à jour toutes entrées de la table revues pour l'id
      * @param $statement
      * @param $id
-     * @return null
      * @throws \Exception
+     * Méthode qui met à jour une entrée de la bdd avec les valeurs de $statement
+     * à l'id contenu dans $id
      */
     public function update($statement, $id){
         if(is_array($statement) && is_int($id)){
@@ -136,11 +138,9 @@ class RevuesModel extends Model
             $requete->bindValue(':datepub', $statement['datepub'], PDO::PARAM_STR);
             $requete->execute();
 
-            // VERIF BIND OK :
             if ($requete->errorCode() !== "00000") {
-                throw new \Exception('Arg database');
+                throw new \Exception('Argh database');
             }
-            return 'ok';
         }
     }
 }
