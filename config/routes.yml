@@ -9,14 +9,24 @@ actus :
 
 actu :
   path: /actu?id={id}
-  defaults: { _controller: 'Controller\ActusController::afficheActus' }
+  defaults: { _controller: 'Controller\ActusController::afficheUneActu' }
+
+detail :
+  path: /details?id={id}
+  defaults: { _controller: 'Controller\RevuesController::detailRevue' }
 
 commander :
   path: /commander
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
 
 
+<<<<<<< Updated upstream
 # BACK OFFICE
+=======
+
+
+# NAVIGATION DANS LE BACK OFFICE :
+>>>>>>> Stashed changes
 admin :
   path: /admin
   defaults: { _controller: 'Controller\RevuesController::listAction' }

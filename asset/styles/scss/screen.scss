@@ -1,0 +1,16 @@
+// VARIABLE
+$blue: #34B8C9;
+$lato: 'Lato', 'helvetica' ,sans-serif;
+$merri: 'Merriweather', 'times' , serif;
+
+// IMPORT
+@import "partial/reset";
+@import "partial/menu";
+@import "partial/headercom";
+@import "partial/accueil";
+@import "partial/tri";
+@import "partial/revue";
+@import "partial/actu";
+@import "partial/forms";
+@import "partial/panier";
+@import "partial/qui";

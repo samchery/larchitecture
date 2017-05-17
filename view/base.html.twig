@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
-    {% block stylesheet %}{% endblock %}
+    <link rel="stylesheet" href="../asset/styles/css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400" rel="stylesheet">
 </head>
 <body>
+<main>
+    <figure class="fig-bg-cover">
+        <img src="../asset/img-content/background-cover.jpg" class="bg-cover" alt="background-cover">
+    </figure>
+    <header>
+        <div class="nav-up clearfix">
+            <img src="../asset/img-layout/architecture-logo.png" alt="logo l'architecture">
+            <a href="#"><span>Abonnez-vous</span></a>
+            <a href="#"><span>Commander le dernier numéro</span></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="#">Nos Revues</a></li>
+                <li><a href="#">Qui sommes-nous ?</a></li>
+                <li><a href="#">Appel d'offre</a></li>
+                <li><a href="/actus">Actualités</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="slogan">
+            <p>Toute l’actualité de <strong>l’architecture</strong><p>
+            <p>et de <strong>la construction</strong></p>
+        </div>
+    </header>
+
 {% block body %}{% endblock %}
 {% block javascript %}{% endblock %}
+
+    <footer class="footer">
+        <ul>
+            <li><a href="#">Copyright</a></li>
+            <li><a href="#">Mentions Légale</a></li>
+            <li><a href="/admin">Modérations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</main>
+</body>
+</html>
 </body>
 </html>

@@ -23,6 +23,16 @@ class RevuesController extends Controller
         ]);
     }
 
+    public function detailRevue()
+    {
+        $id = (int) $_GET['id'];
+        $model = new RevuesModel();
+        $data = $model->select($id);
+        return self::$twig->render('front/detailsRevue.html.twig',[
+            'list' => $data
+        ]);
+    }
+
     public function regionAction($region)
     {
         $model = new RevuesModel();
@@ -31,7 +41,6 @@ class RevuesController extends Controller
             'list' => $data
         ]);
     }
-
 
     /**
      * La méthode va suivant les cas :
