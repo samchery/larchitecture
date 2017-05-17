@@ -25,11 +25,12 @@ class ActusModel extends Model
                       id, 
                       datepub, 
                       architecte, 
-                      titre, 
+                      titre,
                       type, 
                       lieu,
                       description,
-                      mainimage
+                      mainimage,
+                      images
                     FROM actus';
             $requete = self::$db->query($sql);
 
@@ -43,7 +44,8 @@ class ActusModel extends Model
                       type, 
                       lieu,
                       description,
-                      mainimage
+                      mainimage,
+                      images
                 FROM actus
                 WHERE id = :id';
             $requete = self::$db->prepare($sql);
@@ -76,7 +78,8 @@ class ActusModel extends Model
                       type, 
                       lieu,
                       description,
-                      mainimage)                 
+                      mainimage,
+                      images)                 
                     VALUES(
                       NULL, 
                       :datepub, 
@@ -85,7 +88,8 @@ class ActusModel extends Model
                       :type, 
                       :lieu,
                       :description,
-                      :mainimage)';
+                      :mainimage,
+                      ::images)';
             $requete = self::$db->prepare($sql);
             $requete->bindValue(':datepub', $statement['datepub'], PDO::PARAM_INT);
             $requete->bindValue(':architecte', $statement['architecte'], PDO::PARAM_STR);
@@ -94,6 +98,7 @@ class ActusModel extends Model
             $requete->bindValue(':lieu', $statement['lieu'], PDO::PARAM_STR);
             $requete->bindValue(':description', $statement['description'], PDO::PARAM_STR);
             $requete->bindValue(':mainimage', $statement['mainimage'], PDO::PARAM_STR);
+            $requete->bindValue(':images', $statement['images'], PDO::PARAM_STR);
             $requete->execute();
 
             if ($requete->errorCode() !== "00000") {

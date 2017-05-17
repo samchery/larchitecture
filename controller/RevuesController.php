@@ -53,7 +53,6 @@ class RevuesController extends Controller
     }
 
     /**
-     * @param $id
      * Supprime l'entrée dont l'id est passé en paramètre
      * et redirige vers la liste des revues
      */
