@@ -12,8 +12,7 @@ use \Model\RevuesModel;
 class RevuesController extends Controller
 {
     /**
-     * methode qui va gérer : récupère les données de la requete select et les envoie dans le template twig de revue
-     * @return string
+     * On récupère la liste des données et on les envoie dans le template
      */
     public function listAction()
     {
@@ -26,7 +25,9 @@ class RevuesController extends Controller
 
 
     /**
-     * methode qui va gérer : ajout dans la BDD ou affichage formulaire
+     * La méthode va suivant les cas :
+     * - ajouter les informations récupérées en POST dans la BDD et rediriger vers le détail de la nouvelle entrée
+     * - rediriger vers le template qui affiche le formulaire d'ajout
      */
     public function addAction()
     {
@@ -44,17 +45,33 @@ class RevuesController extends Controller
         }
     }
 
+    /**
+     * @param $id
+     * Supprime l'entrée dont l'id est passé en paramètre
+     * et redirige vers la liste des revues
+     */
     public function deleteAction($id)
     {
+        // on s'assure que l'id est bien un entier
         $id = (int) $id;
+
         $model = new RevuesModel();
         $model->delete($id);
         header('location : index.php?a=list');
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     * La méthode va suivant les cas :
+     * - rediriger vers le formulaire de modification prérempli suivant l'id passé en paramètre
+     * - updater la bdd et rediriger vers la liste des revues
+     */
     public function updateAction($id)
     {
+        // on s'assure que l'id est bien un entier
         $id = (int) $id;
+
         if(count($_POST) == 0){
             $model = new RevuesModel();
             $detail = $model->select($id);
