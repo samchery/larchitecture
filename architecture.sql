@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
-<<<<<<< Updated upstream
--- Generation Time: May 17, 2017 at 08:01 AM
-=======
--- Generation Time: May 17, 2017 at 09:04 AM
->>>>>>> Stashed changes
+-- Generation Time: May 17, 2017 at 09:13 AM
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -47,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `actus` (
 --
 
 INSERT INTO `actus` (`id`, `date`, `architecte`, `titre`, `type`, `lieu`, `description`, `mainimage`, `images`) VALUES
-(1, '21/05/2009', 'ABH Architectes', 'Projet Astrale - Construction d''un ensemble de bureaux au Plessis Robinson', 'Tertiaire - Bureau', 'Plessis Robinson (92)', '', 'photo_princid1.jpg', ''),
-(2, '20/05/2009', 'ARSENAULT Eric', 'Internat du lycée agricole à Château Chinon', 'Enseignement - Lycée', 'Chinon (58)', '', 'photo_princid2.jpg', ''),
-(3, '20/05/2009', 'BIK Architecture', 'Aménagement du bowling "Le colisée" à Angers', 'Espace de loisir', 'Angers (49)', '', 'photo_princid3.jpg', ''),
-(4, '20/05/2009', 'DUCLOS Architectes Associés', 'Construction de la délégation régionale du CNFPT à Poitiers', 'Tertiaire - Bureau', 'Poities (86)', '', 'photo_princid4.jpg', ''),
-(5, '20/05/2009', 'MICHEL Jean-Louis', 'Construction du nouveau siège social de la C.A.F. du Gard', 'Tertiaire - Bureau', 'Gard (30)', '', 'photo_princid5.jpg', '');
+(1, '21/05/2009', 'ABH Architectes', 'Projet Astrale - Construction d''un ensemble de bureaux au Plessis Robinson', 'Tertiaire - Bureau', 'Plessis Robinson (92)', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor.	 L''immeuble tertiaire "Astrale" permet de répondre aussi bien à un mono utilisateur qu’à un grand nombre de locataires. D’une capacité d''accueil de 1 500 personnes, avec une surface de 25 000 m2 SHON et 56 000m2 SHOB, il intègre 760 places de parkings sur 2 niveaux de sous-sol et un restaurant 1000 couverts. Le parti d''implantation est de créer un bâtiment urbain périmétrique permettant de dégager un parc végétal de la plus grande dimension possible en son centre. Le restaurant tout en courbe devient lui même une partie de ce jardin en s''agrémentant d''une terrasse végétalisée. L''ensemble des bâtiments s''articule autour de ce parc où plateaux, paliers, escaliers, rue intérieure et restaurant ont des vues. Deux halls principaux ponctuent l’édifice en marquant fortement la volumétrie de l’ensemble.\r\nAu Nord une faille entièrement vitrée accompagnée par un voile en béton blanc courbe offre une transparence entre l’avenue et le jardin intérieur.\r\nAu Sud, un totem vitré lumineux visible depuis l’A86 englobe les salles de réunion rouges afin de former un signal identitaire.\r\nL’organisation en plan résulte d’une recherche de confort et de flexibilité des plateaux de bureaux ainsi que d’une optimisation de l’éclairage naturel, y compris pour l’ensemble des circulations verticales et horizontales. \r\nLes systèmes environnementaux développés sont le traitement de toiture végétalisée avec récupération des eaux de pluies, \r\nla mise en place de pompes à chaleur individuelles réversibles raccordées sur une boucle thermodynamique,\r\nun système de gestion technique centralisé.', 'photo_princid1.jpg', ''),
+(2, '20/05/2009', 'ARSENAULT Eric', 'Internat du lycée agricole à Château Chinon', 'Enseignement - Lycée', 'Chinon (58)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid2.jpg', ''),
+(3, '20/05/2009', 'BIK Architecture', 'Aménagement du bowling "Le colisée" à Angers', 'Espace de loisir', 'Angers (49)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid3.jpg', ''),
+(4, '20/05/2009', 'DUCLOS Architectes Associés', 'Construction de la délégation régionale du CNFPT à Poitiers', 'Tertiaire - Bureau', 'Poities (86)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid4.jpg', ''),
+(5, '20/05/2009', 'MICHEL Jean-Louis', 'Construction du nouveau siège social de la C.A.F. du Gard', 'Tertiaire - Bureau', 'Gard (30)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid5.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -91,28 +87,17 @@ INSERT INTO `partenaires` (`id`, `nom`, `departement`, `url`, `region`, `secteur
 CREATE TABLE IF NOT EXISTS `revues` (
   `id` int(11) NOT NULL,
   `numero` int(11) NOT NULL,
-<<<<<<< Updated upstream
-  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `region` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `zone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `datepub` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-=======
   `img` varchar(255) NOT NULL,
   `region` varchar(255) NOT NULL,
   `zone` varchar(255) NOT NULL,
   `datepub` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
->>>>>>> Stashed changes
 
 --
 -- Dumping data for table `revues`
 --
 
 INSERT INTO `revues` (`id`, `numero`, `img`, `region`, `zone`, `datepub`) VALUES
-<<<<<<< Updated upstream
-(1, 150, 'truc.jpg', 'Ile-de-France', 'France métropolitaine', 2016);
-=======
 (1, 285, 'couv_285.jpg', 'Martinique', 'France métropolitaine', '2017'),
 (2, 284, 'couv_284.jpg', 'Ile-de-France', 'France métropolitaine', '2016'),
 (3, 283, 'couv_283.jpg', 'Bretagne - Normandie', 'France métropolitaine', '2016'),
@@ -129,7 +114,6 @@ INSERT INTO `revues` (`id`, `numero`, `img`, `region`, `zone`, `datepub`) VALUES
 (14, 271, 'couv_271.jpg', 'Réunion', 'Outre-Mer', '2015'),
 (15, 270, 'couv_270.jpg', 'Saint-Martin - Saint-barthelemy', 'Outre-Mer', '2015'),
 (16, 269, 'couv_269.jpg', 'Ile-de-France', 'France métropolitaine', '2015');
->>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
