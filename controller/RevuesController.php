@@ -84,7 +84,7 @@ class RevuesController extends Controller
         if(count($_POST) == 0){
             $model = new RevuesModel();
             $detail = $model->select($id);
-            return self::$twig->render('revues/form2.html.twig',[
+            return self::$twig->render('revues/form.html.twig',[
                 'list' => $detail
             ]);
         } else {
