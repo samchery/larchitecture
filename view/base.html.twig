@@ -17,7 +17,7 @@
         <div class="nav-up clearfix">
             <img src="../asset/img-layout/architecture-logo.png" alt="logo l'architecture">
             <a href="#"><span>Abonnez-vous</span></a>
-            <a href="#"><span>Commander le dernier numéro</span></a>
+            <a href="/commander"><span>Commander le dernier numéro</span></a>
         </div>
         <nav class="nav">
             <ul>
@@ -36,7 +36,15 @@
     </header>
 
 {% block body %}{% endblock %}
-{% block javascript %}{% endblock %}
+{% block javascript %}
+    <script type="text/javascript">
+        //autotextarea
+        function adjust_textarea(h) {
+            h.style.height = "20px";
+            h.style.height = (h.scrollHeight)+"px";
+        }
+    </script>
+{% endblock %}
 
     <footer class="footer">
         <ul>
