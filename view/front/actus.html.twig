@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Affichage actus</h1>
+{% if lastActues > 1 %}
+<table>
+    <tr>
+        <th>date publication</th>
+        <th>archi</th>
+        <th>voir</th>
+    </tr>
+
+        {% for elem in lastActues %}
+            <tr>
+           <td> {{ elem.datepub }} </td>
+            <td>  {{ elem.architecte }}</td>
+                <td><a href="actu?id={{ elem.id }}">voir ({{ elem.id }})</a></td>
+</tr>
+        {% endfor %}
+
+</table>
+{% else %}
+<table>
+    <tr>
+        <th>date publication</th>
+        <th>archi</th>
+
+    </tr>
+    <tr>
+        <td> {{ lastActues.datepub }} </td>
+        <td>  {{ lastActues.architecte }}</td>
+    </tr>
+</table>
+{% endif %}
+
+{% endblock %}
