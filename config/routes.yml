@@ -2,8 +2,19 @@ homepage:
   path: /
   defaults: { _controller: 'Controller\PageController::goHome' }
 
+actus :
+  path: /actus
+  defaults: { _controller: 'Controller\ActusController::afficheActus' }
+
+actu :
+  path: /actu?id={id}
+  defaults: { _controller: 'Controller\ActusController::afficheActus' }
+
+commander :
+  path: /commander
+  defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
+
 admin :
   path: /admin
   defaults: { _controller: 'Controller\RevuesController::listAction' }
-
 
