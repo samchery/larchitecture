@@ -4,6 +4,10 @@ namespace Controller;
 use \Helper\Connect;
 use Model\RevuesModel;
 
+/**
+ * Class FrontController
+ * Permet de gérer les actions en fonction des paramètres passés dans l'url
+ */
 class FrontController
 {
     public function __construct()
