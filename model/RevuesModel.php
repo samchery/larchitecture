@@ -13,6 +13,7 @@ class RevuesModel extends Model
 {
     /**
      * @param null $id
+     * @param null $limit
      * @return array | bool
      * @throws \Exception
      * Suivant les cas, la méthode va :
@@ -20,7 +21,7 @@ class RevuesModel extends Model
      * - sélectionner une entrée correspondant à l'id passée en paramètre
      */
     public function select($id = Null){
-        if($id === Null){
+        if($id == Null){
             $sql = 'SELECT 
                       id, 
                       numero, 
@@ -32,7 +33,7 @@ class RevuesModel extends Model
             $requete = self::$db->query($sql);
 
             return $requete->fetchAll(PDO::FETCH_OBJ);
-        } elseif (is_int($id)){
+        } else {
             $sql = 'SELECT 
                   id, 
                   numero, 
@@ -52,6 +53,24 @@ class RevuesModel extends Model
 
             return $requete->fetch(PDO::FETCH_OBJ);
         }
+    }
+
+    public function getLast($limation){
+        $limation = (int) $limation;
+        $sql = 'SELECT 
+                      id, 
+                      numero, 
+                      img, 
+                      region, 
+                      zone, 
+                      datepub 
+                    FROM revues
+                    LIMIT :limitation';
+        $requete = self::$db->prepare($sql);
+        $requete->bindValue(':limitation', $limation, PDO::PARAM_INT);
+        $requete->execute();
+
+        return $requete->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function selectByRegion($region){

@@ -1,13 +1,40 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>HAHAHAHAHAHA CAY LA HOME</h1>
+    <section class="dernieres-actu clearfix">
 
-    {% for elem in lastrevues %}
-        <tr>
-            <td><a href="index.php?a=zone&region={{ elem.region }}">{{ elem.region }}</a></td>
-            <td><a href="index.php?a=supp&id={{ elem.id }}">supprimer ({{ elem.id }})</a></td>
-            <td><a href="index.php?a=modifier&id={{ elem.id }}">modifier ({{ elem.id }})</a></td>
-        </tr>
-    {% endfor %}
+        <div class="titre-section clearfix">
+            <hr>
+            <h2 class="h2">Les dernières revues</h2>
+        </div>
+
+        {% for elem in lastrevues %}
+            <div class="revue-actu">
+                <a href="details?id={{ elem.id }}">
+                    <span class="ref-numero">
+                        <p>N°{{ elem.numero }}</p>
+                        <p>{{ elem.region }}</p>
+                    </span>
+                    <img src="../../asset/img-content/{{ elem.img }}" class="img-dernieres-actu" alt="revue">
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="actualites clearfix">
+        <div class="titre-section clearfix">
+            <hr>
+            <h2 class="h2">Actualités</h2>
+        </div>
+
+        {% for elem in lastActus %}
+            <div class="actu-part">
+                <a href="actu?id={{ elem.id }}">
+                    <img src="../../asset/img-content/{{ elem.mainimage }}" class="img-actu-part" alt="partenaire">
+                    <h3 class="h3">{{ elem.architecte }}</h3>
+                    <p>{{ elem.titre }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}

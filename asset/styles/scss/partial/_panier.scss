@@ -1,0 +1,173 @@
+body {
+	margin: 0 auto;
+	font-family: $lato;
+}
+
+.panier {
+	width: 80%;
+	float: left;
+	margin: 8% 0 0 10%;
+	border-bottom: 1px solid black;
+	
+	figure {
+		float: left;
+		width: 20%;
+		margin-bottom: 2%;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 480px) {
+		figure {
+			float: none;
+			margin: 0 auto 2%;
+			width: 60%;
+		}
+	}
+
+	h2 {
+		float: left;
+		font-family: $merri;
+		font-size: 120%;
+		margin: 2% 0 0 18%;
+		width: 57%;
+	}
+
+	@media screen and (max-width: 480px) {
+		h2 {
+			float: none;
+			font-size: 1.4rem;
+			text-align: center;
+		}
+	}
+
+	label {
+		font-size: 90%;
+		font-family: $merri;
+		margin-left: 25%;
+	}
+
+	@media screen and (max-width: 480px) {
+		label {
+			font-size: 1.3rem;
+			margin-left: 0;
+		}
+	}
+
+	select {
+		margin: 7%;
+		width: 12%;
+	}
+
+	@media screen and (max-width: 480px) {
+		select {
+			margin: 5%;
+			width: 15%;
+		}
+	}
+
+	.price {
+		text-align: center;
+		font-size: 100%;
+		font-family: $lato;
+		float: right;
+		width: 20%;
+		border: 1px solid $blue;
+		padding: 1%;
+	}
+
+	@media screen and (max-width: 480px) {
+		.price {
+			text-align: center;
+			font-size: 1.2rem;
+			width: 40%;
+			margin-top: 3%;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.panier {
+		padding-bottom: 3%;
+	}
+}
+
+
+
+.tab {
+	width: 100%;
+	float: left;
+	font-family: $lato;
+	font-size: 120%;
+	text-decoration: underline;
+	margin: 5% 0 0 7%;
+	
+	a {
+		color: #000;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.tab {
+		width: 100%;
+		float: left;
+		font-size: 1.4rem;
+		margin: 7% 0 0 10%;
+	}
+}
+
+/**********BOUTTON**********/
+
+.button-commander {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: $blue;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 100%;
+	padding: 1%;
+	width: 150px;
+	transition: all 0.5s;
+    cursor: pointer;
+	float: right;
+	margin: 5% 5%;
+
+	span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+
+		&:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+	}
+	
+	&:hover span {
+		padding-right: 25px;
+	}
+
+	&:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.button-commander {
+		font-size: 1.6rem;
+		width: 50%;
+		height: 40px;
+		float: none;
+		margin: 10% 25%;
+	}
+}
+

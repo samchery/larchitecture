@@ -60,6 +60,25 @@ class ActusModel extends Model
         }
     }
 
+    public function getLast($limation){
+        $limation = (int) $limation;
+        $sql = 'SELECT 
+                      id, 
+                      datepub, 
+                      architecte, 
+                      titre, 
+                      type, 
+                      lieu,
+                      description,
+                      mainimage
+                    FROM actus
+                    LIMIT :limitation';
+        $requete = self::$db->prepare($sql);
+        $requete->bindValue(':limitation', $limation, PDO::PARAM_INT);
+        $requete->execute();
+
+        return $requete->fetchAll(PDO::FETCH_OBJ);
+    }
 
     /**
      * @param $statement

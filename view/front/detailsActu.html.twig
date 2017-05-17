@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>ici les détails d'une actu</h1>
+<table>
+    <tr>
+        <th>date publication</th>
+        <th>archi</th>
+
+    </tr>
+    <tr>
+        <td> {{ lastActues.datepub }} </td>
+        <td>  {{ lastActues.architecte }}</td>
+    </tr>
+</table>
+{% endblock %}
