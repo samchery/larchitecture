@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: May 15, 2017 at 02:19 PM
+-- Generation Time: May 17, 2017 at 08:01 AM
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -64,14 +64,14 @@ CREATE TABLE IF NOT EXISTS `revues` (
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `region` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `zone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` int(11) NOT NULL
+  `datepub` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `revues`
 --
 
-INSERT INTO `revues` (`id`, `numero`, `img`, `region`, `zone`, `date`) VALUES
+INSERT INTO `revues` (`id`, `numero`, `img`, `region`, `zone`, `datepub`) VALUES
 (1, 150, 'truc.jpg', 'Ile-de-France', 'France métropolitaine', 2016);
 
 -- --------------------------------------------------------
