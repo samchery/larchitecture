@@ -1,22 +1,20 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>Affichage liste actus</h1>
-<table>
-    <tr>
-        <th>date publication</th>
-        <th>archi</th>
-        <th>voir</th>
-    </tr>
 
-        {% for elem in lastActues %}
-            <tr>
-           <td> {{ elem.datepub }} </td>
-            <td>  {{ elem.architecte }}</td>
-                <td><a href="actu?id={{ elem.id }}">voir ({{ elem.id }})</a></td>
-</tr>
+    <div class="titre-section clearfix">
+        <hr>
+        <h2 class="h2">nos actualités</h2>
+    </div>
+
+    {% for elem in lastActues %}
+        <section class="actu clearfix">
+            <figure><img src="../../asset/img-content/{{ elem.mainimage }}" alt=""></figure>
+            <article>
+                <h3>{{ elem.titre }}</h3>
+                <h4>{{ elem.architecte }}  {{ elem.datepub }}</h4>
+                <p>{{ elem.resum }} <a href="actu?id={{ elem.id }}">Lire la suite…</a></p>
+            </article>
+        </section>
         {% endfor %}
-
-</table>
-
 {% endblock %}

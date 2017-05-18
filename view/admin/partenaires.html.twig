@@ -2,9 +2,9 @@
 
 
 {% block body %}
-    <h1>GESTION DES PARTENAIRES</h1>
+    <a href="/admin/addpartenaires" class="add-btn">Ajouter un partenaire</a>
 
-    <table>
+    <table class="revues-list part">
         {% for elem in partenaires %}
             <tr>
                 <td>{{ elem.nom }}</td>
@@ -12,8 +12,7 @@
                 <td>{{ elem.url }}</td>
                 <td>{{ elem.region }}</td>
                 <td>{{ elem.secteur }}</td>
-                <td><a href="modifpartenaire?id={{ elem.id }}">Modifier</a></td>
-                <td><a href="deletepartenaire?id={{ elem.id }}">Supprimer</a></td>
+                <td><a href="modifpartenaire?id={{ elem.id }}">Modifier</a> <a href="deletepartenaire?id={{ elem.id }}">Supprimer</a></td>
             </tr>
         {% endfor %}
     </table>

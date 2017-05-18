@@ -23,4 +23,19 @@ class PageController extends Controller
             'lastActus' => $dataActu
         ]);
     }
+
+    public function goQui()
+    {
+        return self::$twig->render('front/quisommesnous.html.twig');
+    }
+
+    public function goMentions()
+    {
+        return self::$twig->render('front/mentions.html.twig');
+    }
+
+    public function goContact()
+    {
+        return self::$twig->render('front/contact.html.twig');
+    }
 }

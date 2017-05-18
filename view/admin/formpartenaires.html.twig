@@ -2,6 +2,8 @@
 
 {% block body %}
     {%  if list %}
+    <div class="admin-form actus">
+    <h3>Modification d'un partenaire</h3>
         <form method="post" action="#">
             <p>
                 <label for="nom">Nom :</label>
@@ -14,7 +16,7 @@
             </p>
 
             <p>
-                <label for="url">Url :</label>
+                <label for="url">URL :</label>
                 <input type="text" name="url" id="url" value="{{ list.url }}">
             </p>
 
@@ -30,7 +32,10 @@
 
             <input type="submit" value="Modifier">
         </form>
+    </div>
     {% else %}
+    <div class="admin-form actus">
+    <h3>Ajout d'un partenaire</h3>
         <form method="post" action="#">
             <p>
                 <label for="nom">Nom :</label>
@@ -43,7 +48,7 @@
             </p>
 
             <p>
-                <label for="url">Url :</label>
+                <label for="url">URL :</label>
                 <input type="text" name="url" id="url">
             </p>
 
@@ -59,5 +64,6 @@
 
             <input type="submit" value="Ajouter">
         </form>
+    </div>
     {% endif %}
 {% endblock %}

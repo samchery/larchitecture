@@ -1,16 +1,19 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>ici les détails d'une actu</h1>
-<table>
-    <tr>
-        <th>date publication</th>
-        <th>archi</th>
+<section class="clearfix">
 
-    </tr>
-    <tr>
-        <td> {{ lastActues.datepub }} </td>
-        <td>  {{ lastActues.architecte }}</td>
-    </tr>
-</table>
+    <div class="actu-title">
+        <h2>{{ lastActues.titre }}</h2>
+        <h3>{{ lastActues.architecte }}  - {{ lastActues.datepub }}</h3>
+    </div>
+
+    <section class="text-actu">
+        <figure><img src="../../asset/img-content/{{ lastActues.mainimage }}" alt=""></figure>
+        <article>
+            <p class="line1">{{ lastActues.description }}</p>
+        </article>
+    </section>
+
+</section>
 {% endblock %}

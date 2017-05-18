@@ -3,21 +3,37 @@ homepage:
   path: /
   defaults: { _controller: 'Controller\PageController::goHome' }
 
+revues :
+  path: /revues
+  defaults: { _controller: 'Controller\RevuesController::listRevues' }
+
+detailrevues :
+  path: /revue?id={id}
+  defaults: { _controller: 'Controller\RevuesController::detailRevue' }
+
 actus :
   path: /actus
-  defaults: { _controller: 'Controller\ActusController::afficheActus' }
+  defaults: { _controller: 'Controller\ActusController::afficheActusFront' }
 
-actu :
+detailactu :
   path: /actu?id={id}
   defaults: { _controller: 'Controller\ActusController::afficheUneActu' }
-
-detail :
-  path: /details?id={id}
-  defaults: { _controller: 'Controller\RevuesController::detailRevue' }
 
 commander :
   path: /commander
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
+
+quisommesnous :
+  path: /quisommesnous
+  defaults: { _controller: 'Controller\PageController::goQui' }
+
+mentionslegales :
+  path: /mentions
+  defaults: { _controller: 'Controller\PageController::goMentions' }
+
+contact :
+  path: /contact
+  defaults: { _controller: 'Controller\PageController::goContact' }
 
 
 # BACK OFFICE

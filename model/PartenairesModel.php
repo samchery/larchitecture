@@ -54,6 +54,27 @@ class PartenairesModel extends Model
         }
     }
 
+    public function getRegion($region){
+            $sql = 'SELECT 
+                      id, 
+                      nom, 
+                      departement, 
+                      url, 
+                      region, 
+                      secteur 
+                    FROM partenaires
+                    WHERE region = :region';
+
+            $requete = self::$db->prepare($sql);
+            $requete->bindValue(':region', $region, PDO::PARAM_STR);
+            $requete->execute();
+
+            if ($requete->errorCode() !== "00000") {
+                throw new \Exception('Argh database');
+            }
+
+            return $requete->fetchAll(PDO::FETCH_OBJ);
+    }
 
     /**
      * @param $statement

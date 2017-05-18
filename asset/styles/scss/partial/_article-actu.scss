@@ -1,0 +1,56 @@
+section {
+	.actu-title {
+		width: 100%;
+		text-align: center;
+		h2 {
+			font-size: 120%;
+			font-weight: 700;
+		}
+		h3 {
+			font-size: 110%;
+		}
+	}
+
+	.text-actu {
+		float: left;
+		figure {
+			width: 25%;
+			float: left;
+			img {
+				width: 100%;
+			}
+		}
+		article {
+			.line1 {
+				width: 100%;
+				float: left;
+				font-weight: 300;
+				text-align: justify;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			.text-actu {
+				float: none;
+				figure {
+					width: 90%;
+					float: none;
+				}
+				article {
+					.line1 {
+						float: none;
+					}
+				}
+			}
+			@media only screen and (max-width: 468px) {
+				.text-actu {
+					float: none;
+					figure {
+						width: 100%;
+						float: none;
+					}
+				}
+			}
+		}
+	}
+}
