@@ -2,13 +2,12 @@
 
 {% block body %}
 
-    <div class="titre-section clearfix">
-        <hr>
-        <h2 class="h2">toutes nos revues</h2>
+    <div class="titre-section">
+    <hr>
+    <h2 class="h2">toutes nos revues</h2>
     </div>
-
-    <div class="tri clearfix">
-        <form action="#">
+    <div class="tri">
+        <form class="france">
             <label for="fr">Toutes la France</label>
             <select id="fr" name="fr">
                 <optgroup label="France">
@@ -36,7 +35,7 @@
                 </optgroup>
             </select>
         </form>
-        <form action="#">
+        <form action="domtom">
             <label for="dt">DOM TOM</label>
             <select id="dt" name="dt">
                 <optgroup label="DOM TOM">
@@ -50,7 +49,7 @@
                 </optgroup>
             </select>
         </form>
-        <form action="#">
+        <form action="etranger">
             <label for="etranger">Étranger</label>
             <select id="etranger" name="etranger">
                 <optgroup label="Étranger">
@@ -67,7 +66,7 @@
         <h2 class="h2">nos dernières revues</h2>
     </div>
 
-    <section class="list-revues clearfix">
+    <section class="revues">
     {% for elem in list %}
        <div>
            <a href="/revue?id={{ elem.id }}" class="element">

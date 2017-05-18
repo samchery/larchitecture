@@ -1,14 +1,21 @@
 .back {
   color: #35AEBD;
   font-size: 1.6rem;
+  margin-left: 5%;
 }
 
 .apercu {
+  width: 100%;
+  float: left;
   text-align: center;
+  margin-bottom: 4%;
+
   figure {
+    margin: 0 auto;
     width: 26%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+
     img {
       width: 100%;
     }
@@ -21,7 +28,7 @@
   }
 
   h3 {
-    font-size: 120%;
+    font-size: 1.8rem;
     font-family: $lato;
     margin-bottom: 3%;
   }
@@ -33,15 +40,14 @@
     color: #fff;
     text-transform: uppercase;
     border-radius: 8px;
-    margin-top: 3%;
     font-size: 1.3rem;
   }
 
   @media screen and (max-width: 960px) {
     a {
       display: block;
-      padding: 10px 0;
       width: 40%;
+      padding: 10px 0;
       height: 30px;
       margin: 0 30%;
     }
@@ -56,7 +62,7 @@
 
 .partenaires {
   width: 100%;
-  margin-top: 10%;
+  margin: 3% 0 0;
   display: flex;
   float: left;
   justify-content: space-around;

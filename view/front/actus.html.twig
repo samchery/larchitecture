@@ -7,14 +7,16 @@
         <h2 class="h2">nos actualités</h2>
     </div>
 
-    {% for elem in lastActues %}
-        <section class="actu clearfix">
-            <figure><img src="../../asset/img-content/{{ elem.mainimage }}" alt=""></figure>
-            <article>
-                <h3>{{ elem.titre }}</h3>
-                <h4>{{ elem.architecte }}  {{ elem.datepub }}</h4>
-                <p>{{ elem.resum }} <a href="actu?id={{ elem.id }}">Lire la suite…</a></p>
-            </article>
-        </section>
-        {% endfor %}
+    <div class="contenu-actu clearfix">
+        {% for elem in lastActues %}
+            <section class="actu">
+                <figure><img src="../../asset/img-content/{{ elem.mainimage }}" alt=""></figure>
+                <article>
+                    <h3>{{ elem.titre }}</h3>
+                    <h4>{{ elem.architecte }}  {{ elem.datepub }}</h4>
+                    <p>{{ elem.resum }} <a href="actu?id={{ elem.id }}">Lire la suite…</a></p>
+                </article>
+            </section>
+            {% endfor %}
+    </div>
 {% endblock %}

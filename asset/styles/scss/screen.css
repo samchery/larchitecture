@@ -1,8 +1,48 @@
-* {
+/*-----------------RESET----------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*-----------------All---------------*/
 *,
 *:before,
 *:after {
@@ -19,12 +59,11 @@
 html {
   font-size: 62.5%; }
 
-html {
-  font-size: 62.5%; }
-
 body {
-  font-family: "Lato", "helvetica", sans-serif;
-  font-size: 1.4rem; }
+  font-family: "Lato", "helvetica", sans-serif; }
+
+main {
+  width: 100%; }
 
 a {
   text-decoration: none;
@@ -33,36 +72,24 @@ a {
 /* -- TITRE DES SECTIONS -- */
 .titre-section {
   width: 100%;
-  position: relative; }
+  margin: 1% 0 2%;
+  position: relative;
+  text-align: center; }
   .titre-section .h2 {
-    text-transform: uppercase;
-    width: 30%;
-    margin: 25px auto;
-    font-size: 3.2rem;
-    text-align: center;
+    display: inline;
+    margin: 0 auto;
+    padding: 0 2%;
+    font-size: 2.6rem;
     font-weight: 700;
-    background-color: #fff; }
-  @media screen and (max-width: 1100px) {
-    .titre-section .h2 {
-      width: 35%; } }
-  @media screen and (max-width: 960px) {
-    .titre-section .h2 {
-      font-size: 2.4rem; } }
-  @media screen and (max-width: 680px) {
-    .titre-section .h2 {
-      width: 50%; } }
-  @media screen and (max-width: 480px) {
-    .titre-section .h2 {
-      width: 70%;
-      font-size: 2rem; } }
+    background-color: #fff;
+    text-transform: uppercase; }
   .titre-section hr {
-    position: absolute;
     width: 95%;
-    margin: 25px 2.5%;
+    margin: 0 2.5%;
+    position: absolute;
     background: #000;
-    top: 20px;
-    z-index: -1;
-    height: 3px; }
+    top: 15px;
+    z-index: -1; }
   @media screen and (max-width: 960px) {
     .titre-section hr {
       top: 15px; } }
@@ -89,8 +116,9 @@ header {
     border-bottom: 1px solid #fff;
     background-color: #000; }
     header .nav-up img {
-      width: 20%;
-      margin: 10px 2% 0;
+      width: 16%;
+      margin: 10px 2% 5px;
+      padding-top: 10px;
       float: left; }
     @media screen and (max-width: 768px) {
       header .nav-up img {
@@ -136,28 +164,27 @@ header {
         display: block;
         padding: 0;
         margin: 10px 0; } }
-  header nav {
+  header .nav {
     margin-top: 10px;
     margin-left: 2%;
     font-weight: 300; }
-    header nav ul {
-      padding-top: 10px; }
-      header nav ul li {
-        display: inline-block; }
-        header nav ul li a {
-          display: table-cell;
+    header .nav ul {
+      width: 100%; }
+      header .nav ul li {
+        display: table-cell; }
+        header .nav ul li a {
           padding: 0 30px;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           color: #fff; }
-        header nav ul li a:hover {
+        header .nav ul li a:hover {
           color: #34B8C9; }
         @media screen and (max-width: 768px) {
-          header nav ul li a {
+          header .nav ul li a {
             display: block;
             padding: 5px;
             margin: 10px 0; } }
         @media screen and (max-width: 480px) {
-          header nav ul li a {
+          header .nav ul li a {
             display: initial;
             margin: 0 0;
             padding: 0 0;
@@ -170,7 +197,7 @@ header {
       margin-left: 0;
       background: #000;
       overflow: hidden;
-      transition: 0.5s; } }
+      trznsition: 0.5s; } }
   header .slogan {
     width: 100%;
     margin-top: 13%; }
@@ -291,72 +318,82 @@ header {
     text-align: center;
     float: none; } }
 
-.actu figure {
-  width: 40%;
-  float: left; }
-  .actu figure img {
-    width: 100%; }
-@media screen and (max-width: 480px) {
+.actu {
+  width: 90%;
+  display: flex;
+  float: left;
+  justify-content: space-around;
+  font-family: "Lato", "helvetica", sans-serif;
+  margin: 0 auto;
+  margin: 2% 0 3% 5%;
+  align-items: center; }
   .actu figure {
-    width: 100%;
-    float: none; } }
-.actu article {
-  width: 55%;
-  float: left; }
-  .actu article h3 {
-    font-size: 1.8rem;
-    margin-bottom: 4%;
-    font-weight: 700; }
-  .actu article h4 {
-    font-size: 1.6rem;
-    margin-bottom: 7%; }
-  .actu article p {
-    font-family: "Merriweather", "times", serif;
-    line-height: 16px;
-    font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: 1px; }
-    @media screen and (max-width: 480px) {
-      .actu article p:last-of-type {
-        width: 90%;
-        text-align: left; } }
-  .actu article a {
-    color: #34B8C9;
-    text-decoration: underline; }
-@media screen and (max-width: 480px) {
+    width: 40%; }
+    .actu figure img {
+      width: 100%; }
+  @media screen and (max-width: 480px) {
+    .actu figure {
+      width: 100%; } }
   .actu article {
-    width: 90%;
-    margin: 0 auto; } }
+    text-align: center;
+    width: 55%; }
+    .actu article h3 {
+      font-size: 1.8rem;
+      margin-bottom: 4%;
+      font-weight: 700; }
+    .actu article h4 {
+      font-size: 1.7rem;
+      margin-bottom: 7%; }
+    .actu article p {
+      font-family: "Merriweather", "times", serif;
+      line-height: 16px;
+      font-size: 1.5rem;
+      line-height: 19px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      text-align: justify; }
+      @media screen and (max-width: 480px) {
+        .actu article p:last-of-type {
+          width: 90%; } }
+      .actu article p a {
+        color: #35AEBD;
+        text-transform: underline; }
+  @media screen and (max-width: 480px) {
+    .actu article {
+      width: 90%;
+      margin: 0 auto; } }
 
 @media screen and (max-width: 480px) {
   .actu {
-    width: 100%;
+    width: 90%;
+    display: initial;
     float: none; } }
 /* ---------- PAGE QUI SOMMES NOUS -------- */
 .who {
   padding-top: 2%;
   width: 100%;
+  float: left;
   font-family: "Lato", "helvetica", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding-bottom: 2%; }
   .who figure {
     width: 40%;
-    float: left;
-    /* figure dans img */ }
-    .who figure img {
-      width: 100%;
-      display: block; }
-  .who article {
-    width: 60%;
     float: left; }
+    .who figure img {
+      width: 100%; }
+  .who article {
+    width: 50%; }
     .who article h3 {
-      font-size: 1.8rem;
+      text-align: center;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 6%; }
     .who article p {
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 24px;
-      padding: 5px 25px 0 25px; }
+      text-align: justify;
+      font-size: 1.8rem;
+      line-height: 22px; }
 
 .contact-wrapper {
   margin-top: 75px; }
@@ -398,38 +435,64 @@ header {
         .contact-wrapper .contact .container .container {
           width: 90%; } }
 
-.tri form {
-  float: left;
-  width: 33%; }
-  .tri form label {
+.tri {
+  width: 100%;
+  height: 150px;
+  margin-top: 1%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  float: left; }
+  .tri label {
     display: block;
     text-align: center;
-    margin-bottom: 5%; }
-  .tri form select {
-    width: 200px; }
-
-.list-revues div {
-  width: 30%;
-  margin: 1%;
-  float: left;
-  height: 375px;
-  overflow: hidden; }
-  .list-revues div a.element figure {
-    width: 45%;
-    margin-bottom: 4%; }
-    .list-revues div a.element figure img {
-      width: 100%; }
-  .list-revues div a.element h3 {
-    font-size: 100%;
-    font-family: "Merriweather", "times", serif;
-    margin-bottom: 6%; }
-  .list-revues div a.commander {
-    padding: 1%;
-    background-color: #35AEBD;
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+    margin: 2% 0 8%;
+    font-size: 1.8rem;
+    color: #fff; }
+  .tri select {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
     border-radius: 8px; }
+
+.revues {
+  width: 100%;
+  float: left;
+  text-align: center; }
+  .revues div {
+    width: 50%;
+    margin-top: 7%;
+    float: left; }
+    .revues div figure {
+      margin: 0 auto;
+      width: 45%;
+      margin-bottom: 4%; }
+      .revues div figure img {
+        width: 100%; }
+    .revues div h3 {
+      font-size: 1.6rem;
+      font-family: "Merriweather", "times", serif;
+      margin-bottom: 6%; }
+    .revues div a {
+      padding: 1.5%;
+      background-color: #35AEBD;
+      text-transform: uppercase;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      color: #fff; }
+
+.more {
+  clear: both;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 5%; }
+  .more a {
+    text-decoration: underline;
+    color: #000;
+    text-transform: uppercase; }
 
 /* ----- FOOTER ------- */
 footer {
@@ -470,21 +533,26 @@ footer {
 
 .back {
   color: #35AEBD;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  margin-left: 5%; }
 
 .apercu {
-  text-align: center; }
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 4%; }
   .apercu figure {
+    margin: 0 auto;
     width: 26%;
     margin-top: 5%;
-    margin-bottom: 5%; }
+    margin-bottom: 2%; }
     .apercu figure img {
       width: 100%; }
   @media screen and (max-width: 960px) {
     .apercu figure {
       width: 65%; } }
   .apercu h3 {
-    font-size: 120%;
+    font-size: 1.8rem;
     font-family: "Lato", "helvetica", sans-serif;
     margin-bottom: 3%; }
   .apercu a {
@@ -494,13 +562,12 @@ footer {
     color: #fff;
     text-transform: uppercase;
     border-radius: 8px;
-    margin-top: 3%;
     font-size: 1.3rem; }
   @media screen and (max-width: 960px) {
     .apercu a {
       display: block;
-      padding: 10px 0;
       width: 40%;
+      padding: 10px 0;
       height: 30px;
       margin: 0 30%; } }
 
@@ -509,7 +576,7 @@ footer {
     margin-bottom: 10%; } }
 .partenaires {
   width: 100%;
-  margin-top: 10%;
+  margin: 3% 0 0;
   display: flex;
   float: left;
   justify-content: space-around; }
@@ -674,18 +741,17 @@ section.admin {
     color: #34B8C9; }
 
 .form {
-  font-family: "Lato", "helvetica", sans-serif;
   width: 60%;
   padding: 4%;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
-  .form .asterix {
-    float: right;
-    color: #35AEBD; }
   .form label {
     font-size: 1.5rem; }
+    .form label .asterix {
+      float: right;
+      color: #35AEBD; }
   .form input[type="text"],
   .form input[type="email"],
   .form input[type="tel"], .form textarea, .form select {
@@ -706,10 +772,14 @@ section.admin {
       font-size: 1.5rem; } }
   .form p {
     color: #35AEBD;
-    font-family: "Merriweather", "times", serif;
-    font-size: 1.3rem; }
+    font-size: 1.8rem; }
 
-.button-commander {
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90%;
+    margin: 8% auto;
+    font-size: 1.4rem; } }
+.button-commander-form {
   width: 150px;
   display: inline-block;
   border-radius: 4px;
@@ -722,22 +792,22 @@ section.admin {
   transition: all 0.5s;
   cursor: pointer;
   float: right;
-  margin: 5% 5%; }
-  .button-commander span {
+  margin: 2% 20%; }
+  .button-commander-form span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s; }
-    .button-commander span:after {
+    .button-commander-form span:after {
       content: '\00bb';
       position: absolute;
       opacity: 0;
       top: 0;
       right: -20px;
       transition: 0.5s; }
-  .button-commander:hover span {
+  .button-commander-form:hover span {
     padding-right: 25px; }
-  .button-commander:hover span:after {
+  .button-commander-form:hover span:after {
     opacity: 1;
     right: 0; }
 
@@ -748,26 +818,17 @@ section.admin {
     height: 40px;
     float: none;
     margin: 2% 25%; } }
-@media screen and (max-width: 480px) {
-  .form {
-    width: 90%;
-    margin: 8% auto;
-    font-size: 1.4rem; } }
-body {
-  margin: 0 auto;
-  font-family: "Lato", "helvetica", sans-serif; }
-
 .panier {
-  width: 80%;
+  width: 60%;
   float: left;
-  margin: 8% 0 0 10%;
+  margin: 1% 0 0 20%;
   border-bottom: 1px solid black; }
   .panier figure {
     float: left;
     width: 20%;
     margin-bottom: 2%; }
-  .panier img {
-    width: 100%; }
+    .panier figure img {
+      width: 100%; }
   @media screen and (max-width: 480px) {
     .panier figure {
       float: none;
@@ -776,7 +837,7 @@ body {
   .panier h2 {
     float: left;
     font-family: "Merriweather", "times", serif;
-    font-size: 120%;
+    font-size: 2rem;
     margin: 2% 0 0 18%;
     width: 57%; }
   @media screen and (max-width: 480px) {
@@ -785,7 +846,7 @@ body {
       font-size: 1.4rem;
       text-align: center; } }
   .panier label {
-    font-size: 90%;
+    font-size: 1.6rem;
     font-family: "Merriweather", "times", serif;
     margin-left: 25%; }
   @media screen and (max-width: 480px) {
@@ -793,15 +854,14 @@ body {
       font-size: 1.3rem;
       margin-left: 0; } }
   .panier select {
-    margin: 7%;
-    width: 12%; }
+    margin: 7%; }
   @media screen and (max-width: 480px) {
     .panier select {
       margin: 5%;
       width: 15%; } }
   .panier .price {
     text-align: center;
-    font-size: 100%;
+    font-size: 1.6rem;
     font-family: "Lato", "helvetica", sans-serif;
     float: right;
     width: 20%;
@@ -819,11 +879,12 @@ body {
     padding-bottom: 3%; } }
 .tab {
   width: 100%;
+  margin-top: 5%;
+  padding-left: 20%;
   float: left;
   font-family: "Lato", "helvetica", sans-serif;
-  font-size: 120%;
-  text-decoration: underline;
-  margin: 5% 0 0 7%; }
+  font-size: 1.8rem;
+  text-decoration: underline; }
   .tab a {
     color: #000; }
 
@@ -841,13 +902,13 @@ body {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 100%;
+  font-size: 1.6rem;
   padding: 1%;
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   float: right;
-  margin: 5% 5%; }
+  margin: 0 20% 3% 0; }
   .button-commander span {
     cursor: pointer;
     display: inline-block;
