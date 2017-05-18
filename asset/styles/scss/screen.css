@@ -484,7 +484,7 @@ header {
     width: 50%;
     margin-top: 7%;
     float: left;
-    height: 480px;
+    height: 525px;
     overflow: hidden; }
     .revues div figure {
       margin: 0 auto 4% auto;
@@ -530,31 +530,31 @@ header {
     color: #fff;
     text-transform: uppercase; }
 
-.back {
+.revue .back {
   color: #35AEBD;
   font-size: 1.6rem;
   margin-left: 5%; }
-
-.apercu {
+.revue .apercu {
   width: 100%;
   float: left;
   text-align: center;
   margin-bottom: 4%; }
-  .apercu figure {
-    margin: 0 auto;
-    width: 26%;
-    margin-top: 5%;
-    margin-bottom: 2%; }
-    .apercu figure img {
+  .revue .apercu h3 {
+    font-size: 1.5rem;
+    margin: 2%; }
+  .revue .apercu figure {
+    margin: 5% auto 2% auto;
+    width: 26%; }
+    .revue .apercu figure img {
       width: 100%; }
   @media screen and (max-width: 480px) {
-    .apercu figure {
-      width: 65%; } }
-  .apercu h2 {
+    .revue .apercu figure {
+      width: 75%; } }
+  .revue .apercu h2 {
     font-size: 1.8rem;
     font-family: "Lato", "helvetica", sans-serif;
     margin-bottom: 3%; }
-  .apercu a {
+  .revue .apercu a {
     padding: 1%;
     background-color: #35AEBD;
     text-decoration: none;
@@ -563,40 +563,132 @@ header {
     border-radius: 8px;
     font-size: 1.3rem; }
   @media screen and (max-width: 480px) {
-    .apercu a {
+    .revue .apercu a {
       display: block;
       width: 40%;
       padding: 10px 0;
       height: 30px;
       margin: 0 30%; } }
-
 @media screen and (max-width: 480px) {
-  .apercu {
+  .revue .apercu {
     margin-bottom: 10%; } }
-.partenaires {
-  width: 100%;
-  margin: 3% 0 0;
-  display: flex;
-  float: left;
-  justify-content: space-around; }
-  .partenaires figure {
-    width: 30%; }
-    .partenaires figure img {
+
+.actu-title {
+  margin: 25px 0;
+  text-align: center; }
+  .actu-title h2 {
+    font-size: 2.2rem;
+    font-weight: 700; }
+  @media screen and (max-width: 480px) {
+    .actu-title h2 {
+      font-size: 1.9rem;
+      margin: 2% 0; } }
+  .actu-title h3 {
+    margin: 1%;
+    font-size: 2rem; }
+    .actu-title h3 span {
+      font-style: italic; }
+  @media screen and (max-width: 480px) {
+    .actu-title h3 {
+      font-size: 1.7rem;
+      margin: 4% 0; } }
+
+.text-actu {
+  margin-top: 3%; }
+  .text-actu figure {
+    width: 25%;
+    float: left; }
+    .text-actu figure img {
+      display: block;
       width: 100%; }
   @media screen and (max-width: 480px) {
-    .partenaires figure {
-      width: 70%;
-      margin: 5% auto; } }
-  .partenaires .hallou {
-    width: 10%; }
+    .text-actu figure {
+      width: 100%;
+      float: none; } }
+  .text-actu article {
+    margin-left: 5%;
+    width: 70%;
+    float: left; }
+    .text-actu article p {
+      font-size: 1.8rem;
+      text-align: justify; }
   @media screen and (max-width: 480px) {
-    .partenaires .hallou {
-      width: 25%;
-      margin: 5% auto; } }
+    .text-actu p {
+      font-size: 1.6rem;
+      text-align: left; } }
+  .text-actu .line1 {
+    width: 100%;
+    margin-top: 2%;
+    float: left;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: justify; }
+  .text-actu .line2 {
+    margin-top: 1%;
+    line-height: 20px; }
+  @media screen and (max-width: 480px) {
+    .text-actu .line2 {
+      display: none; } }
+  @media only screen and (max-width: 768px) {
+    .text-actu .text-actu {
+      float: none; }
+    .text-actu .text-actu figure {
+      width: 90%;
+      float: none; }
+    .text-actu .line1 {
+      float: none; } }
+@media only screen and (max-width: 768px) and (max-width: 468px) {
+  .text-actu .text-actu {
+    float: none; }
+  .text-actu .text-actu figure {
+    width: 100%;
+    float: none; } }
 
-@media screen and (max-width: 480px) {
-  .partenaires {
-    display: initial;
+.prestataire {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #45BBC8;
+  font-size: 1.8rem;
+  line-height: 20px;
+  color: #fff;
+  float: left; }
+  .prestataire .equipe {
+    width: 30%; }
+  @media only screen and (max-width: 768px) {
+    .prestataire .equipe {
+      width: 90%; } }
+  .prestataire .entreprise {
+    width: 30%; }
+  @media only screen and (max-width: 768px) {
+    .prestataire .entreprise {
+      width: 90%; } }
+
+@media only screen and (max-width: 768px) {
+  .prestataire {
+    width: 100%;
+    display: block;
+    line-height: 22px;
+    text-align: center; } }
+.photos-firstline, .photos-secondline {
+  display: flex;
+  width: 100%;
+  float: left;
+  justify-content: space-around;
+  margin-bottom: 5%; }
+  @media only screen and (max-width: 768px) {
+    .photos-firstline img, .photos-secondline img {
+      width: 70%;
+      display: block;
+      margin-bottom: 3%; } }
+
+@media only screen and (max-width: 768px) {
+  .photos-firstline, .photos-secondline {
+    width: 100%;
+    display: block;
     float: none; } }
 .actuhead {
   width: 95%;
@@ -681,116 +773,37 @@ header {
     margin: 30px auto;
     float: none;
     width: 90%; } }
-.actu-title {
-  width: 100%;
-  text-align: center; }
-  .actu-title h2 {
-    font-size: 2.2rem;
-    font-weight: 700; }
-  @media screen and (max-width: 480px) {
-    .actu-title h2 {
-      font-size: 1.9rem;
-      margin: 2% 0; } }
-  .actu-title h3 {
-    font-size: 2rem; }
-  @media screen and (max-width: 480px) {
-    .actu-title h3 {
-      font-size: 1.7rem;
-      margin: 4% 0; } }
-
-.text-actu {
-  float: left;
-  margin-top: 3%; }
-  .text-actu figure {
-    width: 25%;
+.partenaires {
+  width: 95%;
+  margin: 0 auto; }
+  .partenaires div {
+    width: 23%;
+    margin: 1%;
     float: left; }
-    .text-actu figure img {
-      width: 100%; }
-  @media screen and (max-width: 480px) {
-    .text-actu figure {
+    .partenaires div figure {
       width: 100%;
-      float: none; } }
-  .text-actu p {
-    font-size: 1.8rem;
-    text-align: justify; }
-  @media screen and (max-width: 480px) {
-    .text-actu p {
-      font-size: 1.6rem;
-      text-align: left; } }
-  .text-actu .line1 {
-    width: 100%;
-    margin-top: 2%;
-    float: left;
-    font-weight: 300;
-    line-height: 22px;
-    text-align: justify; }
-  .text-actu .line2 {
-    margin-top: 1%;
-    line-height: 20px; }
-  @media screen and (max-width: 480px) {
-    .text-actu .line2 {
-      display: none; } }
-  @media only screen and (max-width: 768px) {
-    .text-actu .text-actu {
-      float: none; }
-    .text-actu .text-actu figure {
-      width: 90%;
-      float: none; }
-    .text-actu .line1 {
-      float: none; } }
-@media only screen and (max-width: 768px) and (max-width: 468px) {
-  .text-actu .text-actu {
-    float: none; }
-  .text-actu .text-actu figure {
-    width: 100%;
-    float: none; } }
-
-.prestataire {
-  width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding-bottom: 3%;
-  display: flex;
-  justify-content: space-around;
-  background-color: #45BBC8;
-  font-size: 1.8rem;
-  line-height: 20px;
-  color: #fff;
-  float: left; }
-  .prestataire .equipe {
-    width: 30%; }
-  @media only screen and (max-width: 768px) {
-    .prestataire .equipe {
-      width: 90%; } }
-  .prestataire .entreprise {
-    width: 30%; }
-  @media only screen and (max-width: 768px) {
-    .prestataire .entreprise {
-      width: 90%; } }
-
-@media only screen and (max-width: 768px) {
-  .prestataire {
-    width: 100%;
-    display: block;
-    line-height: 22px;
-    text-align: center; } }
-.photos-firstline, .photos-secondline {
-  display: flex;
-  width: 100%;
-  float: left;
-  justify-content: space-around;
-  margin-bottom: 5%; }
-  @media only screen and (max-width: 768px) {
-    .photos-firstline img, .photos-secondline img {
-      width: 70%;
+      display: block; }
+      .partenaires div figure img {
+        width: 100%;
+        display: block;
+        margin-bottom: 1%; }
+    .partenaires div h4 {
       display: block;
-      margin-bottom: 3%; } }
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: 400; }
 
-@media only screen and (max-width: 768px) {
-  .photos-firstline, .photos-secondline {
-    width: 100%;
-    display: block;
-    float: none; } }
+@media screen and (max-width: 900px) {
+  .partenaires {
+    width: 100%; } }
+@media screen and (max-width: 650px) {
+  .partenaires div {
+    width: 46%;
+    margin: 2%; } }
+@media screen and (max-width: 480px) {
+  .partenaires div {
+    width: auto;
+    margin: 1%; } }
 .container {
   width: 40%;
   float: left;
@@ -1215,11 +1228,13 @@ section.admin {
   section.admin h2 {
     font-size: 24px;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    margin: 3%; }
   section.admin h3 {
     font-size: 20px;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    margin: 3%; }
   section.admin nav.admin-nav ul {
     width: 100%;
     text-align: center; }
@@ -1241,7 +1256,7 @@ section.admin {
   section.admin table.revues-list {
     width: 80%;
     border-collapse: collapse;
-    margin-bottom: 2%; }
+    margin: 0 auto 2% auto; }
     section.admin table.revues-list a {
       display: inline;
       padding: 0 2%; }
@@ -1266,9 +1281,11 @@ section.admin {
       margin: 2%;
       display: flex;
       justify-content: space-between; }
+    section.admin div.admin-form form input, section.admin div.admin-form form select {
+      width: 60%; }
     section.admin div.admin-form.actus {
       width: 50%; }
-      section.admin div.admin-form.actus input[type=text], section.admin div.admin-form.actus textarea {
+      section.admin div.admin-form.actus input[type=text], section.admin div.admin-form.actus select, section.admin div.admin-form.actus textarea {
         width: 75%; }
 
 /*# sourceMappingURL=screen.css.map */

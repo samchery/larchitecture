@@ -1,5 +1,5 @@
 .actu-title {
-	width: 100%;
+	margin:25px 0;
 	text-align: center;
 
 	h2 {
@@ -15,7 +15,11 @@
 	}
 
 	h3 {
+		margin:1%;
 		font-size: 2rem;
+		span{
+			font-style: italic;
+		}
 	}
 
 	@media screen and (max-width: 480px) {
@@ -27,14 +31,12 @@
 }
 
 .text-actu {
-	float: left;
-	margin-top: 3%; 
-
+	margin-top: 3%;
 	figure {
 		width: 25%;
 		float: left;
-		
 		img {
+			display: block;
 			width: 100%;
 		}
 	}
@@ -45,19 +47,22 @@
 			float: none;
 		}
 	}
-	
-	p {
-		font-size: 1.8rem;
-		text-align: justify;
+	article{
+		margin-left:5%;
+		width: 70%;
+		float: left;
+		p {
+			font-size: 1.8rem;
+			text-align: justify;
+		}
 	}
-
 	@media screen and (max-width: 480px) {
 		p {
 			font-size: 1.6rem;
 			text-align: left;
 		}
 	}
-	
+
 	.line1 {
 		width: 100%;
 		margin-top: 2%;
