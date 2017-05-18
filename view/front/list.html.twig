@@ -1,0 +1,26 @@
+{% extends "adminbase.html.twig" %}
+
+{% block body %}
+    <a href="/admin/addrevues" class="add-btn">Ajouter une revue</a>
+
+    <table class="revues-list">
+        <thead>
+            <tr>
+                <td>Numéro</td>
+                <td>Date</td>
+                <td>Zone</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for elem in list %}
+            <tr>
+                <td>Revue n°{{ elem.numero }}</td>
+                <td>{{ elem.datepub }}</td>
+                <td>{{ elem.zone }}</td>
+                <td><a href="/admin/modifrevues?id={{ elem.id }}">Modifier</a> <a href="/admin/deleterevues?id={{ elem.id }}">Supprimer</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

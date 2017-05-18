@@ -1,4 +1,6 @@
 {% extends "base.html.twig" %}
+{% block title %}Actualités | L'architecture{% endblock %}
+
 
 {% block body %}
 
@@ -7,16 +9,51 @@
         <h2 class="h2">nos actualités</h2>
     </div>
 
-    <div class="contenu-actu clearfix">
-        {% for elem in lastActues %}
-            <section class="actu">
-                <figure><img src="../../asset/img-content/{{ elem.mainimage }}" alt=""></figure>
-                <article>
-                    <h3>{{ elem.titre }}</h3>
-                    <h4>{{ elem.architecte }}  {{ elem.datepub }}</h4>
-                    <p>{{ elem.resum }} <a href="actu?id={{ elem.id }}">Lire la suite…</a></p>
-                </article>
-            </section>
-            {% endfor %}
-    </div>
+    <section class="actuhead clearfix">
+        <figure><img src="../../asset/img-content/{{ lastActues[0].mainimage }}" alt=""></figure>
+        <article>
+            <h3>{{ lastActues[0].titre }}</h3>
+            <h4>{{ lastActues[0].architecte }}  | publié le <span>{{ lastActues[0].datepub }}</span></h4>
+            <p>{{ lastActues[0].resum }} <a href="actu?id={{ lastActues[0].id }}">Lire la suite…</a></p>
+        </article>
+    </section>
+
+    <section class="img-actu">
+        <div class="img-line clearfix">
+
+            <a href="actu?id={{ lastActues[1].id }}">
+                <div class="infos">
+                    <p>{{ lastActues[1].titre }}</p>
+                </div>
+                <img src="../../asset/img-content/{{ lastActues[1].mainimage }}" alt="">
+            </a>
+
+            <a href="actu?id={{ lastActues[2].id }}">
+                <div class="infos">
+                    <p>{{ lastActues[2].titre }}</p>
+                </div>
+                <img src="../../asset/img-content/{{ lastActues[2].mainimage }}" alt="">
+            </a>
+        </div>
+
+        <div class="img-line clearfix">
+            <a href="actu?id={{ lastActues[3].id }}">
+                <div class="infos">
+                    <p>{{ lastActues[3].titre }}</p>
+                </div>
+                <img src="../../asset/img-content/{{ lastActues[3].mainimage }}" alt="">
+            </a>
+
+            <a href="actu?id={{ lastActues[4].id }}">
+                <div class="infos">
+                    <p>{{ lastActues[4].titre }}</p>
+                </div>
+                <img src="../../asset/img-content/{{ lastActues[4].mainimage }}" alt="">
+            </a>
+        </div>
+    </section>
+
+
+
+
 {% endblock %}

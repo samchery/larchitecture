@@ -1,6 +1,7 @@
 var burger = document.querySelector('.burger');
 var nav = document.querySelector('header .nav');
 var abonnez = document.querySelector('.abonnez');
+var commande = document.querySelector('.commande');
 
 burger.addEventListener('click', menuBurger)
 
