@@ -1,46 +1,77 @@
-/* ----- FOOTER ------- */
-footer{
-  color: #fff;
-  margin-top: 5%;
-  padding:15px;
-  background-color: #000;
-  ul {
-    width:580px;
-    margin:25px auto;
-    li{
-      display: inline-block;
-      border-right:1px solid #fff;
-      a {
-        padding: 20px;
-        font-weight: 300;
-        font-size: 1.7rem;
-        color: #fff;
-      }
-      a:hover {
-        color: #34B8C9;
-      }
-      @media screen and (max-width: 480px) {
-        a {
-          display: inline;
-          padding: 10px ;
-          font-size: 1.4rem;
-          text-align: center;
-          font-weight: 400;
-        }
-      }
-    }
-    li:last-child{
-      border-right: none;
-    };
-  }
-  p{
-    width:75%;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height:14px;
-    margin: 5px auto;
-    a{
-      color: #fff;
-    }
-  }
+footer {
+	width: 100%;
+	margin-top: 5%;
+	border: solid;
+	background: #000;
+	color: #fff;
+	a{
+		color: #fff;
+	}
+	ul {
+		display: table;
+		margin: 1% auto 0;
+		
+		li {
+			display: table-cell;
+			
+			a {
+				padding: 15px;
+				font-weight: 300;
+				font-size: 1.7rem;
+				color: #fff ;
+
+			}
+
+			@media screen and (max-width: 768px) {
+				a {
+					display: block;
+					padding: 7px 0;
+					margin: 0 auto; 
+					text-align: center;
+				}
+			}
+			a:hover{
+				color: $blue;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			li {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		ul {
+			display: initial;
+			margin: 1% 0 0;
+		}
+	}
+	
+	figure {
+		width: 20%;
+		margin: 2% auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		figure {
+			width: 40%;
+			margin: 2% auto;
+		}
+	}
+
+	p {
+		width:75%;
+		margin: 20px auto;
+		color: #fff;
+		text-align:center;
+		font-size:1.3rem;
+		line-height: 18px;
+	}
 }
