@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: May 17, 2017 at 08:01 AM
+-- Generation Time: May 18, 2017 at 11:57 AM
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -28,26 +28,26 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `actus` (
   `id` int(11) NOT NULL,
-  `date` varchar(255) NOT NULL,
+  `datepub` varchar(255) NOT NULL,
   `architecte` varchar(255) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `lieu` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `mainimage` varchar(255) NOT NULL,
-  `images` text NOT NULL
+  `resum` text NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `actus`
 --
 
-INSERT INTO `actus` (`id`, `datepub`, `architecte`, `titre`, `type`, `lieu`, `description`, `mainimage`, `images`) VALUES
-(1, '21/05/2009', 'ABH Architectes', 'Projet Astrale - Construction d''un ensemble de bureaux au Plessis Robinson', 'Tertiaire - Bureau', 'Plessis Robinson (92)', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor.	 L''immeuble tertiaire "Astrale" permet de répondre aussi bien à un mono utilisateur qu’à un grand nombre de locataires. D’une capacité d''accueil de 1 500 personnes, avec une surface de 25 000 m2 SHON et 56 000m2 SHOB, il intègre 760 places de parkings sur 2 niveaux de sous-sol et un restaurant 1000 couverts. Le parti d''implantation est de créer un bâtiment urbain périmétrique permettant de dégager un parc végétal de la plus grande dimension possible en son centre. Le restaurant tout en courbe devient lui même une partie de ce jardin en s''agrémentant d''une terrasse végétalisée. L''ensemble des bâtiments s''articule autour de ce parc où plateaux, paliers, escaliers, rue intérieure et restaurant ont des vues. Deux halls principaux ponctuent l’édifice en marquant fortement la volumétrie de l’ensemble.\r\nAu Nord une faille entièrement vitrée accompagnée par un voile en béton blanc courbe offre une transparence entre l’avenue et le jardin intérieur.\r\nAu Sud, un totem vitré lumineux visible depuis l’A86 englobe les salles de réunion rouges afin de former un signal identitaire.\r\nL’organisation en plan résulte d’une recherche de confort et de flexibilité des plateaux de bureaux ainsi que d’une optimisation de l’éclairage naturel, y compris pour l’ensemble des circulations verticales et horizontales. \r\nLes systèmes environnementaux développés sont le traitement de toiture végétalisée avec récupération des eaux de pluies, \r\nla mise en place de pompes à chaleur individuelles réversibles raccordées sur une boucle thermodynamique,\r\nun système de gestion technique centralisé.', 'photo_princid1.jpg', ''),
-(2, '20/05/2009', 'ARSENAULT Eric', 'Internat du lycée agricole à Château Chinon', 'Enseignement - Lycée', 'Chinon (58)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid2.jpg', ''),
-(3, '20/05/2009', 'BIK Architecture', 'Aménagement du bowling "Le colisée" à Angers', 'Espace de loisir', 'Angers (49)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid3.jpg', ''),
-(4, '20/05/2009', 'DUCLOS Architectes Associés', 'Construction de la délégation régionale du CNFPT à Poitiers', 'Tertiaire - Bureau', 'Poities (86)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid4.jpg', ''),
-(5, '20/05/2009', 'MICHEL Jean-Louis', 'Construction du nouveau siège social de la C.A.F. du Gard', 'Tertiaire - Bureau', 'Gard (30)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid5.jpg', '');
+INSERT INTO `actus` (`id`, `datepub`, `architecte`, `titre`, `type`, `lieu`, `description`, `mainimage`, `resum`) VALUES
+(1, '21/05/2009', 'ABH Architectes', 'Projet Astrale - Construction d''un ensemble de bureaux au Plessis Robinson', 'Tertiaire - Bureau', 'Plessis Robinson (92)', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor. L''immeuble tertiaire "Astrale" permet de répondre aussi bien à un mono utilisateur qu’à un grand nombre de locataires. D’une capacité d''accueil de 1 500 personnes, avec une surface de 25 000 m2 SHON et 56 000m2 SHOB, il intègre 760 places de parkings sur 2 niveaux de sous-sol et un restaurant 1000 couverts. Le parti d''implantation est de créer un bâtiment urbain périmétrique permettant de dégager un parc végétal de la plus grande dimension possible en son centre. Le restaurant tout en courbe devient lui même une partie de ce jardin en s''agrémentant d''une terrasse végétalisée. L''ensemble des bâtiments s''articule autour de ce parc où plateaux, paliers, escaliers, rue intérieure et restaurant ont des vues. Deux halls principaux ponctuent l’édifice en marquant fortement la volumétrie de l’ensemble.\nAu Nord une faille entièrement vitrée accompagnée par un voile en béton blanc courbe offre une transparence entre l’avenue et le jardin intérieur.\nAu Sud, un totem vitré lumineux visible depuis l’A86 englobe les salles de réunion rouges afin de former un signal identitaire.\nL’organisation en plan résulte d’une recherche de confort et de flexibilité des plateaux de bureaux ainsi que d’une optimisation de l’éclairage naturel, y compris pour l’ensemble des circulations verticales et horizontales. \nLes systèmes environnementaux développés sont le traitement de toiture végétalisée avec récupération des eaux de pluies, \nla mise en place de pompes à chaleur individuelles réversibles raccordées sur une boucle thermodynamique,\nun système de gestion technique centralisé.', 'photo_princid1.jpg', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor.	'),
+(2, '20/05/2009', 'ARSENAULT Eric', 'Internat du lycée agricole à Château Chinon', 'Enseignement - Lycée', 'Chinon (58)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid2.jpg', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan'),
+(3, '20/05/2009', 'BIK Architecture', 'Aménagement du bowling "Le colisée" à Angers', 'Espace de loisir', 'Angers (49)', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor.	\r\nL''immeuble tertiaire "Astrale" permet de répondre aussi bien à un mono utilisateur qu’à un grand nombre de locataires.\r\nD’une capacité d''accueil de 1 500 personnes, avec une surface de 25 000 m2 SHON et 56 000m2 SHOB, il intègre 760 places de parkings sur 2 niveaux de sous-sol et un restaurant 1000 couverts.\r\nLe parti d''implantation est de créer un bâtiment urbain périmétrique permettant de dégager un parc végétal de la plus grande dimension possible en son centre.\r\nLe restaurant tout en courbe devient lui même une partie de ce jardin en s''agrémentant d''une terrasse végétalisée.\r\nL''ensemble des bâtiments s''articule autour de ce parc où plateaux, paliers, escaliers, rue intérieure et restaurant ont des vues.\r\n\r\n\r\nDeux halls principaux ponctuent l’édifice en marquant fortement la volumétrie de l’ensemble.\r\nAu Nord une faille entièrement vitrée accompagnée par un voile en béton blanc courbe offre une transparence entre l’avenue et le jardin intérieur.\r\nAu Sud, un totem vitré lumineux visible depuis l’A86 englobe les salles de réunion rouges afin de former un signal identitaire.\r\nL’organisation en plan résulte d’une recherche de confort et de flexibilité des plateaux de bureaux ainsi que d’une optimisation de l’éclairage naturel, y compris pour l’ensemble des circulations verticales et horizontales. \r\nLes systèmes environnementaux développés sont le traitement de toiture végétalisée avec récupération des eaux de pluies, \r\nla mise en place de pompes à chaleur individuelles réversibles raccordées sur une boucle thermodynamique,\r\nun système de gestion technique centralisé.\r\n', 'photo_princid3.jpg', 'Situé au coeur de NOVEOS Parc d’Affaires Paris Sud Ouest, en plein essor. L''immeuble tertiaire "Astrale" permet de répondre aussi bien à un mono utilisateur qu’à un grand nombre de locataires. D’une capacité d''accueil de 1 500 personnes, avec une surface de 25 000 m2 SHON et 56 000m2 SHOB, il intègre 760 places de parkings sur 2 niveaux de sous-sol et un restaurant 1000 couverts.'),
+(4, '20/05/2009', 'DUCLOS Architectes Associés', 'Construction de la délégation régionale du CNFPT à Poitiers', 'Tertiaire - Bureau', 'Poities (86)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid4.jpg', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan'),
+(5, '20/05/2009', 'MICHEL Jean-Louis', 'Construction du nouveau siège social de la C.A.F. du Gard', 'Tertiaire - Bureau', 'Gard (30)', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan avec une tisanerie suspendue dans le vide à son extrémité. Différentes loggias ponctuent le bâtiment et offrent depuis l’intérieur autant de vues sur Château Chinon et la campagne environnante. Une logique de traitement de façade est développée en fonction du degré d’exposition aux intempéries : zinc, enduit, bois et verre sont répartis du plus exposé au mieux protégé.  A l’intérieur, les chambres permettent à chaque élève l’appropriation d’un sous-espace distinct.', 'photo_princid5.jpg', 'Le bâtiment est régi par une courbe à double inflexion qui s’avance dans le paysage vers le Morvan');
 
 -- --------------------------------------------------------
 
@@ -61,22 +61,22 @@ CREATE TABLE IF NOT EXISTS `partenaires` (
   `departement` int(11) NOT NULL,
   `url` varchar(255) NOT NULL,
   `region` varchar(255) NOT NULL,
-  `secteur` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `secteur` varchar(255) NOT NULL,
+  `logo` varchar(2555) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `partenaires`
 --
 
-INSERT INTO `partenaires` (`id`, `nom`, `departement`, `url`, `region`, `secteur`) VALUES
-(1, 'Euroco', 69, 'http://www.euresco.fr/', 'Ile-de-France', 'AGENCEMENT MOBILIER, MÉTIERS D''ART, DÉCORATION, CHEMINEES'),
-(2, 'LEROUX - PACREAU', 49, 'http://www.leroux-pacreau.fr/', 'Ile-de-France', 'AGENCEMENT MOBILIER, MÉTIERS D''ART, DÉCORATION, CHEMINEES'),
-(3, 'IRVOAS & CIE', 78, 'http://www.irvoas.fr/', 'Ile-de-France', 'CLOISONS, PLAFONDS, ISOLATION'),
-(4, 'HALLOU ESCALIERS', 35, 'http://www.hallou.fr/', 'Ile-de-France', 'ESCALIETEUR'),
-(5, 'DREAMTEAM SERVICES', 94, 'http://www.dreamteamservices.com/', 'Ile-de-France', 'SERVICES AUX PROFESSIONNELS'),
-(6, 'CALOREO', 76, 'http://caloreo.free.fr/kontakt.html', 'Bretagne - Normandie', 'ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE'),
-(7, 'ETDE', 14, 'http://www.bouyguesenergiesservices.com/', 'Bretagne - Normandie', 'ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE'),
-(8, 'MELIN', 27, 'http://www.melin-sa.fr/', 'Bretagne - Normandie', 'MENUISERIE (BOIS ET ALU), MIROITERIE');
+INSERT INTO `partenaires` (`id`, `nom`, `departement`, `url`, `region`, `secteur`, `logo`) VALUES
+(1, 'Euroco', 69, 'http://www.euresco.fr/', 'Ile-de-France', 'AGENCEMENT MOBILIER, MÉTIERS D''ART, DÉCORATION, CHEMINEES', 'euresco.png'),
+(2, 'LEROUX - PACREAU', 49, 'http://www.leroux-pacreau.fr/', 'Ile-de-France', 'AGENCEMENT MOBILIER, MÉTIERS D''ART, DÉCORATION, CHEMINEES', 'logoleroux.jpg'),
+(3, 'IRVOAS & CIE', 78, 'http://www.irvoas.fr/', 'Ile-de-France', 'CLOISONS, PLAFONDS, ISOLATION', 'logoirovas.png'),
+(4, 'HALLOU ESCALIERS', 35, 'http://www.hallou.fr/', 'Ile-de-France', 'ESCALIETEUR', 'hallou.png'),
+(5, 'DREAMTEAM SERVICES', 94, 'http://www.dreamteamservices.com/', 'Ile-de-France', 'SERVICES AUX PROFESSIONNELS', 'dreamserviceslogo.jpg'),
+(6, 'CALOREO', 76, 'http://caloreo.free.fr/kontakt.html', 'Bretagne - Normandie', 'ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE', 'caloreologo.jpg'),
+(7, 'ETDE', 14, 'http://www.bouyguesenergiesservices.com/', 'Bretagne - Normandie', 'ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE', 'bouygues-logo.png');
 
 -- --------------------------------------------------------
 
@@ -167,6 +167,11 @@ ALTER TABLE `users`
 --
 ALTER TABLE `actus`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `partenaires`
+--
+ALTER TABLE `partenaires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `revues`
 --

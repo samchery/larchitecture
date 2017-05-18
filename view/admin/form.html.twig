@@ -1,68 +1,154 @@
 {% extends "adminbase.html.twig" %}
 
-
 {% block body %}
     {%  if list %}
-    <div class="admin-form">
-    <h3>Modification d'une revue</h3>
-        <form method="post" action="#">
-            <p>
-                <label for="numero">Numéro</label>
-                <input type="text" name="numero" id="numero" value="{{ list.numero }}">
-            </p>
-            <p>
-                <label for="img">Image</label>
-                <input type="text" name="img" id="img" value="{{ list.img }}">
-            </p>
+        <div class="admin-form">
+            <h3>Modification d'une revue</h3>
+            <form method="post" action="#">
+                <p>
+                    <label for="numero">Numéro</label>
+                    <input type="text" name="numero" id="numero" value="{{ list.numero }}">
+                </p>
+                <p>
+                    <label for="img">Image</label>
+                    <input type="text" name="img" id="img" value="{{ list.img }}">
+                </p>
 
-            <p>
-                <label for="region">Région</label>
-                <input type="text" name="region" id="region" value="{{ list.region }}">
-            </p>
+                <p>
+                    <label for="zone">Zone</label>
+                    <select id="zone" name="zone">
+                        <optgroup label="France">
+                            <option value="france">France</option>
+                            <option value="domtom">DOM TOM</option>
+                            <option value="etranger">Étranger</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="zone">Zone</label>
-                <input type="text" name="zone" id="zone" value="{{ list.zone }}">
-            </p>
+                <p>
+                    <label for="region">Région</label>
+                    <select id="region" name="region">
+                        <optgroup label="France">
+                            <option value="alsace">Alsace</option>
+                            <option value="aquitaine">Aquitaine</option>
+                            <option value="auvergne">Auvergne</option>
+                            <option value="bourgogne">Bourgogne</option>
+                            <option value="bretagne">Bretagne</option>
+                            <option value="centre">Centre</option>
+                            <option value="champagne-ardenne">Champagne Ardenne</option>
+                            <option value="corse">Corse</option>
+                            <option value="franche-comté">Franche Comté</option>
+                            <option value="ile-de-france">Île De France</option>
+                            <option value="languedoc-roussillon">Languedoc Roussillon</option>
+                            <option value="limousin">Limousin</option>
+                            <option value="loraine">Loraine</option>
+                            <option value="midi-pyrénées">Midi Pyrénées</option>
+                            <option value="nord-pas-de-calais">Nord Pas De Calais</option>
+                            <option value="normandie">Normandie</option>
+                            <option value="pays-de-la-loire">Pays De La Loire</option>
+                            <option value="picardie">Picardie</option>
+                            <option value="poitou-charentes">Poitou Charentes</option>
+                            <option value="provences-alpes-cote-d'azur">Provences Alpes Cote D'azur</option>
+                            <option value="rhones-alpes">Rhones Alpes</option>
+                        </optgroup>
+                        <optgroup label="DOM TOM">
+                            <option value="guadeloupe">Guadeloupe</option>
+                            <option value="guyane">Guyane</option>
+                            <option value="martinique">Martinique</option>
+                            <option value="mayotte">Mayotte</option>
+                            <option value="reunion">Réunion</option>
+                            <option value="saint-barthelemy">Saint Barthélémy</option>
+                            <option value="saint-martin">Saint Martin</option>
+                        </optgroup>
+                        <optgroup label="Étranger">
+                            <option value="belgique">Belgique</option>
+                            <option value="suisse">Suisse</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="datepub">Date de publication</label>
-                <input type="text" name="datepub" id="datepub" value="{{ list.datepub }}">
-            </p>
+                <p>
+                    <label for="datepub">Date de publication</label>
+                    <input type="text" name="datepub" id="datepub" value="{{ list.datepub }}">
+                </p>
 
-            <input type="submit" value="Modifier">
-        </form>
-    </div>
+                <input type="submit" value="Modifier">
+            </form>
+        </div>
     {% else %}
-    <div class="admin-form">
-    <h3>Ajout d'une revue</h3>
-        <form method="post" action="#">
-            <p>
-                <label for="numero">Numéro</label>
-                <input type="text" name="numero" id="numero">
-            </p>
-            <p>
-                <label for="img">Image</label>
-                <input type="text" name="img" id="img">
-            </p>
+        <div class="admin-form">
+            <h3>Ajout d'une revue</h3>
+            <form method="post" action="#">
+                <p>
+                    <label for="numero">Numéro</label>
+                    <input type="text" name="numero" id="numero">
+                </p>
+                <p>
+                    <label for="img">Image</label>
+                    <input type="text" name="img" id="img">
+                </p>
 
-            <p>
-                <label for="region">Région</label>
-                <input type="text" name="region" id="region">
-            </p>
+                <p>
+                    <label for="zone">Zone</label>
+                    <select id="zone" name="zone">
+                        <optgroup label="France">
+                            <option value="france">France</option>
+                            <option value="domtom">DOM TOM</option>
+                            <option value="etranger">Étranger</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="zone">Zone</label>
-                <input type="text" name="zone" id="zone">
-            </p>
+                <p>
+                    <label for="region">Région</label>
+                    <select id="region" name="region">
+                        <optgroup label="France">
+                            <option value="alsace">Alsace</option>
+                            <option value="aquitaine">Aquitaine</option>
+                            <option value="auvergne">Auvergne</option>
+                            <option value="bourgogne">Bourgogne</option>
+                            <option value="bretagne">Bretagne</option>
+                            <option value="centre">Centre</option>
+                            <option value="champagne-ardenne">Champagne Ardenne</option>
+                            <option value="corse">Corse</option>
+                            <option value="franche-comté">Franche Comté</option>
+                            <option value="ile-de-france">Île De France</option>
+                            <option value="languedoc-roussillon">Languedoc Roussillon</option>
+                            <option value="limousin">Limousin</option>
+                            <option value="loraine">Loraine</option>
+                            <option value="midi-pyrénées">Midi Pyrénées</option>
+                            <option value="nord-pas-de-calais">Nord Pas De Calais</option>
+                            <option value="normandie">Normandie</option>
+                            <option value="pays-de-la-loire">Pays De La Loire</option>
+                            <option value="picardie">Picardie</option>
+                            <option value="poitou-charentes">Poitou Charentes</option>
+                            <option value="provences-alpes-cote-d'azur">Provences Alpes Cote D'azur</option>
+                            <option value="rhones-alpes">Rhones Alpes</option>
+                        </optgroup>
+                        <optgroup label="DOM TOM">
+                            <option value="guadeloupe">Guadeloupe</option>
+                            <option value="guyane">Guyane</option>
+                            <option value="martinique">Martinique</option>
+                            <option value="mayotte">Mayotte</option>
+                            <option value="reunion">Réunion</option>
+                            <option value="saint-barthelemy">Saint Barthélémy</option>
+                            <option value="saint-martin">Saint Martin</option>
+                        </optgroup>
+                        <optgroup label="Étranger">
+                            <option value="belgique">Belgique</option>
+                            <option value="suisse">Suisse</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="datepub">Date de publication :</label>
-                <input type="text" name="datepub" id="datepub">
-            </p>
 
-            <input type="submit" value="Ajouter">
-        </form>
-    </div>
+                <p>
+                    <label for="datepub">Date de publication :</label>
+                    <input type="text" name="datepub" id="datepub">
+                </p>
+
+                <input type="submit" value="Ajouter">
+            </form>
+        </div>
     {% endif %}
 {% endblock %}
