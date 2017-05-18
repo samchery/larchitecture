@@ -1,7 +1,16 @@
 .actu {
+	width: 90%;
+	display: flex;
+	float: left;
+	justify-content: space-around;
+	font-family: $lato;
+	margin: 0 auto;
+	margin: 2% 0 3% 5%;
+	align-items: center;
+
 	figure {
 		width: 40%;
-		float:left;
+
 		img {
 			width: 100%;
 		}
@@ -9,40 +18,44 @@
 
 	@media screen and (max-width: 480px) {
 		figure {
-			width: 100%;
-			float:none;
+			width: 100%
 		}
 	}
 
 	article {
+		text-align: center;
 		width: 55%;
-		float:left;
+
 		h3 {
 			font-size: 1.8rem;
 			margin-bottom: 4%;
 			font-weight: 700;
 		}
+
 		h4 {
-			font-size: 1.6rem;
+			font-size: 1.7rem;
 			margin-bottom: 7%;
 		}
+
 		p {
 			font-family: $merri;
 			line-height: 16px;
-			font-size: 1.4rem;
+			font-size: 1.5rem;
+			line-height: 19px;
 			font-weight: 300;
 			letter-spacing: 1px;
+			text-align: justify;
 
 			@media screen and (max-width: 480px) {
 				&:last-of-type {
 					width: 90%;
-					text-align: left;
 				}
 			}
-		}
-		a{
-			color: $blue;
-			text-decoration: underline;
+
+			a{
+				color: #35AEBD;
+				text-transform: underline;
+			}
 		}
 	}
 
@@ -56,7 +69,8 @@
 
 @media screen and (max-width: 480px) {
 	.actu {
-		width: 100%;
+		width: 90%;
+		display: initial;
 		float: none;
 	}
 }

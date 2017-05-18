@@ -36,116 +36,108 @@
 		color: $blue;
 	}
 }
-
-@media screen and (max-width: 480px) {
-	.steps {
-
-	}
-}
-
 .form {
-    font-family: $lato;
-    width: 60%;
-    padding: 4%;
-    margin: 0 auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  width: 60%;
+  padding: 4%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 
-	.asterix {
-		float: right;
-	    color: #35AEBD;
-	}
-	
-	label {
-		font-size: 1.5rem;
-	}
 
-	input[type="text"],
-	input[type="email"], 
-	input[type="tel"], textarea, select {
-	    outline: none;
-	    display: block;
-	    width: 100%;
-	    padding: 2%;
-	    border: none;
-	    border-bottom: 1px solid #ddd;
-	    background: transparent;
-	    margin-bottom: 3%;
-	    font-size: 1.5rem;
-	    height: 12%;
-	}
-	
-	@media screen and (max-width: 480px) {
-		input[type="text"],
-		input[type="email"], 
-		input[type="tel"], textarea, select {
-		    font-size: 1.5rem;
-		}
-	}
+  label {
+    font-size: 1.5rem;
 
-	p {
-		color: #35AEBD; 
-		font-family: $merri;
-		font-size: 1.3rem;
-	}
+    .asterix {
+      float: right;
+      color: #35AEBD;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"], textarea, select {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 3%;
+    font-size: 1.5rem;
+    height: 12%;
+  }
+
+  @media screen and (max-width: 480px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"], textarea, select {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: #35AEBD;
+    font-size: 1.8rem;
+  }
 }
 
-.button-commander {
-	width: 150px;
-	display: inline-block;
-	border-radius: 4px;
-	background-color: $blue;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 1.6rem;
-	padding: 1%;
-	transition: all 0.5s;
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90%;
+    margin: 8% auto;
+    font-size: 1.4rem;
+  }
+}
+
+.button-commander-form {
+  width: 150px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $blue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1%;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: right;
+  margin: 2% 20%;
+
+  span {
     cursor: pointer;
-	float: right;
-	margin: 5% 5%;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 
-	span {
-		cursor: pointer;
-		display: inline-block;
-		position: relative;
-		transition: 0.5s;
+    &:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+  }
 
-		&:after {
-			content: '\00bb';
-			position: absolute;
-			opacity: 0;
-			top: 0;
-			right: -20px;
-			transition: 0.5s;
-		}
-	}
-	
-	&:hover span {
-		padding-right: 25px;
-	}
+  &:hover span {
+    padding-right: 25px;
+  }
 
-	&:hover span:after {
-		opacity: 1;
-		right: 0;
-	}
+  &:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
-	.button-commander {
-		font-size: 1.6rem;
-		width: 50%;
-		height: 40px;
-		float: none;
-		margin: 2% 25%;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.form {
-	    width: 90%;
-	    margin: 8% auto;
-	    font-size: 1.4rem;
-	}
+  .button-commander {
+    font-size: 1.6rem;
+    width: 50%;
+    height: 40px;
+    float: none;
+    margin: 2% 25%;
+  }
 }

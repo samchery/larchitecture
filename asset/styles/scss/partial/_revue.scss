@@ -1,46 +1,78 @@
 .tri {
-	form{
-      float: left;
-      width:33%;
-		label {
-			display: block;
-			text-align: center;
-			margin-bottom: 5%;
-		}
-		select {
-			width: 200px;
-		}
-	}
+  width: 100%;
+  height: 150px;
+  margin-top: 1%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  float: left;
+
+  label {
+    display: block;
+    text-align: center;
+    margin: 2% 0 8%;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  select {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 8px;
+  }
 }
 
-.list-revues {
-	div {
-      width: 30%;
-      margin:1%;
-      float: left;
-      height:375px;
-      overflow: hidden;
-      a.element{
-		figure {
-			width: 45%;
-			margin-bottom: 4%;
-			img{
-				width: 100%;
-			}
-		}
-		h3 {
-			font-size: 100%;
-			font-family: $merri;
-			margin-bottom: 6%;
-		}
+.revues {
+  width: 100%;
+  float: left;
+  text-align: center;
+
+  div {
+    width: 50%;
+    margin-top: 7%;
+    float: left;
+
+    figure {
+      margin: 0 auto;
+      width: 45%;
+      margin-bottom: 4%;
+
+      img{
+        width: 100%;
       }
-      a.commander {
-        padding: 1%;
-        background-color: #35AEBD;
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        border-radius: 8px;
-      }
-	}
+    }
+
+
+    h3 {
+      font-size: 1.6rem;
+      font-family: $merri;
+      margin-bottom: 6%;
+    }
+
+    a {
+      padding: 1.5%;
+      background-color: #35AEBD;
+      text-transform: uppercase;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+  }
+}
+
+.more {
+  clear: both;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 5%;
+
+  a {
+    text-decoration: underline;
+    color: #000;
+    text-transform: uppercase;
+  }
 }

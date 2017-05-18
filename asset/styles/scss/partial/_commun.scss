@@ -3,8 +3,12 @@ html {
 }
 
 body{
-  font-family:  "Lato", "helvetica", sans-serif;
-  font-size:1.4rem;
+  font-family: $lato;
+}
+
+
+main{
+  width: 100%;
 }
 
 a {
@@ -17,51 +21,27 @@ a {
 
 .titre-section{
   width: 100%;
+  margin: 1% 0 2%;
   position: relative;
+  text-align: center;
 
   .h2 {
-    text-transform: uppercase;
-    width: 30%;
-    margin: 25px auto;
-    font-size: 3.2rem;
-    text-align: center;
+    display: inline;
+    margin: 0 auto;
+    padding: 0 2%;
+    font-size: 2.6rem;
     font-weight: 700;
     background-color: #fff;
-  }
-
-  @media screen and (max-width: 1100px) {
-    .h2 {
-      width: 35%;
-    }
-  }
-
-  @media screen and (max-width: 960px) {
-    .h2 {
-      font-size: 2.4rem;
-    }
-  }
-
-  @media screen and (max-width: 680px) {
-    .h2 {
-      width: 50%;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .h2 {
-      width: 70%;
-      font-size: 2rem;
-    }
+    text-transform: uppercase;
   }
 
   hr {
-    position: absolute;
     width: 95%;
-    margin: 25px 2.5%;
+    margin: 0 2.5%;
+    position: absolute;
     background: #000;
-    top: 20px;
+    top: 15px;
     z-index: -1;
-    height: 3px;
   }
 
   @media screen and (max-width: 960px) {

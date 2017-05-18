@@ -1,19 +1,17 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-
-    <a class="back" href="/revues">&#60; Revenir à la page précédente</a>
-
-    <div class="titre-section clearfix">
+    <div class="titre-section">
         <hr>
-        <h2>Détails</h2>
+        <h2 class="h2">Détail de la revue {{ list.numero }}</h2>
     </div>
-
+    <div class="contenu-revue clearfix">
+    <a class="back" href="">&#60; Revenir à la page précédente</a>
     <div class="apercu">
         <figure>
             <img src="../../asset/img-content/{{ list.img }}" alt="revue">
         </figure>
-        <h2>{{ list.region }} - {{ list.numero }}</h2>
+        <h3>{{ list.region }}</h3>
         <a href="/commander?id={{ list.id }}">commander</a>
     </div>
 

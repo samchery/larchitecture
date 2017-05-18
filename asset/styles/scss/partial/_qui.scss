@@ -2,31 +2,36 @@
 .who {
   padding-top: 2%;
   width: 100%;
-  font-family: "Lato", "helvetica", sans-serif;
+  float: left;
+  font-family: $lato;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding-bottom: 2%;
 
   figure {
     width: 40%;
-    float:left;
-    /* figure dans img */
+    float: left;
+
     img {
       width: 100%;
-      display: block;
     }
   }
+
   article {
-    width: 60%;
-    float:left;
+    width: 50%;
+
     h3 {
-      font-size: 1.8rem;
+      text-align: center;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 6%;
     }
+
     p {
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 24px;
-      padding: 5px 25px 0 25px;
+      text-align: justify ;
+      font-size: 1.8rem;
+      line-height: 22px;
     }
   }
 }
