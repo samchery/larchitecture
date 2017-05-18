@@ -51,11 +51,12 @@ class RevuesController extends Controller
         ]);
     }
 
-    public function regionAction($region)
+    public function regionAction()
     {
+        $region = $_GET['region'];
         $model = new RevuesModel();
         $data = $model->selectByRegion($region) ;
-        return self::$twig->render('revues/region.html.twig',[
+        return self::$twig->render('front/revues.html.twig',[
             'list' => $data
         ]);
     }
