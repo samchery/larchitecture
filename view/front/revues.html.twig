@@ -4,13 +4,13 @@
 {% block body %}
 
     <div class="titre-section">
-    <hr>
-    <h2 class="h2">toutes nos revues</h2>
+        <hr>
+        <h2 class="h2">toutes nos revues</h2>
     </div>
     <div class="tri">
-        <form class="france">
-            <label for="fr">Toutes la France</label>
-            <select id="fr" name="fr">
+        <form method="GET" action="/revues?region={region}">
+            <label for="region">Toutes la France</label>
+            <select id="region" name="region">
                 <optgroup label="France">
                     <option value="alsace">Alsace</option>
                     <option value="aquitaine">Aquitaine</option>
@@ -35,10 +35,11 @@
                     <option value="rhones-alpes">Rhones Alpes</option>
                 </optgroup>
             </select>
+            <button type="submit">Valider</button>
         </form>
-        <form action="domtom">
-            <label for="dt">DOM TOM</label>
-            <select id="dt" name="dt">
+        <form method="GET" action="/revues?region={region}">
+            <label for="region">DOM TOM</label>
+            <select id="region" name="region">
                 <optgroup label="DOM TOM">
                     <option value="guadeloupe">Guadeloupe</option>
                     <option value="guyane">Guyane</option>
@@ -49,35 +50,40 @@
                     <option value="saint-martin">Saint Martin</option>
                 </optgroup>
             </select>
+            <button type="submit">Valider</button>
         </form>
-        <form action="etranger">
-            <label for="etranger">Étranger</label>
-            <select id="etranger" name="etranger">
-                <optgroup label="Étranger">
-                    <option value="belgique">Belgique</option>
-                    <option value="suisse">Suisse</option>
-                </optgroup>
-            </select>
+        
+        <form method="GET" action="/revues?region={region}">
+        <label for="region">Étranger</label>
+        <select id="region" name="region">
+            <optgroup label="Étranger">
+                <option value="belgique">Belgique</option>
+                <option value="suisse">Suisse</option>
+            </optgroup>
+        </select>
+        <button type="submit">Valider</button>
         </form>
     </div>
+
+
 
     <div class="titre-section clearfix">
         <hr>
         <h2 class="h2">nos dernières revues</h2>
     </div>
-<div class="clearfix">
-    <section class="revues">
-    {% for elem in list %}
-        <div>
-            <a href="/revue?id={{ elem.id }}" class="element">
-                <figure>
-                    <img src="../../asset/img-content/{{ elem.img }}" alt="revue">
-                </figure>
-            </a>
-            <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
-            <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
-       </div>
-    {% endfor %}
-    </section>
-</div>
+    <div class="clearfix">
+        <section class="revues">
+            {% for elem in list %}
+                <div>
+                    <a href="/revue?id={{ elem.id }}" class="element">
+                        <figure>
+                            <img src="../../asset/img-content/{{ elem.img }}" alt="revue">
+                        </figure>
+                    </a>
+                    <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
+                    <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
 {% endblock %}

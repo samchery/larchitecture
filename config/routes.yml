@@ -7,6 +7,10 @@ revues :
   path: /revues
   defaults: { _controller: 'Controller\RevuesController::listRevues' }
 
+revuesregion :
+  path: /revues?region={region}
+  defaults: { _controller: 'Controller\RevuesController::regionAction' }
+
 detailrevues :
   path: /revue?id={id}
   defaults: { _controller: 'Controller\RevuesController::detailRevue' }
