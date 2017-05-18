@@ -2,6 +2,8 @@
 
 {% block body %}
     {%  if list %}
+    <div class="admin-form actus">
+        <h3>Modification d'une actualité</h3>
         <form method="post" action="#">
             <p>
                 <label for="titre">Titre :</label>
@@ -25,7 +27,7 @@
 
             <p>
                 <label for="description">Description :</label>
-                <input type="text" name="description" id="description" value="{{ list.description }}">
+                <textarea name="description" id="description" style="height:200px;" value="{{ list.description }}"></textarea>
             </p>
 
             <p>
@@ -40,12 +42,15 @@
 
 
             <p>
-                <input type="hidden" name="datepub" id="datepub" value="{{ "now"|date("d/m/Y") }}">
+                <input type="hidden" name="datepub" id="datepub" value="{{ list.datepub }}">
             </p>
 
             <input type="submit" value="Modifier">
         </form>
+    </div>
     {% else %}
+    <div class="admin-form actus">
+    <h3>Ajout d'une actualité</h3>
         <form method="post" action="#">
             <p>
                 <label for="titre">Titre :</label>
@@ -69,7 +74,7 @@
 
             <p>
                 <label for="description">Description :</label>
-                <input type="text" name="description" id="description">
+                <textarea name="description" id="description" style="height:200px"></textarea>
             </p>
 
             <p>

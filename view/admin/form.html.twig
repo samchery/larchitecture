@@ -3,60 +3,66 @@
 
 {% block body %}
     {%  if list %}
+    <div class="admin-form">
+    <h3>Modification d'une revue</h3>
         <form method="post" action="#">
             <p>
-                <label for="numero">Numéro :</label>
+                <label for="numero">Numéro</label>
                 <input type="text" name="numero" id="numero" value="{{ list.numero }}">
             </p>
             <p>
-                <label for="img">Image :</label>
+                <label for="img">Image</label>
                 <input type="text" name="img" id="img" value="{{ list.img }}">
             </p>
 
             <p>
-                <label for="region">Région :</label>
+                <label for="region">Région</label>
                 <input type="text" name="region" id="region" value="{{ list.region }}">
             </p>
 
             <p>
-                <label for="zone">Zone :</label>
+                <label for="zone">Zone</label>
                 <input type="text" name="zone" id="zone" value="{{ list.zone }}">
             </p>
 
             <p>
-                <label for="datepub">date publication :</label>
+                <label for="datepub">Date de publication</label>
                 <input type="text" name="datepub" id="datepub" value="{{ list.datepub }}">
             </p>
 
             <input type="submit" value="Modifier">
         </form>
+    </div>
     {% else %}
+    <div class="admin-form">
+    <h3>Ajout d'une revue</h3>
         <form method="post" action="#">
             <p>
-                <label for="numero">Numéro :</label>
+                <label for="numero">Numéro</label>
                 <input type="text" name="numero" id="numero">
             </p>
             <p>
-                <label for="img">Image :</label>
+                <label for="img">Image</label>
                 <input type="text" name="img" id="img">
             </p>
 
             <p>
-                <label for="region">Région :</label>
+                <label for="region">Région</label>
                 <input type="text" name="region" id="region">
             </p>
 
             <p>
-                <label for="zone">Zone :</label>
+                <label for="zone">Zone</label>
                 <input type="text" name="zone" id="zone">
             </p>
 
             <p>
-                <label for="datepub">date publication :</label>
+                <label for="datepub">Date de publication :</label>
                 <input type="text" name="datepub" id="datepub">
             </p>
 
             <input type="submit" value="Ajouter">
         </form>
+    </div>
     {% endif %}
 {% endblock %}

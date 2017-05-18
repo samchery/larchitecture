@@ -1,16 +1,27 @@
 {% extends "adminbase.html.twig" %}
 
 {% block body %}
-    <h1>GESTION DES ACTUS LALALALALLALALALALA</h1>
-    <table>
+ <a href="/admin/addactus" class="add-btn">Nouvelle actualité</a>
+
+
+    <table class="revues-list">
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Titre</td>
+                <td>Architecte</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
         {% for elem in lastActues %}
             <tr>
                 <td>{{ elem.datepub }}</td>
-                <td>{{ elem.architecte }}</td>
                 <td>{{ elem.titre }}</td>
-                <td><a href="/admin/modifactus?id={{ elem.id }}">Modifier</a></td>
-                <td><a href="/admin/deleteactus?id={{ elem.id }}">Supprimer</a></td>
+                <td>{{ elem.architecte }}</td>
+                <td><a href="/admin/modifactus?id={{ elem.id }}">Modifier</a> <a href="/admin/deleteactus?id={{ elem.id }}">Supprimer</a></td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 {% endblock %}

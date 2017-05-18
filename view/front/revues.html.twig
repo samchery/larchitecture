@@ -1,0 +1,83 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="titre-section clearfix">
+        <hr>
+        <h2 class="h2">toutes nos revues</h2>
+    </div>
+
+    <div class="tri clearfix">
+        <form action="#">
+            <label for="fr">Toutes la France</label>
+            <select id="fr" name="fr">
+                <optgroup label="France">
+                    <option value="alsace">Alsace</option>
+                    <option value="aquitaine">Aquitaine</option>
+                    <option value="auvergne">Auvergne</option>
+                    <option value="bourgogne">Bourgogne</option>
+                    <option value="bretagne">Bretagne</option>
+                    <option value="centre">Centre</option>
+                    <option value="champagne-ardenne">Champagne Ardenne</option>
+                    <option value="corse">Corse</option>
+                    <option value="franche-comté">Franche Comté</option>
+                    <option value="ile-de-france">Île De France</option>
+                    <option value="languedoc-roussillon">Languedoc Roussillon</option>
+                    <option value="limousin">Limousin</option>
+                    <option value="loraine">Loraine</option>
+                    <option value="midi-pyrénées">Midi Pyrénées</option>
+                    <option value="nord-pas-de-calais">Nord Pas De Calais</option>
+                    <option value="normandie">Normandie</option>
+                    <option value="pays-de-la-loire">Pays De La Loire</option>
+                    <option value="picardie">Picardie</option>
+                    <option value="poitou-charentes">Poitou Charentes</option>
+                    <option value="provences-alpes-cote-d'azur">Provences Alpes Cote D'azur</option>
+                    <option value="rhones-alpes">Rhones Alpes</option>
+                </optgroup>
+            </select>
+        </form>
+        <form action="#">
+            <label for="dt">DOM TOM</label>
+            <select id="dt" name="dt">
+                <optgroup label="DOM TOM">
+                    <option value="guadeloupe">Guadeloupe</option>
+                    <option value="guyane">Guyane</option>
+                    <option value="martinique">Martinique</option>
+                    <option value="mayotte">Mayotte</option>
+                    <option value="reunion">Réunion</option>
+                    <option value="saint-barthelemy">Saint Barthélémy</option>
+                    <option value="saint-martin">Saint Martin</option>
+                </optgroup>
+            </select>
+        </form>
+        <form action="#">
+            <label for="etranger">Étranger</label>
+            <select id="etranger" name="etranger">
+                <optgroup label="Étranger">
+                    <option value="belgique">Belgique</option>
+                    <option value="suisse">Suisse</option>
+                </optgroup>
+            </select>
+        </form>
+    </div>
+
+
+    <div class="titre-section clearfix">
+        <hr>
+        <h2 class="h2">nos dernières revues</h2>
+    </div>
+
+    <section class="list-revues clearfix">
+    {% for elem in list %}
+       <div>
+           <a href="/revue?id={{ elem.id }}" class="element">
+            <figure>
+                <img src="../../asset/img-content/{{ elem.img }}" alt="revue">
+            </figure>
+            <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
+        </a>
+        <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
+       </div>
+    {% endfor %}
+    </section>
+{% endblock %}

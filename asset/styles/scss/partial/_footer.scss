@@ -1,0 +1,46 @@
+/* ----- FOOTER ------- */
+footer{
+  color: #fff;
+  margin-top: 5%;
+  padding:15px;
+  background-color: #000;
+  ul {
+    width:580px;
+    margin:25px auto;
+    li{
+      display: inline-block;
+      border-right:1px solid #fff;
+      a {
+        padding: 20px;
+        font-weight: 300;
+        font-size: 1.7rem;
+        color: #fff;
+      }
+      a:hover {
+        color: #34B8C9;
+      }
+      @media screen and (max-width: 480px) {
+        a {
+          display: inline;
+          padding: 10px ;
+          font-size: 1.4rem;
+          text-align: center;
+          font-weight: 400;
+        }
+      }
+    }
+    li:last-child{
+      border-right: none;
+    };
+  }
+  p{
+    width:75%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height:14px;
+    margin: 5px auto;
+    a{
+      color: #fff;
+    }
+  }
+}

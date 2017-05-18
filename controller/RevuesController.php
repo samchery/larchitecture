@@ -4,6 +4,7 @@ namespace Controller;
 
 use \Helper\Controller;
 use \Model\RevuesModel;
+use \Model\PartenairesModel;
 
 /**
  * Class RevuesController
@@ -23,13 +24,28 @@ class RevuesController extends Controller
         ]);
     }
 
+    public function listRevues()
+    {
+        $model = new RevuesModel();
+        $data = $model->select() ;
+        return self::$twig->render('front/revues.html.twig',[
+            'list' => $data
+        ]);
+    }
+
     public function detailRevue()
     {
         $id = (int) $_GET['id'];
         $model = new RevuesModel();
         $data = $model->select($id);
+        $modelP = new PartenairesModel();
+        var_dump($data);
+        // récupérer une région dynamiquement
+        $region = "Ile-de-France";
+        $dataP = $modelP->getRegion($region);
         return self::$twig->render('front/detailsRevue.html.twig',[
-            'list' => $data
+            'list' => $data,
+            'listP' => $dataP
         ]);
     }
 

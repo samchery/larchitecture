@@ -17,6 +17,16 @@ class ActusController extends Controller
         ]);
     }
 
+    public function afficheActusFront()
+    {
+        $model = new ActusModel();
+        $data = $model->select();
+        // méthode pour sélect les actus
+        return self::$twig->render('front/actus.html.twig',[
+            'lastActues' => $data
+        ]);
+    }
+
     public function afficheUneActu()
     {
         if($_GET['id']){

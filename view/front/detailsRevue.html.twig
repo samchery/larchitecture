@@ -2,12 +2,35 @@
 
 {% block body %}
 
-    <h1>Ici des détails</h1>
+    <a class="back" href="/revues">&#60; Revenir à la page précédente</a>
 
-    {{ list.numero }} <br>
-    {{ list.zone }}<br>
-    {{ list.region }}<br>
-    {{ list.img }}<br>
-    {{ list.datepub }}
+    <div class="titre-section clearfix">
+        <hr>
+        <h2>Détails</h2>
+    </div>
+
+    <div class="apercu">
+        <figure>
+            <img src="../../asset/img-content/{{ list.img }}" alt="revue">
+        </figure>
+        <h2>{{ list.region }} - {{ list.numero }}</h2>
+        <a href="/commander?id={{ list.id }}">commander</a>
+    </div>
+
+
+    <div class="titre-section clearfix">
+        <hr>
+        <h2>nos partenaires en {{ list.region }}</h2>
+    </div>
+
+    <div class="partenaires">
+    {% for elem in list %}
+        <figure>
+            <img src="../../asset/img-content/{{ listP.logo }}" alt="euresco">
+        </figure>
+
+    {% endfor %}
+
+    </div><!-- gérer les logos, cas ou y'en a qu'1 de part, cas ou 0 // et bonne région -->
 
 {% endblock %}
