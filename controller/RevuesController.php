@@ -43,12 +43,11 @@ class RevuesController extends Controller
         $modelP = new PartenairesModel();
         $region = $data->region;
 
-        $dataP = $modelP->getRegion($region);
-        var_dump($dataP[0]->nom);
+        $dataP = $modelP->selectByRegion($region);
 
         return self::$twig->render('front/detailsRevue.html.twig',[
             'list' => $data,
-            'listP' => $dataP
+            'partenaires' => $dataP,
         ]);
     }
 

@@ -2,68 +2,175 @@
 
 {% block body %}
     {%  if list %}
-    <div class="admin-form actus">
-    <h3>Modification d'un partenaire</h3>
-        <form method="post" action="#">
-            <p>
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom" value="{{ list.nom }}">
-            </p>
+        <div class="admin-form actus">
+            <h3>Modification d'un partenaire</h3>
+            <form method="post" action="#">
+                <p>
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" value="{{ list.nom }}">
+                </p>
 
-            <p>
-                <label for="departement">Département :</label>
-                <input type="text" name="departement" id="departement" value="{{ list.departement }}">
-            </p>
+                <p>
+                    <label for="departement">Département :</label>
+                    <input type="text" name="departement" id="departement" value="{{ list.departement }}">
+                </p>
 
-            <p>
-                <label for="url">URL :</label>
-                <input type="text" name="url" id="url" value="{{ list.url }}">
-            </p>
+                <p>
+                    <label for="url">URL :</label>
+                    <input type="text" name="url" id="url" value="{{ list.url }}">
+                </p>
 
-            <p>
-                <label for="region">Région :</label>
-                <input type="text" name="region" id="region" value="{{ list.region }}">
-            </p>
+                <p>
+                    <label for="secteur">Secteurs :</label>
+                    <select id="secteur" name="secteur">
+                        <optgroup label="Secteurs d'activités">
+                            <option value="AGENCEMENT, MOBILIER, MÉTIERS D'ART, DÉCORATION, CHEMINEES">AGENCEMENT, MOBILIER, MÉTIERS D'ART, DÉCORATION, CHEMINEES</option>
+                            <option value="COUVERTURE, ETANCHÉITÉ, CHARPENTE, ZINGUERIE">COUVERTURE, ETANCHÉITÉ, CHARPENTE, ZINGUERIE</option>
+                            <option value="ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE">ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE</option>
+                            <option value="ENTREPRISE GÉNÉRALE DE BÂTIMENT, GROS-OEUVRE, TRAVAUX PUBLICS, GÉNIE CIVIL, TERRASSEMENT">ENTREPRISE GÉNÉRALE DE BÂTIMENT, GROS-OEUVRE, TRAVAUX PUBLICS, GÉNIE CIVIL, TERRASSEMENT</option>
+                            <option value="ESCALIETEUR">ESCALIETEUR</option>
+                            <option value="INGENIERIE, BUREAU D'ÉTUDES, COORDINATION, ECONOMISTE, GÉOMÈTRE">INGENIERIE, BUREAU D'ÉTUDES, COORDINATION, ECONOMISTE, GÉOMÈTRE</option>
+                            <option value="MAÇONNERIE, PLÂTRERIE, PEINTURE, SOLS, MARBRERIE, VITRERIE, CARRELAGE, PARQUETS">MAÇONNERIE, PLÂTRERIE, PEINTURE, SOLS, MARBRERIE, VITRERIE, CARRELAGE, PARQUETS</option>
+                            <option value="MENUISERIE (BOIS ET ALU), MIROITERIE">MENUISERIE (BOIS ET ALU), MIROITERIE</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="secteur">Secteur :</label>
-                <input type="text" name="secteur" id="secteur" value="{{ list.secteur }}">
-            </p>
+                <p>
+                    <label for="region">Région</label>
+                    <select id="region" name="region">
+                        <optgroup label="France">
+                            <option value="Alsace">Alsace</option>
+                            <option value="Aquitaine">Aquitaine</option>
+                            <option value="Auvergne">Auvergne</option>
+                            <option value="Bourgogne">Bourgogne</option>
+                            <option value="Bretagne">Bretagne</option>
+                            <option value="Centre">Centre</option>
+                            <option value="Champagne-Ardenne">Champagne Ardenne</option>
+                            <option value="Corse">Corse</option>
+                            <option value="Franche Comté">Franche Comté</option>
+                            <option value="Île de France">Île De France</option>
+                            <option value="Languedoc Roussillon">Languedoc Roussillon</option>
+                            <option value="Limousin">Limousin</option>
+                            <option value="Loraine">Loraine</option>
+                            <option value="Midi Pyrénées">Midi Pyrénées</option>
+                            <option value="Nord Pas de Calais">Nord Pas De Calais</option>
+                            <option value="Normandie">Normandie</option>
+                            <option value="Pays de la Loire">Pays De La Loire</option>
+                            <option value="Picardie">Picardie</option>
+                            <option value="Poitou Charentes">Poitou Charentes</option>
+                            <option value="Provences Alpes Côte d'Azur">Provences Alpes Cote D'azur</option>
+                            <option value="Rhônes Alpes">Rhones Alpes</option>
+                        </optgroup>
+                        <optgroup label="DOM TOM">
+                            <option value="Guadeloupe">Guadeloupe</option>
+                            <option value="Guyane">Guyane</option>
+                            <option value="Martinique">Martinique</option>
+                            <option value="Mayotte">Mayotte</option>
+                            <option value="Reunion">Réunion</option>
+                            <option value="Saint-Barthelemy">Saint Barthélémy</option>
+                            <option value="Saint-Martin">Saint Martin</option>
+                        </optgroup>
+                        <optgroup label="Étranger">
+                            <option value="Belgique">Belgique</option>
+                            <option value="Suisse">Suisse</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <input type="submit" value="Modifier">
-        </form>
-    </div>
+                <p>
+                    <label for="logo">Logo :</label>
+                    <input type="text" name="logo" id="logo" value="{{ list.logo }}">
+                </p>
+
+
+                <input type="submit" value="Modifier">
+            </form>
+        </div>
     {% else %}
-    <div class="admin-form actus">
-    <h3>Ajout d'un partenaire</h3>
-        <form method="post" action="#">
-            <p>
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom">
-            </p>
+        <div class="admin-form actus">
+            <h3>Ajout d'un partenaire</h3>
+            <form method="post" action="#">
+                <p>
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom">
+                </p>
 
-            <p>
-                <label for="departement">Département :</label>
-                <input type="text" name="departement" id="departement" >
-            </p>
+                <p>
+                    <label for="departement">Département :</label>
+                    <input type="text" name="departement" id="departement" >
+                </p>
 
-            <p>
-                <label for="url">URL :</label>
-                <input type="text" name="url" id="url">
-            </p>
+                <p>
+                    <label for="url">URL :</label>
+                    <input type="text" name="url" id="url">
+                </p>
 
-            <p>
-                <label for="region">Région :</label>
-                <input type="text" name="region" id="region">
-            </p>
+                <p>
+                    <label for="secteur">Secteurs :</label>
+                    <select id="secteur" name="secteur">
+                        <optgroup label="Secteurs d'activités">
+                            <option value="AGENCEMENT, MOBILIER, MÉTIERS D'ART, DÉCORATION, CHEMINEES">AGENCEMENT, MOBILIER, MÉTIERS D'ART, DÉCORATION, CHEMINEES</option>
+                            <option value="COUVERTURE, ETANCHÉITÉ, CHARPENTE, ZINGUERIE">COUVERTURE, ETANCHÉITÉ, CHARPENTE, ZINGUERIE</option>
+                            <option value="ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE">ELECTRICITÉ, CHAUFFAGE, CLIMATISATION, PLOMBERIE</option>
+                            <option value="ENTREPRISE GÉNÉRALE DE BÂTIMENT, GROS-OEUVRE, TRAVAUX PUBLICS, GÉNIE CIVIL, TERRASSEMENT">ENTREPRISE GÉNÉRALE DE BÂTIMENT, GROS-OEUVRE, TRAVAUX PUBLICS, GÉNIE CIVIL, TERRASSEMENT</option>
+                            <option value="ESCALIETEUR">ESCALIETEUR</option>
+                            <option value="INGENIERIE, BUREAU D'ÉTUDES, COORDINATION, ECONOMISTE, GÉOMÈTRE">INGENIERIE, BUREAU D'ÉTUDES, COORDINATION, ECONOMISTE, GÉOMÈTRE</option>
+                            <option value="MAÇONNERIE, PLÂTRERIE, PEINTURE, SOLS, MARBRERIE, VITRERIE, CARRELAGE, PARQUETS">MAÇONNERIE, PLÂTRERIE, PEINTURE, SOLS, MARBRERIE, VITRERIE, CARRELAGE, PARQUETS</option>
+                            <option value="MENUISERIE (BOIS ET ALU), MIROITERIE">MENUISERIE (BOIS ET ALU), MIROITERIE</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <p>
-                <label for="secteur">Secteur :</label>
-                <input type="text" name="secteur" id="secteur">
-            </p>
+                <p>
+                    <label for="region">Région :</label>
+                    <select id="region" name="region">
+                        <optgroup label="France">
+                            <option value="Alsace">Alsace</option>
+                            <option value="Aquitaine">Aquitaine</option>
+                            <option value="Auvergne">Auvergne</option>
+                            <option value="Bourgogne">Bourgogne</option>
+                            <option value="Bretagne">Bretagne</option>
+                            <option value="Centre">Centre</option>
+                            <option value="Champagne-Ardenne">Champagne Ardenne</option>
+                            <option value="Corse">Corse</option>
+                            <option value="Franche Comté">Franche Comté</option>
+                            <option value="Île de France">Île De France</option>
+                            <option value="Languedoc Roussillon">Languedoc Roussillon</option>
+                            <option value="Limousin">Limousin</option>
+                            <option value="Loraine">Loraine</option>
+                            <option value="Midi Pyrénées">Midi Pyrénées</option>
+                            <option value="Nord Pas de Calais">Nord Pas De Calais</option>
+                            <option value="Normandie">Normandie</option>
+                            <option value="Pays de la Loire">Pays De La Loire</option>
+                            <option value="Picardie">Picardie</option>
+                            <option value="Poitou Charentes">Poitou Charentes</option>
+                            <option value="Provences Alpes Côte d'Azur">Provences Alpes Cote D'azur</option>
+                            <option value="Rhônes Alpes">Rhones Alpes</option>
+                        </optgroup>
+                        <optgroup label="DOM TOM">
+                            <option value="Guadeloupe">Guadeloupe</option>
+                            <option value="Guyane">Guyane</option>
+                            <option value="Martinique">Martinique</option>
+                            <option value="Mayotte">Mayotte</option>
+                            <option value="Reunion">Réunion</option>
+                            <option value="Saint-Barthelemy">Saint Barthélémy</option>
+                            <option value="Saint-Martin">Saint Martin</option>
+                        </optgroup>
+                        <optgroup label="Étranger">
+                            <option value="Belgique">Belgique</option>
+                            <option value="Suisse">Suisse</option>
+                        </optgroup>
+                    </select>
+                </p>
 
-            <input type="submit" value="Ajouter">
-        </form>
-    </div>
+                <p>
+                    <label for="logo">Logo :</label>
+                    <input type="text" name="logo" id="logo">
+                </p>
+
+                <input type="submit" value="Ajouter">
+            </form>
+        </div>
     {% endif %}
 {% endblock %}

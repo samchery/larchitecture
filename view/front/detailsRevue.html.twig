@@ -18,16 +18,16 @@
 
     <div class="titre-section clearfix">
         <hr>
-        <h2>nos partenaires en {{ list.region }}</h2>
+        <h2>Nos partenaires en {{ list.region }}</h2>
     </div>
-
     <div class="partenaires">
-            <h3>{{ listP[0].secteur }}</h3>
-            <figure>
-                <img src="../../asset/img-content/{{ listP[0].logo }}" alt="euresco">
-            </figure>
-            <h4>{{ listP[0].nom }}</h4>
-
-    </div><!-- gérer les logos, cas ou y'en a qu'1 de part, cas ou 0 // et bonne région -->
+    {% for elem in partenaires %}
+        <figure>
+            <img src="../../asset/img-content/{{ elem.logo }}" alt="{{ elem.nom }}">
+        </figure>
+        <h4>{{ elem.nom }}</h4>
+    {% endfor %}
+    </div>
+    </div>
 
 {% endblock %}
