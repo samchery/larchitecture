@@ -1,49 +1,42 @@
 {% extends "base.html.twig" %}
-
+{% block title %}Nous contactez | L'architecture{% endblock %}
 {% block body %}
 
     <div class="titre-section clearfix">
         <hr>
-        <h2>Nous contacter</h2>
+        <h2>Nous contactez</h2>
     </div>
 
-    <section class="clearfix contact-wrapper">
-        <div class="contact">
-            <p>Pour nous contacter par mail, veuillez utiliser le formulaire ci-dessous.<br>
-                Merci de renseigner tous les champs.</p>
-            <div class="container">
-                <form action="/action_page.php">
-                    <label for="fname">Nom</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
-                    <label for="lname">Prénom</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
-                    <label for="telephone">Téléphone</label>
-                    <input type="text" id="telephone" name="telephone" placeholder="Votre numéro de téléphone..">
-                    <label for="mail">Adresse e-mail</label>
-                    <input type="text" id="mail" name="mail" placeholder="Votre adresse e-mail..">
-                    <label for="service">Service</label>
-                    <select id="service" name="service">
-                        <option value="com">Commercial</option>
-                        <option value="pub">Rédactionnel / Publicité</option>
-                        <option value="admi">Administratif / Comptabilité</option>
-                        <option value="dir">Direction</option>
-                    </select>
-                    <label for="country">Pays</label>
-                    <select id="country" name="country">
-                        <option value="fr">France</option>
-                        <option value="dt">DOM TOM</option>
-                        <option value="etr">Étranger</option>
-                    </select>
-                    <label for="subject">Commentaires</label>
-                    <textarea id="subject" name="subject" placeholder="Écrivez nous.." style="height:200px"></textarea>
-                    <input type="submit" value="Envoyer">
-                </form>
-            </div>
+    <div class="container clearfix">
+        <h3 class="text-contact">Pour nous contacter, veuillez utiliser le formulaire ci-dessous. Merci de renseigner tous les champs.</h3>
+        <form action="/action_page.php">
+            <label for="fname">Nom</label>
+            <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+            <label for="lname">Prénom</label>
+            <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
+            <label for="telephone">Téléphone</label>
+            <input type="text" id="telephone" name="telephone" placeholder="Votre numéro de téléphone..">
+            <label for="mail">Adresse e-mail</label>
+            <input type="text" id="mail" name="mail" placeholder="Votre adresse e-mail..">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+                <option value="com">Commercial</option>
+                <option value="pub">Rédactionnel / Publicité</option>
+                <option value="admi">Administratif / Comptabilité</option>
+                <option value="dir">Direction</option>
+            </select>
+            <label for="country">Pays</label>
+            <select id="country" name="country">
+                <option value="fr">France</option>
+                <option value="dt">DOM TOM</option>
+                <option value="etr">Étranger</option>
+            </select>
+            <label for="subject">Commentaires</label>
+            <textarea id="subject" name="subject" placeholder="Écrivez nous.." style="height:200px"></textarea>
+            <input type="submit" value="Envoyer">
+        </form>
+        <div class="info-contact">Groupe SOFRE&amp;COM Société Française d'Edition et de Communication<br>9/11 rue Jacquard - 93315 Le Pré Saint Gervais cedex - France
         </div>
-        <div class="contact">
-            <p>Pour nous joindre par courrier, utiliser cette adresse :<br>
-            Groupe SOFRE&COM Société Française d'Edition et de Communication<br>9/11 rue Jacquard - 93315 Le Pré Saint Gervais cedex - France</p>
-        </div>
-    </section>
+    </div>
 
 {% endblock %}

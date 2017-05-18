@@ -1,9 +1,10 @@
 footer {
 	width: 100%;
 	margin-top: 5%;
-	border: solid;
+	padding:25px 0;
 	background: #000;
-	color: #fff;
+	clear: both;
+
 	a{
 		color: #fff;
 	}
@@ -68,7 +69,8 @@ footer {
 
 	p {
 		width:75%;
-		margin: 20px auto;
+		margin: auto;
+		margin-top: 2%;
 		color: #fff;
 		text-align:center;
 		font-size:1.3rem;

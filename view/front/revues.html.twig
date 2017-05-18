@@ -60,23 +60,23 @@
         </form>
     </div>
 
-
     <div class="titre-section clearfix">
         <hr>
         <h2 class="h2">nos dernières revues</h2>
     </div>
-
+<div class="clearfix">
     <section class="revues">
     {% for elem in list %}
-       <div>
-           <a href="/revue?id={{ elem.id }}" class="element">
-            <figure>
-                <img src="../../asset/img-content/{{ elem.img }}" alt="revue">
-            </figure>
+        <div>
+            <a href="/revue?id={{ elem.id }}" class="element">
+                <figure>
+                    <img src="../../asset/img-content/{{ elem.img }}" alt="revue">
+                </figure>
+            </a>
             <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
-        </a>
-        <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
+            <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
        </div>
     {% endfor %}
     </section>
+</div>
 {% endblock %}
