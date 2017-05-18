@@ -59,6 +59,10 @@ abonnement :
   path: /abonnement
   defaults: { _controller: 'Controller\PageController::goAbonnement' }
 
+Offre :
+  path: /offre
+  defaults: { _controller: 'Controller\PageController::goOffre' }
+
 
 # BACK OFFICE
 
