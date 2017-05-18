@@ -1059,4 +1059,83 @@ footer {
     font-size: 1.3rem;
     line-height: 18px; }
 
+header.header-admin {
+  background-color: #000;
+  width: 100%;
+  position: static; }
+  header.header-admin div img {
+    width: 20%;
+    float: left; }
+  header.header-admin div a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: underline;
+    float: right;
+    padding: 2% 2% 0 0; }
+
+section.admin {
+  position: static;
+  width: 100%;
+  text-align: center;
+  font-size: 16px; }
+  section.admin h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 5px; }
+  section.admin h3 {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px; }
+  section.admin nav.admin-nav ul {
+    width: 100%;
+    text-align: center; }
+    section.admin nav.admin-nav ul li {
+      display: inline-block;
+      margin: 1%;
+      font-size: 20px; }
+      section.admin nav.admin-nav ul li a {
+        background: #34B8C9;
+        border-radius: 10px;
+        padding: 10px 25px; }
+  section.admin a.add-btn {
+    background: #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #fff;
+    display: inline-block;
+    margin: 2%; }
+  section.admin table.revues-list {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 2%; }
+    section.admin table.revues-list a {
+      display: inline;
+      padding: 0 2%; }
+      section.admin table.revues-list a:hover {
+        text-decoration: underline; }
+    section.admin table.revues-list thead {
+      background: #333;
+      color: #fff;
+      font-weight: bold; }
+      section.admin table.revues-list thead td {
+        padding: 1%; }
+    section.admin table.revues-list tbody tr, section.admin table.revues-list tbody td {
+      padding: 2%;
+      border-bottom: 1px solid #ddd; }
+    section.admin table.revues-list.part {
+      width: 95%; }
+  section.admin div.admin-form {
+    width: 30%;
+    margin: 0 auto; }
+    section.admin div.admin-form form p {
+      width: 100%;
+      margin: 2%;
+      display: flex;
+      justify-content: space-between; }
+    section.admin div.admin-form.actus {
+      width: 50%; }
+      section.admin div.admin-form.actus input[type=text], section.admin div.admin-form.actus textarea {
+        width: 75%; }
+
 /*# sourceMappingURL=screen.css.map */

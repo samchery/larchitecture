@@ -38,4 +38,9 @@ class PageController extends Controller
     {
         return self::$twig->render('front/contact.html.twig');
     }
+
+    public function goAbonnement()
+    {
+        return self::$twig->render('front/abonnement.html.twig');
+    }
 }

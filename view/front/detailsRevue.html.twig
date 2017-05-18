@@ -22,12 +22,11 @@
     </div>
 
     <div class="partenaires">
-    {% for elem in list %}
-        <figure>
-            <img src="../../asset/img-content/{{ listP.logo }}" alt="euresco">
-        </figure>
-
-    {% endfor %}
+            <h3>{{ listP[0].secteur }}</h3>
+            <figure>
+                <img src="../../asset/img-content/{{ listP[0].logo }}" alt="euresco">
+            </figure>
+            <h4>{{ listP[0].nom }}</h4>
 
     </div><!-- gérer les logos, cas ou y'en a qu'1 de part, cas ou 0 // et bonne région -->
 
