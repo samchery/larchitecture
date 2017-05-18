@@ -20,7 +20,7 @@ detailactu :
   defaults: { _controller: 'Controller\ActusController::afficheUneActu' }
 
 commander :
-  path: /commander
+  path: /commander?id={id}
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
 
 quisommesnous :
@@ -38,6 +38,10 @@ contact :
 abonnement :
   path: /abonnement
   defaults: { _controller: 'Controller\PageController::goAbonnement' }
+
+appelOffre :
+  path: /offre
+  defaults: { _controller: 'Controller\PageController::goOffre' }
 
 
 # BACK OFFICE

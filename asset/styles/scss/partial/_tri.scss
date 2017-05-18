@@ -1,13 +1,13 @@
 .tri {
 	width: 100%;
 	height: 150px;
-	margin-top: 1%; 
-	padding-top: 30px; 
+	margin-top: 1%;
+	padding-top: 30px;
 	display: flex;
 	justify-content: space-around;
 	background: #000;
 	float: left;
-	
+
 	label {
 		display: block;
 		text-align: center;
@@ -46,8 +46,8 @@
 	.tri {
 		width: 100%;
 		height: initial;
-		margin-top: 1%; 
-		padding: 30px 0; 
+		margin-top: 1%;
+		padding: 30px 0;
 		display: block;
 		float: none;
 	}
@@ -67,7 +67,7 @@
 			margin: 0 auto;
 			width: 45%;
 			margin-bottom: 4%;
-			
+
 			img{
 				width: 100%;
 			}
@@ -86,7 +86,7 @@
 			}
 		}
 
-		a {
+		.commander {
 			padding: 1.5%;
 			background-color: #35AEBD;
 			text-transform: uppercase;
@@ -111,16 +111,16 @@
 	font-size: 1.6rem;
 	text-align: center;
 	padding-top: 5%;
-	margin-bottom: 5%; 
+	margin-bottom: 5%;
 
 	a {
 		width: 200px;
 		height: 30px;
-		margin: 0 auto 5%; 
+		margin: 0 auto 5%;
 		padding-top: 5px;
 		border-radius: 10px;
 		display: block;
-		background: #000; 
+		background: #000;
 		color: #fff;
 
 		text-transform: uppercase;
