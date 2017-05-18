@@ -1,56 +1,174 @@
-section {
-	.actu-title {
-		width: 100%;
-		text-align: center;
+.actu-title {
+	width: 100%;
+	text-align: center;
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: 700;
+	}
+
+	@media screen and (max-width: 480px) {
 		h2 {
-			font-size: 120%;
-			font-weight: 700;
-		}
-		h3 {
-			font-size: 110%;
+			font-size: 1.9rem;
+			margin: 2% 0;
 		}
 	}
 
-	.text-actu {
-		float: left;
-		figure {
-			width: 25%;
-			float: left;
-			img {
-				width: 100%;
-			}
+	h3 {
+		font-size: 2rem;
+	}
+
+	@media screen and (max-width: 480px) {
+		h3 {
+			font-size: 1.7rem;
+			margin: 4% 0;
 		}
-		article {
-			.line1 {
-				width: 100%;
-				float: left;
-				font-weight: 300;
-				text-align: justify;
-			}
+	}
+}
+
+.text-actu {
+	float: left;
+	margin-top: 3%; 
+
+	figure {
+		width: 25%;
+		float: left;
+		
+		img {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		figure {
+			width: 100%;
+			float: none;
+		}
+	}
+	
+	p {
+		font-size: 1.8rem;
+		text-align: justify;
+	}
+
+	@media screen and (max-width: 480px) {
+		p {
+			font-size: 1.6rem;
+			text-align: left;
+		}
+	}
+	
+	.line1 {
+		width: 100%;
+		margin-top: 2%;
+		float: left;
+		font-weight: 300;
+		line-height: 22px;
+		text-align: justify;
+	}
+
+	.line2 {
+		margin-top: 1%;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width: 480px) {
+		.line2 {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.text-actu {
+			float: none;
 		}
 
-		@media only screen and (max-width: 768px) {
+		.text-actu figure {
+			width: 90%;
+			float: none;
+		}
+
+		.line1 {
+			float: none;
+		}
+
+			@media only screen and (max-width: 468px) {
 			.text-actu {
 				float: none;
-				figure {
-					width: 90%;
-					float: none;
-				}
-				article {
-					.line1 {
-						float: none;
-					}
-				}
 			}
-			@media only screen and (max-width: 468px) {
-				.text-actu {
-					float: none;
-					figure {
-						width: 100%;
-						float: none;
-					}
-				}
+
+			.text-actu figure {
+				width: 100%;
+				float: none;
 			}
 		}
 	}
 }
+
+.prestataire {
+	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding-bottom: 3%;
+	display: flex;
+	justify-content: space-around;
+	background-color: #45BBC8;
+	font-size: 1.8rem;
+	line-height: 20px;
+	color: #fff;
+	float: left;
+		
+	.equipe {
+		width: 30%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.equipe {
+			width: 90%;
+		}
+	}
+
+	.entreprise {
+		width: 30%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.entreprise {
+			width: 90%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.prestataire {
+		width: 100%;
+		display: block;
+		line-height: 22px;
+		text-align: center;
+	}
+}
+
+.photos-firstline, .photos-secondline {
+	display: flex;
+	width: 100%;
+	float: left;
+	justify-content: space-around;
+	margin-bottom: 5%;
+	
+	@media only screen and (max-width: 768px) {
+		img {
+			width: 70%;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 3%;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.photos-firstline, .photos-secondline {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+}
+	

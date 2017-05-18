@@ -1,26 +1,20 @@
-@charset "UTF-8";
-@import "partial/reset";
-
 // VARIABLE
 $blue: #34B8C9;
 $lato: 'Lato', 'helvetica' ,sans-serif;
 $merri: 'Merriweather', 'times' , serif;
 
-
-
 // IMPORT
-@import "partial/commun";
-@import "partial/menu";
+@import "partial/reset";
+@import "partial/config";
+@import "partial/header";
+@import "partial/en-tete";
 @import "partial/accueil";
-@import "partial/actu";
-@import "partial/qui";
-@import "partial/contact";
+@import "partial/tri";
 @import "partial/revue";
-@import "partial/footer";
-@import "partial/revuedetail";
+@import "partial/actu";
 @import "partial/article-actu";
-@import "partial/admin";
-
-
-@import "partial/forms";
+@import "partial/contact";
+@import "partial/formulaire";
 @import "partial/panier";
+@import "partial/infos";
+@import "partial/footer";

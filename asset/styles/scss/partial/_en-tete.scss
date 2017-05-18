@@ -1,0 +1,88 @@
+
+.titre-section{
+	width: 100%;
+	margin: 1% 0 2%;
+	position: relative;
+	text-align: center;
+	
+	.h2 {
+		display: inline;
+		margin: 0 auto;
+		padding: 0 2%;
+		font-size: 2.6rem;
+		font-weight: 700;
+		background-color: #fff;
+		text-transform: uppercase;
+	}
+
+	hr {
+		width: 95%;
+		margin: 0 2.5%;
+		position: absolute;
+		background: #000;
+		top: 15px;
+		z-index: -1;
+	}
+
+	@media screen and (max-width: 960px) {
+		hr {
+			top: 15px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		hr {
+			top: 13px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		hr {
+			top: 12px;
+		}
+	}
+}
+
+.steps {
+	width: 100%;
+	display: flex;
+	float: left;
+	justify-content: space-around;
+	margin-top: 2%;
+	margin-bottom: 5%;
+
+	div {
+		text-align: center;
+
+		h3 {
+			font-family: $lato;
+			float: left;
+			font-size: 2rem;
+		}
+
+		@media screen and (max-width: 480px) {
+			h3 {
+				font-size: 1.8rem;
+				font-weight: 300;
+			}
+		}
+
+		p {
+			font-family: $lato;
+			margin-top: 5px; 
+			font-size: 1.6rem;
+			font-weight: 300;
+		}
+		
+		@media screen and (max-width: 480px) {
+			p {
+				font-size: 1.2rem;
+				font-weight: 300;
+			}
+		}
+	}
+	
+	.active {
+		color: $blue;
+	}
+}
