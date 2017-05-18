@@ -2,10 +2,11 @@
 
 {% block body %}
 <section class="clearfix">
-
+<br><br><br><br>
+    <a class="back" href="/actus">&#60; Revenir à la page précédente</a>
     <div class="actu-title">
         <h2>{{ lastActues.titre }}</h2>
-        <h3>{{ lastActues.architecte }}  - {{ lastActues.datepub }}</h3>
+        <h3>{{ lastActues.architecte }}  - <span>{{ lastActues.datepub }}</span></h3>
     </div>
 
     <section class="text-actu">

@@ -118,3 +118,53 @@
 		}
 	}
 }
+
+
+.partenaires{
+	width:95%;
+	margin:0 auto;
+	div{
+		width: 23%;
+		margin: 1%;
+		float: left;
+		figure{
+			width:100%;
+			display:block;
+			img{
+				width:100%;
+				display:block;
+				margin-bottom:1%;
+			}
+		}
+		h4{
+			display: block;
+			font-size:1.4rem;
+			text-align: center;
+			font-weight:400;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+  .partenaires{
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .partenaires{
+    div{
+      width: 46%;
+      margin: 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .partenaires{
+    div{
+      width: auto;
+      margin: 1%;
+    }
+  }
+}
