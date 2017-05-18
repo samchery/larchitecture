@@ -1,6 +1,7 @@
 .container {
 	width: 40%;
-	margin: 0 auto;
+	float: left;
+	margin-left: 6.5%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -22,20 +23,6 @@
 	    resize: vertical 
 	}
 
-	input[type=submit] {
-	    background-color: #34B8C9;
-	    color: white;
-	    padding: 2% 5%;
-	    border: none;
-	    border-radius: 4px;
-	    cursor: pointer;
-		
-		&:hover {
-			background-color: #4ec0d1;
-		}
-	}
-
-
 	.text-contact {
 		width: 100%;
 		text-align: center;
@@ -46,20 +33,82 @@
 		text-align: center;
 		font-size: 1.1rem;
 		width: 56%;
-		margin: 0 auto;
+		margin: 5% auto 0 auto;
+	}
+}
+
+	input[type=submit] {
+	    background-color: #34B8C9;
+	    color: white;
+	    padding: 2% 5%;
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    float: right;
+		
+		&:hover {
+			background-color: #4ec0d1;
+		}
+	}
+
+.radio {
+	width: 100%;
+}
+
+.adresse, .newsletter {
+	width: 40%;
+	float: left;
+	margin-left: 6.5%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 1.6rem;
+
+    h3 {
+    	text-align: center;
+		font-size: 2rem;
+		margin-bottom: 5%;
+    }
+
+}
+
+.newsletter {
+	margin-top: 5%;
+
+    input[type=text] {
+	    width: 100%; 
+	    padding: 2%; 
+	    border: 1px solid #ccc; 
+	    border-radius: 4px; 
+	    box-sizing: border-box; 
+	    margin-top: 2%; 
+	    margin-bottom: 5%; 
+	    resize: vertical 
+	}
+
+	p {
+		margin: 3% 0 3%;
+		font-weight: 300;
+		font-size: 1.4rem;
+	}
+
+
+}
+
+@media screen and (max-width: 850px) {
+	.container {
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+
+@media screen and (max-width: 850px) {
+	.adresse, .newsletter {
+		margin-left: 5%;
 		margin-top: 5%;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.container {
-		width: 60%;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.container {
 		width: 90%;
 	}
 }
+
 

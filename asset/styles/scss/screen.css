@@ -35,7 +35,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: ' ';
   content: none; }
 
 table {
@@ -91,6 +91,9 @@ a {
     width: 100%; } }
 header {
   width: 100%; }
+  header.abso {
+    position: absolute;
+    top: 0; }
   header .nav-up {
     width: 100%;
     padding-bottom: 10px;
@@ -123,12 +126,11 @@ header {
       color: #fff; }
       header .nav-up a:last-of-type {
         position: absolute;
-        top: 15%;
+        top: 63px;
         font-size: 1.5rem;
         right: 2.5%; }
-      @media screen and (max-width: 1100px) {
-        header .nav-up a:last-of-type {
-          top: 18%; } }
+      header .nav-up a:last-of-type:hover {
+        color: #34B8C9; }
       @media screen and (max-width: 768px) {
         header .nav-up a:last-of-type {
           display: none; } }
@@ -152,18 +154,16 @@ header {
       header .nav-up .abonnez {
         width: 25%;
         position: absolute;
-        top: 270%;
+        top: 221%;
         left: -38%;
         z-index: 999;
         transition: 0.6s; } }
     @media screen and (max-width: 480px) {
       header .nav-up .abonnez {
         width: 35%; } }
-    header .nav-up .commander:hover {
-      border: 1px solid #34B8C9; }
   header .nav {
     background: #000;
-    padding: 0 2% 1% 2%;
+    padding: 15px 2% 1% 2%;
     font-weight: 300;
     z-index: 99; }
     header .nav ul {
@@ -177,10 +177,15 @@ header {
           font-size: 2rem;
           font-weight: 400;
           color: #fff; }
+        header .nav ul li a:hover {
+          color: #34B8C9; }
+        @media screen and (max-width: 1000px) {
+          header .nav ul li a {
+            font-size: 1.7rem; } }
         @media screen and (max-width: 960px) {
           header .nav ul li a {
             padding: 0 15px; } }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 600px) {
           header .nav ul li a {
             display: block;
             padding: 5px;
@@ -190,16 +195,21 @@ header {
             display: initial;
             margin: 0 0;
             padding: 0 0;
-            font-weight: 300; } }
-        header .nav ul li a:hover {
-          color: #34B8C9; }
-      @media screen and (max-width: 1000px) {
+            font-weight: 300; }
+            header .nav ul li a:hover {
+              color: #34B8C9; } }
+      @media screen and (max-width: 960px) {
+        header .nav ul li {
+          display: inline-block;
+          text-align: left;
+          margin-right: 15px; } }
+      @media screen and (max-width: 778px) {
         header .nav ul li {
           margin-right: 10px; }
           header .nav ul li a {
-            font-size: 1.7rem; } }
-      @media screen and (max-width: 820px) {
-        header .nav ul header nav ul li {
+            font-size: 1.8rem; } }
+      @media screen and (max-width: 768px) {
+        header .nav ul li {
           display: block;
           width: 100%;
           margin: 10% 0 0 5%;
@@ -228,6 +238,22 @@ header {
         color: #34B8C9; }
       header .slogan p:first-of-type {
         margin-left: 25%; }
+      header .slogan p:last-of-type {
+        margin-top: 15px;
+        margin-left: 55%;
+        animation: slog1 1s ease; }
+@keyframes slog1 {
+  from {
+    margin-left: 50%;
+    opacity: 0; } }
+      header .slogan p:first-of-type {
+        margin-left: 25%;
+        opacity: 1;
+        animation: slog 1s ease; }
+@keyframes slog {
+  from {
+    margin-left: 10%;
+    opacity: 0; } }
       @media screen and (max-width: 768px) {
         header .slogan p:first-of-type {
           margin-left: 5%; } }
@@ -257,10 +283,6 @@ header {
     @media screen and (max-width: 480px) {
       header .slogan p {
         display: none; } }
-
-header.abso {
-  position: absolute;
-  top: 0; }
 
 .titre-section {
   width: 100%;
@@ -465,9 +487,8 @@ header.abso {
     height: 480px;
     overflow: hidden; }
     .revues div figure {
-      margin: 0 auto;
-      width: 45%;
-      margin-bottom: 4%; }
+      margin: 0 auto 4% auto;
+      width: 45%; }
       .revues div figure img {
         width: 100%; }
     .revues div h3 {
@@ -577,56 +598,89 @@ header.abso {
   .partenaires {
     display: initial;
     float: none; } }
-.actu {
-  width: 90%;
-  display: flex;
-  float: left;
-  justify-content: space-around;
-  font-family: "Lato", "helvetica", sans-serif;
-  margin: 0 auto;
-  margin: 2% 0 3% 5%;
-  align-items: center; }
-  .actu figure {
-    width: 40%; }
-    .actu figure img {
-      width: 100%; }
-  @media screen and (max-width: 480px) {
-    .actu figure {
-      width: 100%; } }
-  .actu article {
-    text-align: center;
-    width: 55%; }
-    .actu article h2 {
+.actuhead {
+  width: 95%;
+  margin: 25px auto; }
+  .actuhead figure {
+    width: 30%;
+    float: left; }
+    .actuhead figure img {
+      width: 100%;
+      display: block; }
+  .actuhead article {
+    padding: 15px;
+    width: 70%;
+    float: left; }
+    .actuhead article h3 {
+      text-align: center;
       font-size: 1.8rem;
-      margin-bottom: 4%;
+      font-weight: 700;
+      margin-bottom: 6%; }
+    .actuhead article h4 {
+      font-size: 1.6rem;
+      margin-bottom: 3%;
       font-weight: 700; }
-    .actu article h3 {
-      font-size: 1.7rem;
-      margin-bottom: 7%; }
-    .actu article p {
-      font-family: "Merriweather", "times", serif;
-      line-height: 16px;
-      font-size: 1.5rem;
-      line-height: 19px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      text-align: justify; }
-      @media screen and (max-width: 480px) {
-        .actu article p:last-of-type {
-          width: 90%; } }
-      .actu article p a {
-        color: #35AEBD;
-        text-transform: underline; }
-  @media screen and (max-width: 480px) {
-    .actu article {
-      width: 90%;
-      margin: 0 auto; } }
+      .actuhead article h4 span {
+        font-style: italic; }
+    .actuhead article p {
+      font-size: 1.4rem;
+      line-height: 26px; }
+      .actuhead article p a {
+        color: #34B8C9;
+        font-weight: 700;
+        display: inline-block;
+        margin-left: 10px; }
 
-@media screen and (max-width: 480px) {
-  .actu {
-    width: 90%;
-    display: initial;
+@media screen and (max-width: 1100px) {
+  .actuhead figure {
+    display: none; }
+  .actuhead article {
+    width: 100%;
     float: none; } }
+.img-actu {
+  margin: 5% 0; }
+  .img-actu .img-line {
+    margin: 10% 0; }
+    .img-actu .img-line a {
+      display: block;
+      width: 40%;
+      margin: 0 5%;
+      float: left;
+      max-height: 300px;
+      overflow: hidden;
+      position: relative; }
+      .img-actu .img-line a .infos {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: rgba(255, 255, 255, 0);
+        transition: 0.4s;
+        transform: rotateX(40deg); }
+        .img-actu .img-line a .infos:hover {
+          color: #fff;
+          background: rgba(0, 0, 0, 0.97);
+          transform: rotateX(0deg); }
+          .img-actu .img-line a .infos:hover p {
+            display: block; }
+        .img-actu .img-line a .infos p {
+          margin-top: 25%;
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: 700;
+          color: #fff;
+          display: none; }
+        @media screen and (max-width: 480px) {
+          .img-actu .img-line a .infos:hover {
+            background: rgba(0, 0, 0, 0.9); } }
+      .img-actu .img-line a img {
+        display: block;
+        width: 100%; }
+
+@media screen and (max-width: 700px) {
+  .img-actu .img-line a {
+    margin: 30px auto;
+    float: none;
+    width: 90%; } }
 .actu-title {
   width: 100%;
   text-align: center; }
@@ -730,7 +784,6 @@ header.abso {
     .photos-firstline img, .photos-secondline img {
       width: 70%;
       display: block;
-      margin: 0 auto;
       margin-bottom: 3%; } }
 
 @media only screen and (max-width: 768px) {
@@ -740,7 +793,8 @@ header.abso {
     float: none; } }
 .container {
   width: 40%;
-  margin: 0 auto;
+  float: left;
+  margin-left: 6.5%;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -757,15 +811,6 @@ header.abso {
     margin-top: 2%;
     margin-bottom: 5%;
     resize: vertical; }
-  .container input[type=submit] {
-    background-color: #34B8C9;
-    color: white;
-    padding: 2% 5%;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; }
-    .container input[type=submit]:hover {
-      background-color: #4ec0d1; }
   .container .text-contact {
     width: 100%;
     text-align: center; }
@@ -773,14 +818,59 @@ header.abso {
     text-align: center;
     font-size: 1.1rem;
     width: 56%;
-    margin: 0 auto;
-    margin-top: 5%; }
+    margin: 5% auto 0 auto; }
 
-@media only screen and (max-width: 768px) {
+input[type=submit] {
+  background-color: #34B8C9;
+  color: white;
+  padding: 2% 5%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right; }
+  input[type=submit]:hover {
+    background-color: #4ec0d1; }
+
+.radio {
+  width: 100%; }
+
+.adresse, .newsletter {
+  width: 40%;
+  float: left;
+  margin-left: 6.5%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 1.6rem; }
+  .adresse h3, .newsletter h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5%; }
+
+.newsletter {
+  margin-top: 5%; }
+  .newsletter input[type=text] {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    resize: vertical; }
+  .newsletter p {
+    margin: 3% 0 3%;
+    font-weight: 300;
+    font-size: 1.4rem; }
+
+@media screen and (max-width: 850px) {
   .container {
-    width: 60%; } }
-@media only screen and (max-width: 480px) {
-  .container {
+    width: 90%;
+    margin-left: 5%; } }
+@media screen and (max-width: 850px) {
+  .adresse, .newsletter {
+    margin-left: 5%;
+    margin-top: 5%;
     width: 90%; } }
 .ml {
   margin: 20px auto;
@@ -798,9 +888,9 @@ header.abso {
   width: 60%;
   padding: 4%;
   margin: 0 auto;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.22); }
   .form label {
     font-size: 1.5rem; }
     .form label .asterix {
@@ -954,7 +1044,6 @@ header.abso {
     padding-left: 10%;
     font-size: 1.4rem;
     margin: 7% 0 0 0; } }
-/**********BOUTTON**********/
 .button-commander {
   display: inline-block;
   border-radius: 4px;
@@ -1098,8 +1187,7 @@ footer {
       margin: 2% auto; } }
   footer p {
     width: 75%;
-    margin: auto;
-    margin-top: 2%;
+    margin: 2% auto 0 auto;
     color: #fff;
     text-align: center;
     font-size: 1.3rem;
@@ -1152,7 +1240,6 @@ section.admin {
     margin: 2%; }
   section.admin table.revues-list {
     width: 80%;
-    margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 2%; }
     section.admin table.revues-list a {

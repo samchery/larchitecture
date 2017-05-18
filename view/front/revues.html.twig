@@ -1,4 +1,5 @@
 {% extends "base.html.twig" %}
+{% block title %}Listes des revues | L'architecture{% endblock %}
 
 {% block body %}
 
@@ -35,7 +36,7 @@
                 </optgroup>
             </select>
         </form>
-        <form>
+        <form action="domtom">
             <label for="dt">DOM TOM</label>
             <select id="dt" name="dt">
                 <optgroup label="DOM TOM">
@@ -49,7 +50,7 @@
                 </optgroup>
             </select>
         </form>
-        <form>
+        <form action="etranger">
             <label for="etranger">Étranger</label>
             <select id="etranger" name="etranger">
                 <optgroup label="Étranger">
@@ -74,12 +75,7 @@
                 </figure>
             </a>
             <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
-<<<<<<< HEAD
             <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
-=======
-        </a>
-        <a class="commander" href="/commander?id={{ elem.id }}&step=1">commander</a>
->>>>>>> 26c61840f5d7683412146123cf2a5203f24c14c8
        </div>
     {% endfor %}
     </section>

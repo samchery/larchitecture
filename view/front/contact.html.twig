@@ -4,9 +4,8 @@
 
     <div class="titre-section clearfix">
         <hr>
-        <h2>Nous contactez</h2>
+        <h2 class="h2">contact</h2>
     </div>
-
     <div class="container clearfix">
         <h3 class="text-contact">Pour nous contacter, veuillez utiliser le formulaire ci-dessous. Merci de renseigner tous les champs.</h3>
         <form action="/action_page.php">
@@ -35,8 +34,18 @@
             <textarea id="subject" name="subject" placeholder="Écrivez nous.." style="height:200px"></textarea>
             <input type="submit" value="Envoyer">
         </form>
+    </div>
+    <div class="adresse">
+        <h3>Notre adresse</h3>
         <div class="info-contact">Groupe SOFRE&amp;COM Société Française d'Edition et de Communication<br>9/11 rue Jacquard - 93315 Le Pré Saint Gervais cedex - France
         </div>
+    </div>
+    <div class="newsletter">
+        <h3>S'inscrire à notre NewsLetter</h3>
+        <p>Inscrivez-vous pour ne pas manquez toutes nos récentes publications !</p>
+        <label for="mail">Adresse e-mail</label>
+        <input type="text" id="mail" name="mail" placeholder="Votre adresse e-mail..">
+        <input type="submit" value="Confirmer">
     </div>
 
 {% endblock %}

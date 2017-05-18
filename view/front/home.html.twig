@@ -13,10 +13,10 @@
         {% for elem in lastrevues %}
             <div class="revue-actu">
                 <a href="revue?id={{ elem.id }}">
-                    <span class="ref-numero">
+                    <div class="ref-numero">
                         <p>N°{{ elem.numero }}</p>
                         <p>{{ elem.region }}</p>
-                    </span>
+                    </div>
                     <img src="../../asset/img-content/{{ elem.img }}" class="img-dernieres-actu" alt="revue">
                 </a>
             </div>
