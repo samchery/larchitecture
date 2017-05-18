@@ -35,7 +35,7 @@
                 </optgroup>
             </select>
         </form>
-        <form action="domtom">
+        <form>
             <label for="dt">DOM TOM</label>
             <select id="dt" name="dt">
                 <optgroup label="DOM TOM">
@@ -49,7 +49,7 @@
                 </optgroup>
             </select>
         </form>
-        <form action="etranger">
+        <form>
             <label for="etranger">Étranger</label>
             <select id="etranger" name="etranger">
                 <optgroup label="Étranger">
@@ -75,7 +75,7 @@
             </figure>
             <h3>{{ elem.region }} - N°{{ elem.numero }}</h3>
         </a>
-        <a class="commander" href="/commander?id={{ elem.id }}">commander</a>
+        <a class="commander" href="/commander?id={{ elem.id }}&step=1">commander</a>
        </div>
     {% endfor %}
     </section>

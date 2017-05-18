@@ -23,6 +23,22 @@ commander :
   path: /commander
   defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
 
+commander un seul :
+  path: /commander?id={id}&step=1
+  defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
+
+commander etape 2 :
+  path: /commander?id={id}&step=2
+  defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
+
+commander etape 3 :
+  path: /commander?id={id}&step=3
+  defaults: { _controller: 'Controller\CommandeController::afficheCommande' }
+
+commander confirmation:
+  path: /commanderconfirmation
+  defaults: { _controller: 'Controller\CommandeController::confirmCommande' }
+
 quisommesnous :
   path: /quisommesnous
   defaults: { _controller: 'Controller\PageController::goQui' }
