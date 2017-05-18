@@ -78,6 +78,14 @@
 		}
 	}
 
+	@media screen and (max-width: 800px) {
+		.revue-actu {
+			width: 40%;
+			margin: 5%;
+			text-align: center;
+		}
+	}
+
 	@media screen and (max-width: 480px) {
 		.revue-actu {
 			width: 75%;
@@ -108,10 +116,17 @@
 		}
 		
 		p {
-			font-size: 1.7rem;
+			font-size: 1.4rem;
 			line-height: 23px;
 		}
 	}
+    @media screen and (max-width: 800px) {
+      .actu-part {
+        p{
+          display: none;
+        }
+      }
+    }
 
 	@media screen and (max-width: 480px) {
 		.actu-part {

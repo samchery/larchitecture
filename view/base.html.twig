@@ -7,20 +7,16 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="../asset/styles/scss/screen.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400" rel="stylesheet">
+    <link rel="icon" href="../asset/img-layout/Favicon.ico" />
 </head>
 <body>
-<main>
-    <figure class="fig-bg-cover">
-        <img src="../asset/img-content/background-cover.jpg" class="bg-cover" alt="background-cover">
 
-        <img src="../asset/img-content/background-cover-mob.png" class="bg-cover-mobile" alt="background-cover">
-    </figure>
     <header>
         <div class="nav-up clearfix">
             <img src="../asset/img-layout/architecture-logo.png" alt="logo l'architecture">
             <img src="../asset/img-layout/burger.svg" class="burger" alt="burger l'architecture">
             <a href="/abonnement" class="abonnez"><span>Abonnez-vous</span></a>
-            <a href="#"><span>Commander le dernier numéro</span></a>
+            <a href="/comander?id=16" class="commander"><span>Commander le dernier numéro</span></a>
         </div>
         <nav class="nav">
             <ul>
@@ -32,13 +28,9 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="slogan">
-            <p>Toute l’actualité de <strong>l’architecture</strong><p>
-            <p>et de <strong>la construction</strong></p>
-        </div>
     </header>
 
-{% block body %}{% endblock %}
+<main>{% block body %}{% endblock %}</main>
 {% block javascript %}
     <script type="text/javascript">
         //autotextarea
@@ -63,7 +55,6 @@
             <br><br>Wesley Aurore (intégrateur), Samantha CHERY (developpeur PHP), Steeve Niat (designer),
             <br>Fanny Pourtier (developpeur php) et Wissam Tamer-Agha (intégrateur)</p>
     </footer>
-</main>
 <script type="text/javascript" src="../asset/js/app.js"></script>
 </body>
 </html>
