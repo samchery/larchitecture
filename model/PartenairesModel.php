@@ -27,7 +27,8 @@ class PartenairesModel extends Model
                       departement, 
                       url, 
                       region, 
-                      secteur 
+                      secteur,
+                      logo
                     FROM partenaires';
             $requete = self::$db->query($sql);
 
@@ -39,7 +40,8 @@ class PartenairesModel extends Model
                       departement, 
                       url, 
                       region, 
-                      secteur 
+                      secteur,
+                      logo
                 FROM partenaires
                 WHERE id = :id';
             $requete = self::$db->prepare($sql);
@@ -54,24 +56,21 @@ class PartenairesModel extends Model
         }
     }
 
-    public function getRegion($region){
+    public function selectbyRegion($region){
             $sql = 'SELECT 
-                      id, 
+                      id,
                       nom, 
                       departement, 
                       url, 
                       region, 
-                      secteur 
+                      secteur,
+                      logo
                     FROM partenaires
                     WHERE region = :region';
 
             $requete = self::$db->prepare($sql);
-            $requete->bindValue(':region', $region, PDO::PARAM_STR);
+            $requete->bindValue(':region', $region, PDO::PARAM_INT);
             $requete->execute();
-
-            if ($requete->errorCode() !== "00000") {
-                throw new \Exception('Argh database');
-            }
 
             return $requete->fetchAll(PDO::FETCH_OBJ);
     }

@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+{% block title %}Commander (3/3) | L'architecture{% endblock %}
+{% block body %}
+
+    <div class="titre-section clearfix">
+        <hr>
+        <h2 class="h2">commander</h2>
+    </div>
+    <div class="contenu-commande clearfix">
+        <section class="steps clearfix">
+            <div class="first">
+                <h3>1ère étape</h3>
+                <p>Choix revue</p>
+            </div>
+            <div class="second">
+                <h3>2e étape</h3>
+                <p>Formulaire</p>
+            </div>
+            <div class="third active">
+                <h3>3e étape</h3>
+                <p>Validation</p>
+            </div>
+        </section>
+        <section class="panier">
+            <figure>
+                <img src="asset/img-content/{{ info.img }}" alt="revue">
+            </figure>
+            <h2>Revue N°{{ info.numero }}</h2>
+            <div class="price">
+                Prix : 49€ <br>(hors frais de port)
+            </div>
+        </section>
+        <a href="/commanderconfirmation">
+            <button class="button-commander" style="vertical-align:middle"><span>Valider</span></button>
+        </a>
+    </div>
+
+{% endblock %}

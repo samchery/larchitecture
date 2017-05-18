@@ -27,17 +27,17 @@
 
             <p>
                 <label for="description">Description :</label>
-                <textarea name="description" id="description" style="height:200px;" value="{{ list.description }}"></textarea>
+                <textarea name="description" id="description" style="height:200px;">{{ list.description }}</textarea>
             </p>
 
             <p>
-                <label for="mainimage">mainimage :</label>
+                <label for="resum">Extrait :</label>
+                <textarea name="resum" id="resum" style="height:200px" maxlength="200" placeholder="(Copiez collez ici les premières lignes de votre article - 200 caractères max.)"> {{ list.resum }}</textarea>
+            </p>
+
+            <p>
+                <label for="mainimage">Image :</label>
                 <input type="text" name="mainimage" id="mainimage" value="{{ list.mainimage }}">
-            </p>
-
-            <p>
-                <label for="images">images :</label>
-                <input type="text" name="images" id="images" value="{{ list.images }}">
             </p>
 
 
@@ -78,15 +78,15 @@
             </p>
 
             <p>
-                <label for="mainimage">mainimage :</label>
-                <input type="text" name="mainimage" id="mainimage">
+                <label for="resum">Extrait :</label>
+                <textarea name="resum" id="resum" style="height:200px" maxlength="200" placeholder="(Copiez collez ici les premières lignes de votre article - 200 caractères max.)"></textarea>
             </p>
+
 
             <p>
-                <label for="images">images :</label>
-                <input type="text" name="images" id="images">
+                <label for="mainimage">Image principale :</label>
+                <input type="text" name="mainimage" id="mainimage">
             </p>
-
 
             <p>
                 <input type="hidden" name="datepub" id="datepub" value="{{ "now"|date("d/m/Y") }}">
