@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta name="description" content="" /> 
+	<title>Formulaires</title>
+	<link rel="stylesheet" type="text/css" href="styles/css/screen.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400" rel="stylesheet">
+</head>
+<body>
+	<figure class="fig-bg-cover">
+		<img src="img-content/background-cover.jpg" class="bg-cover" alt="background-cover">
+		
+		<img src="img-content/background-cover-mob.png" class="bg-cover-mobile" alt="background-cover">
+	</figure>
+	
+	<header>
+		<div class="nav-up clearfix">
+			<img src="img-layout/architecture-logo.png" alt="logo l'architecture">
+			<img src="img-layout/burger.svg" class="burger" alt="burger l'architecture">
+			<a href="#" class="abonnez"><span>Abonnez-vous</span></a>
+			<a href="#"><span>Commander le dernier numéro</span></a>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Nos Revues</a></li>
+				<li><a href="#">Qui sommes-nous ?</a></li>
+				<li><a href="#">Appel d'offre</a></li>
+				<li><a href="#">Actualités</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="slogan">
+			<p>Toute l’actualité de <strong>l’architecture</strong></p>
+			<p>et de <strong>la construction</strong></p>
+		</div>
+	</header>
+	<div class="titre-section clearfix">
+		<hr>
+		<h2 class="h2">commander</h2>	
+	</div>
+	<div class="contenu-form clearfix">
+		<section class="steps clearfix">
+			<div class="first">
+				<h3>1ère étape</h3>
+				<p>Choix revue</p>
+			</div>
+			<div class="second active">
+				<h3>2e étape</h3>
+				<p>Formulaire</p>
+			</div>
+			<div class="third">
+				<h3>3e étape</h3>
+				<p>Validation</p>
+			</div>
+		</section>
+		<section class="form clearfix">
+			<label for="nom">Nom<em class="asterix">*</em></label>
+			<input type="text" id="nom" name="nom" placeholder="Écrivez ici" required autofocus>
+
+			<label for="prenom">Prénom<em class="asterix">*</em></label>
+			<input type="text" id="prenom" name="prenom" required>
+
+			<label for="rs">Raison Sociale</label>
+			<input type="text" id="rs" name="rs">
+
+			<label for="act">Activité</label>
+			<input type="text" id="act" name="act">
+
+			<label for="pays">Pays<em class="asterix">*</em></label>
+			<input type="text" id="pays" name="pays" required>
+
+			<label for="cp">Code postal<em class="asterix">*</em></label>
+			<input type="text" id="cp" name="cp" required>
+
+			<label for="ville">Ville<em class="asterix">*</em></label>
+			<input type="text" id="ville" name="ville" required>
+
+			<label for="adresse">Adresse<em class="asterix">*</em></label>
+			<input type="text" id="adresse" name="adresse" required>
+
+			<label for="telephone">Téléphone<em class="asterix">*</em></label>
+			<input type="tel" id="telephone" name="telephone" required>
+
+			<label for="email">Adresse e-mail<em class="asterix">*</em></label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="verif-email">Vérifiez e-mail<em class="asterix">*</em></label>
+			<input type="email" id="verif-email" name="email" required>
+			<p>* Champs obligatoire</p>
+		</section>
+
+		<button class="button-commander-form">
+			<span>Commander</span>
+		</button>
+	</div>
+	
+	<footer class="footer">
+		<ul class="nav-footer">
+			<li><a href="#">Accueil</a></li>
+			<li><a href="#">Nos Revues</a></li>
+			<li><a href="#">Qui sommes-nous ?</a></li>
+			<li><a href="#">Appel d'offre</a></li>
+			<li><a href="#">Actualités</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<figure>
+			<img src="img-layout/architecture-logo.png" alt="logo">
+		</figure>
+		<ul class="nav-copyright">
+			<li><a href="#">Copyright</a>|</li>
+			<li><a href="#">Mentions légales</a>|</li>
+			<li><a href="#">Contact</a>|</li>
+			<li><a href="#">Moderations</a></li>
+		</ul>
+	</footer>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+	//autotextarea
+	function adjust_textarea(h) {
+		h.style.height = "20px";
+		h.style.height = (h.scrollHeight)+"px";
+	}
+	</script>
+	
+</body>
+</html>
