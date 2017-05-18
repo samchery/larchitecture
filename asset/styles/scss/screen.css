@@ -186,6 +186,8 @@ header {
             padding: 0 0;
             text-align: center;
             font-weight: 300; } }
+        header .nav ul li a:hover {
+          color: #34B8C9; }
       @media screen and (max-width: 768px) {
         header .nav ul li {
           display: block;
@@ -1051,8 +1053,10 @@ footer {
       margin: 2% auto; } }
   footer p {
     width: 75%;
-    margin: 0 auto;
+    margin: 20px auto;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 18px; }
 
 /*# sourceMappingURL=screen.css.map */
