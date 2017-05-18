@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 	<meta name="description" content="" /> 
-	<title>Formulaires</title>
+	<title>Commander une revue !</title>
 	<link rel="stylesheet" type="text/css" href="styles/css/screen.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400" rel="stylesheet">
 </head>
@@ -42,62 +42,64 @@
 		<hr>
 		<h2 class="h2">commander</h2>	
 	</div>
-	<div class="contenu-form clearfix">
-		<section class="steps clearfix">
-			<div class="first">
-				<h3>1ère étape</h3>
-				<p>Choix revue</p>
-			</div>
-			<div class="second active">
-				<h3>2e étape</h3>
-				<p>Formulaire</p>
-			</div>
-			<div class="third">
-				<h3>3e étape</h3>
-				<p>Validation</p>
-			</div>
-		</section>
-		<section class="form clearfix">
-			<label for="nom">Nom<p class="asterix">*</p></label>
-			<input type="text" id="nom" name="nom" placeholder="Écrivez ici" required autofocus>
-
-			<label for="prenom">Prénom<p class="asterix">*</p></label>
-			<input type="text" id="prenom" name="prenom" required>
-
-			<label for="rs">Raison Sociale</label>
-			<input type="text" id="rs" name="rs">
-
-			<label for="act">Activité</label>
-			<input type="text" id="act" name="act">
-
-			<label for="pays">Pays<p class="asterix">*</p></label>
-			<input type="text" id="pays" name="pays" required>
-
-			<label for="cp">Code postal<p class="asterix">*</p></label>
-			<input type="text" id="cp" name="cp" required>
-
-			<label for="ville">Ville<p class="asterix">*</p></label>
-			<input type="text" id="ville" name="ville" required>
-
-			<label for="adresse">Adresse<p class="asterix">*</p></label>
-			<input type="text" id="adresse" rows=5 name="adresse" required>
-
-			<label for="telephone">Téléphone<p class="asterix">*</p></label>
-			<input type="tel" id="telephone" name="telephone" required>
-
-			<label for="email">Adresse e-mail<p class="asterix">*</p></label>
-			<input type="email" id="email" name="email" required>
-
-			<label for="email">Vérifiez e-mail<p class="asterix">*</p></label>
-			<input type="email" id="email" name="email" required>
-			<p>* Champs obligatoire</p>
-		</section>
-
-		<button class="button-commander-form">
-			<span>Commander</span>
-		</button>
+	<div class="contenu-commande clearfix">
+	<section class="steps clearfix">
+		<div class="first active">
+			<h3>1ère étape</h3>
+			<p>Choix revue</p>
+		</div>
+		<div class="second">
+			<h3>2e étape</h3>
+			<p>Formulaire</p>
+		</div>
+		<div class="third">
+			<h3>3e étape</h3>
+			<p>Validation</p>
+		</div>
+	</section>
+	<section class="panier">
+		<figure>
+			<img src="img-content/groupe.png" alt="revue">
+		</figure>
+		<h2>Revue N°285 - 2017</h2>
+		<label for="quantite">Quantité :</label>
+		<select id="quantite" name="quantite">
+			<optgroup label="Quantité">
+				<option value="1">1</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+			</optgroup>
+		</select>
+		<div class="price">
+			Prix : 220€ <br>(hors frais de port)
+		</div>
+	</section>
+	<section class="panier">
+		<figure>
+			<img src="img-content/groupe2.png" alt="revue">
+		</figure>
+		<h2>Revue N°285 - 2017</h2>
+		<label for="quantite">Quantité :</label>
+		<select id="quantite" name="quantite">
+			<optgroup label="Quantité">
+				<option value="1">1</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+			</optgroup>
+		</select>
+		<div class="price">
+			Prix : 155€ <br>(hors frais de port)
+		</div>
+	</section>
+	<span class="tab"><a href="">Voir tarifications pour frais de ports ></a></span>
+	<a href="">
+		<button class="button-commander" style="vertical-align:middle"><span>Commander</span></button>
+	</a>
 	</div>
-	
 	<footer class="footer">
 		<ul class="nav-footer">
 			<li><a href="#">Accueil</a></li>
@@ -118,13 +120,5 @@
 		</ul>
 	</footer>
 	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript">
-	//autotextarea
-	function adjust_textarea(h) {
-		h.style.height = "20px";
-		h.style.height = (h.scrollHeight)+"px";
-	}
-	</script>
-	
 </body>
 </html>

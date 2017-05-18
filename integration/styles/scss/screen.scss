@@ -5,12 +5,16 @@ $merri: 'Merriweather', 'times' , serif;
 
 // IMPORT
 @import "partial/reset";
-@import "partial/menu";
-@import "partial/headercom";
+@import "partial/config";
+@import "partial/header";
+@import "partial/en-tete";
 @import "partial/accueil";
 @import "partial/tri";
 @import "partial/revue";
 @import "partial/actu";
-@import "partial/forms";
+@import "partial/article-actu";
+@import "partial/contact";
+@import "partial/formulaire";
 @import "partial/panier";
-@import "partial/qui";
+@import "partial/infos";
+@import "partial/footer";

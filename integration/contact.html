@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta name="description" content="" />
+	<title>Contact</title>
+	<link rel="stylesheet" href="styles/css/screen.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400" rel="stylesheet">
+</head>
+<body>
+	<figure class="fig-bg-cover">
+		<img src="img-content/background-cover.jpg" class="bg-cover" alt="background-cover">
+		
+		<img src="img-content/background-cover-mob.png" class="bg-cover-mobile" alt="background-cover">
+	</figure>
+	
+	<header>
+		<div class="nav-up clearfix">
+			<img src="img-layout/architecture-logo.png" alt="logo l'architecture">
+			<img src="img-layout/burger.svg" class="burger" alt="burger l'architecture">
+			<a href="#" class="abonnez"><span>Abonnez-vous</span></a>
+			<a href="#"><span>Commander le dernier numéro</span></a>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Nos Revues</a></li>
+				<li><a href="#">Qui sommes-nous ?</a></li>
+				<li><a href="#">Appel d'offre</a></li>
+				<li><a href="#">Actualités</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="slogan">
+			<p>Toute l’actualité de <strong>l’architecture</strong></p>
+			<p>et de <strong>la construction</strong></p>
+		</div>
+	</header>
+	<div class="titre-section clearfix">
+		<hr>
+		<h2 class="h2">contact</h2>	
+	</div>
+	<div class="container clearfix">
+		<h3 class="text-contact">Pour nous contacter, veuillez utiliser le formulaire ci-dessous. Merci de renseigner tous les champs.</h3>
+		<form action="/action_page.php">
+			<label for="fname">Nom</label>
+			<input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+			<label for="lname">Prénom</label>
+			<input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
+			<label for="telephone">Téléphone</label>
+			<input type="text" id="telephone" name="telephone" placeholder="Votre numéro de téléphone..">
+			<label for="mail">Adresse e-mail</label>
+			<input type="text" id="mail" name="mail" placeholder="Votre adresse e-mail..">
+			<label for="service">Service</label>
+			<select id="service" name="service">
+				<option value="com">Commercial</option>
+				<option value="pub">Rédactionnel / Publicité</option>
+				<option value="admi">Administratif / Comptabilité</option>
+				<option value="dir">Direction</option>
+			</select>
+			<label for="country">Pays</label>
+			<select id="country" name="country">
+				<option value="fr">France</option>
+				<option value="dt">DOM TOM</option>
+				<option value="etr">Étranger</option>
+			</select>
+			<label for="subject">Commentaires</label>
+			<textarea id="subject" name="subject" placeholder="Écrivez nous.." style="height:200px"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+		<div class="info-contact">Groupe SOFRE&amp;COM Société Française d'Edition et de Communication<br>9/11 rue Jacquard - 93315 Le Pré Saint Gervais cedex - France
+		</div>
+	</div>
+	<footer class="footer">
+		<ul class="nav-footer">
+			<li><a href="#">Accueil</a></li>
+			<li><a href="#">Nos Revues</a></li>
+			<li><a href="#">Qui sommes-nous ?</a></li>
+			<li><a href="#">Appel d'offre</a></li>
+			<li><a href="#">Actualités</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<figure>
+			<img src="img-layout/architecture-logo.png" alt="logo">
+		</figure>
+		<ul class="nav-copyright">
+			<li><a href="#">Copyright</a>|</li>
+			<li><a href="#">Mentions légales</a>|</li>
+			<li><a href="#">Contact</a>|</li>
+			<li><a href="#">Moderations</a></li>
+		</ul>
+	</footer>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
