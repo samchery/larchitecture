@@ -39,11 +39,13 @@ class RevuesController extends Controller
         $model = new RevuesModel();
         $data = $model->select($id);
 
-        var_dump($data);
         // récupérer une région dynamiquement
         $modelP = new PartenairesModel();
-        $region = "Ile-de-France";
+        $region = $data->region;
+
         $dataP = $modelP->getRegion($region);
+        var_dump($dataP[0]->nom);
+
         return self::$twig->render('front/detailsRevue.html.twig',[
             'list' => $data,
             'listP' => $dataP

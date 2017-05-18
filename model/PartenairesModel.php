@@ -91,20 +91,23 @@ class PartenairesModel extends Model
                       departement, 
                       url, 
                       region, 
-                      secteur)                 
+                      secteur,
+                      logo)                 
                     VALUES(
                       NULL, 
                       :nom, 
                       :departement, 
                       :url, 
                       :region, 
-                      :secteur)';
+                      :secteur,
+                      :logo)';
             $requete = self::$db->prepare($sql);
             $requete->bindValue(':nom', $statement['nom'], PDO::PARAM_INT);
             $requete->bindValue(':departement', $statement['departement'], PDO::PARAM_STR);
             $requete->bindValue(':url', $statement['url'], PDO::PARAM_STR);
             $requete->bindValue(':region', $statement['region'], PDO::PARAM_STR);
             $requete->bindValue(':secteur', $statement['secteur'], PDO::PARAM_STR);
+            $requete->bindValue(':logo', $statement['logo'], PDO::PARAM_STR);
             $requete->execute();
 
             if ($requete->errorCode() !== "00000") {
@@ -149,7 +152,8 @@ class PartenairesModel extends Model
                       departement = :departement, 
                       url = :url, 
                       region = :region, 
-                      secteur = :secteur                 
+                      secteur = :secteur,
+                      logo = :logo
                     WHERE id = :id';
             $requete = self::$db->prepare($sql);
             $requete->bindValue(':id', $id, PDO::PARAM_INT);
@@ -158,6 +162,7 @@ class PartenairesModel extends Model
             $requete->bindValue(':url', $statement['url'], PDO::PARAM_STR);
             $requete->bindValue(':region', $statement['region'], PDO::PARAM_STR);
             $requete->bindValue(':secteur', $statement['secteur'], PDO::PARAM_STR);
+            $requete->bindValue(':logo', $statement['logo'], PDO::PARAM_STR);
             $requete->execute();
 
             if ($requete->errorCode() !== "00000") {
